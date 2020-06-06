@@ -31,7 +31,8 @@ ExecuteTitlescreen:
     ld hl, TitlescreenTilemap
     ld de, _SCRN0
     ld c, Bank(TitlescreenTilemap)
-    call Decompress
+    jp TitleColor
+ReturnFromTitleColor:
     ld a, $05
     call PlaySong
     ld a, $01
@@ -7610,5 +7611,14 @@ IntroScreenTilemap_MtDedede:
 
 INCBIN "baserom.gb", $1bb0d, $1bdf0 - $1bb0d
 
-; free space padding
-INCBIN "baserom.gb", $1bdf0, $1c000 - $1bdf0
+TitleColor:
+    call Decompress
+    ld a, $FF
+    ld [rVBK], a ;switch to VRAM bank 1
+    ld hl, TitlescreenColormap
+    ld de, _SCRN0
+    ld c, Bank(TitlescreenColormap)
+    call Decompress
+    ld a, $00
+    ld [rVBK], a
+    jp ReturnFromTitleColor

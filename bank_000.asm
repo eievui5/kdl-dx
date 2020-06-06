@@ -8684,16 +8684,56 @@ Call_000_3da9:
 ColourPallets:
     ld a, %10000000 ;Increment bit
     ld [rBCPS], a
+    ;Pallet 1
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
 
-    ld a, $0F
+    ld a, $7F
+    ld [rBCPD], a
+    ld a, $40
+    ld [rBCPD], a
+
+    ld a, $7C
+    ld [rBCPD], a
+    ld a, $00
+    ld [rBCPD], a
+
+    ld a, $00
+    ld [rBCPD], a
+    ld [rBCPD], a 
+
+    ;Pallet 2
+    ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
 
-    ld a, $05
+    ld a, $03
     ld [rBCPD], a
+    ld a, $EF
+    ld [rBCPD], a
+
+    ld a, $03
+    ld [rBCPD], a
+    ld a, $E0
+    ld [rBCPD], a
+
+    ld a, $00
+    ld [rBCPD], a
+    ld [rBCPD], a 
+    ;Pallet 3
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $68
+    ld [rBCPD], a
+    ld a, $1F
+    ld [rBCPD], a
+
+    ld a, $00
+    ld [rBCPD], a
+    ld a, $1F
     ld [rBCPD], a
 
     ld a, $00
@@ -8719,7 +8759,7 @@ ColourPallets:
     ld a, $00
     ld [rOCPD], a
     ld [rOCPD], a
-    ;The following is only to produce a working rom. This is going to be removed in the next release
+    ;again, temp rept
     ld [rOCPD], a
     ld [rOCPD], a
 
