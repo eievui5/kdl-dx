@@ -50,8 +50,10 @@ InitGame:
     ld [wLoadedROMBank], a
     ld [MBC1RomBank], a
     call InitWindow
-    ld a, %11100100 ; standard greyscale palette order
-    ldh [rOBP1], a
+
+    nop
+    jp ColourPallets
+Return:
     ld a, 8
     ldh [rSCY], a
     ld [$d055], a
@@ -8678,4 +8680,60 @@ Call_000_3da9:
     ret
 
 ; free space padding
-INCBIN "baserom.gb", $3dae, $4000 - $3dae
+;INCBIN "baserom.gb", $3dae, $4000 - $3dae
+ColourPallets:
+    ld a, %10000000 ;Increment bit
+    ld [rBCPS], a
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $0F
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $05
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $00
+    ld [rBCPD], a
+    ld [rBCPD], a 
+    ;similar code for sprites
+    ld a, %10000000 ;increment bit 
+    ld [rOCPS], a
+
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $68
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $0C
+    ld [rOCPD], a
+
+    ld a, $00
+    ld [rOCPD], a
+    ld [rOCPD], a
+    ;The following is only to produce a working rom. This is going to be removed in the next release
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $68
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $0C
+    ld [rOCPD], a
+
+    ld a, $00
+    ld [rOCPD], a
+    ld [rOCPD], a
+    jp Return
