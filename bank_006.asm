@@ -170,24 +170,24 @@ jr_006_411c:
     call StartTimer
     call Call_006_4285
     ld d, $00
-    ld a, [wCurStage]
+    ld a, [wCurStage] ;The currect stage is loaded into a to be used as an offset
     ld c, a
-    add a
+    add a ;it's multiplied by three, since each Level has three bytes, Bank, Location1, and Location2
     add c
     ld b, $00
-    ld c, a
+    ld c, a 
     ld hl, StageMetatileDefinitions
-    add hl, bc
+    add hl, bc ;and here it's added to St4geMetatileDefinitions to get the correct level's tiles
     ld a, [hl+]
-    ld c, a
+    ld c, a ;here it loads the first byte into a; the rombank
     ld a, [hl+]
-    ld d, a
+    ld d, a ;This is the first byte of it's location in ROM
     ld a, [hl+]
-    ld e, a
-    ld h, d
-    ld l, e
-    ld de, wMetatileDefinitions
-    call Decompress
+    ld e, a;and this is the second
+    ld h, d 
+    ld l, e;The location is moved into hl to be decompressed
+    ld de, wMetatileDefinitions ;and de is set to the destination for the decompressed data.
+    call LoadTileAndColorData
     ld a, $32
     ld_long $ff8f, a
     ld a, $15
@@ -7609,7 +7609,7 @@ IntroScreenTilemap_BubblyClouds:
 IntroScreenTilemap_MtDedede:
     INCBIN "gfx/stages/mt_dedede/intro_screen.tilemap.lz"
 
-INCBIN "baserom.gb", $1bb0d, $1bdf0 - $1bb0d
+;mystuff
 
 TitleColor:
     call Decompress
@@ -7619,6 +7619,28 @@ TitleColor:
     ld de, _SCRN0
     ld c, Bank(TitlescreenColormap)
     call Decompress
-    ld a, $00
+    xor a
     ld [rVBK], a
     jp ReturnFromTitleColor
+
+LoadTileAndColorData:
+    call Decompress
+    ld a, [wCurStage] ;The currect stage is loaded into a to be used as an offset
+    ld c, a
+    add a ;it's multiplied by three, since each Level has three bytes, Bank, Location1, and Location2
+    add c
+    ld b, $00
+    ld c, a
+    ld hl, StageColortileDefinitions
+    add hl, bc ;and here it's added to St4geMetatileDefinitions to get the correct level's tiles
+    ld a, [hl+]
+    ld c, a ;here it loads the first byte into a; the rombank
+    ld a, [hl+]
+    ld d, a ;This is the first byte of it's location in ROM
+    ld a, [hl+]
+    ld e, a;and this is the second
+    ld h, d 
+    ld l, e;The location is moved into hl to be decompressed
+    ld de, wColortileDefinitions ;and de is set to the destination for the decompressed data.
+    call Decompress
+    ret

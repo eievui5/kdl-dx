@@ -964,5 +964,5 @@ MtDededeScreen5_Entities_XTrip_ExtraGame:
 
 INCBIN "baserom.gb", $3de3f, $3dfb2 - $3de3f
 
-; free space padding
-INCBIN "baserom.gb", $3dfb2, $40000 - $3dfb2
+Colortiles_GreenGreens:
+    INCBIN "data/stages/green_greens/colortiles.bin.lz"

@@ -1,3 +1,7 @@
-Todo:
+Current Task:
+    ☐ Find out why random data is getting into the colormap buffer
+Next Tasks:
+    ☐ Vewy Uwgent, fix Y
     ☐ Make Stars on titlescreen Yellow (Manip OAM)
+    Find out how the game loads its OAM DMA packets and inject the color pallet of the OAM sprite.
     ☐ Edit tiles to look better with color (Fill in letters on title)

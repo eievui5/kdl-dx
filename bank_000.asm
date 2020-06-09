@@ -2452,7 +2452,7 @@ Call_000_1292:
     ld c, $09
 .jr_000_1298:
     ld a, [hl]
-    call Call_000_131a
+    call LoadTilemapCopyBuffer
     push bc
     ld b, $00
     ld a, [$d03f]
@@ -2491,7 +2491,7 @@ Call_000_12b4:
     push bc
 .jr_000_12d0:
     ld a, [hl+]
-    call Call_000_131a
+    call LoadTilemapCopyBuffer
     ld a, [$d057]
     add $10
     ld [$d057], a
@@ -2527,7 +2527,7 @@ Call_000_12b4:
     ld c, b
 .jr_000_1307:
     ld a, [hl+]
-    call Call_000_131a
+    call LoadTilemapCopyBuffer
     ld a, [$d057]
     add $10
     ld [$d057], a
@@ -2540,21 +2540,21 @@ Call_000_12b4:
     ret
 
 
-Call_000_131a:
+LoadTilemapCopyBufferOLD:
     push bc
     push hl
-    ld l, a
+    ld l, a ;A seems to be loaded from C100-? in wram. This file must be the tilemap, and points to the metatiles
     ld h, $00
+    add hl, hl ;This part multiplies the offset by 4, since the metatiles are every 4 bytes
     add hl, hl
-    add hl, hl
-    ld bc, wMetatileDefinitions
-    add hl, bc
+    ld bc, wMetatileDefinitions ;this loads C600, which seems to have some scattered metatiles.
+    add hl, bc ;this is where the a offset is loaded into hl, right before piecing together the data.
     ld a, [$d057]
     ld [wTemp], a
     ld a, [$d058]
     ld [$d06c], a
     ld [$d07f], a
-    call Call_000_1352
+    call MetatileLocationLoaderOLD ;This is called to load the metatile's location. It returns 1 line down to load the tile
     ld a, [hl+]
     ld [de], a
     inc de
@@ -2576,7 +2576,7 @@ Call_000_131a:
     ret
 
 
-Call_000_1352:
+MetatileLocationLoaderOLD:
     push bc
     push hl
     ld hl, $9800
@@ -2589,26 +2589,26 @@ Call_000_1352:
     srl a
     srl a
     srl a
-    jr z, .jr_000_1375
+    jr z, .jr_000_1375 ;this has something to do with how many times .jr_000_1371 repeats.
     ld bc, $0020
 .jr_000_1371:
-    add hl, bc
+    add hl, bc ;this might be how h checks its "progress"
     dec a
     jr nz, .jr_000_1371
 .jr_000_1375:
     ld b, $00
-    ld a, [$d06e]
+    ld a, [$d06e] ;The "progress" the tile loader makes is stored in D06E so that it can be restored here
     ld c, a
-    add hl, bc
+    add hl, bc ;hl is already defined before we get here, and b is 00, so it looks like hl retains its progress somewhere.
     ld a, h
+    ld [de], a ;this loads the metatile location into the tilemap buffer
+    inc de
+    ld a, l ;and the second part
     ld [de], a
     inc de
-    ld a, l
-    ld [de], a
-    inc de
-    pop hl
+    pop hl ;This loads the earlier defined offset in the metatile space
     pop bc
-    ret
+    ret ;when it returns the metatile is loaded
 
 
 Jump_000_1385:
@@ -3408,8 +3408,8 @@ Call_000_1964:
 .jr_000_197c:
     ld c, a
 .jr_000_197d:
-    ld a, [hl+]
-    call Call_000_131a
+    ld a, [hl+] ;That weird Offset location saver is loaded into a here
+    call LoadTilemapCopyBuffer
     ld a, [$d057]
     add $10
     ld [$d057], a
@@ -3442,7 +3442,7 @@ Call_000_1964:
     ldh a, [$8c]
     or $60
     ldh [$8c], a
-    call Call_000_1ee3
+    call VRAMBankSwitchTest
     ld a, [wTemp]
     xor a
     ldh [$8c], a
@@ -3718,7 +3718,7 @@ Call_000_19f9:
     add c
     ld b, $00
     ld c, a
-    ld hl, StageMetatileDefinitions
+    ld hl, StageMetatileDefinitions ;This is where the Metatiles for each stage are lined up
     add hl, bc
     ld a, [hl+]
     ld c, a
@@ -4014,7 +4014,7 @@ VBlank:
     ld hl, $d032
     inc [hl]
     call Call_000_1fb2
-    call Call_000_1ee3
+    call VRAMBankSwitchTest
     call Call_000_1e2e
     call $ff80
     ldh a, [$8c]
@@ -4304,31 +4304,31 @@ Call_000_1ee3:
     ret z
     bit 5, a
     ret z
-    ld bc, wTilemapCopyBuffer
-.jr_000_1eee:
-    ld a, [bc]
-    inc bc
-    ld h, a
+    ld bc, wTilemapCopyBuffer ;This buffer contains 6 bytes for each tile. The first and second are loaded into h and l respectively, and are used for the tile's location. the last 4 bytes are loaded into a, and are the tiles' IDsthese tiles are arraged in a 2*2 pattern, before moving to the next set.
+.loadNextTile:
+    ld a, [bc] ;Load the first byte of the buffer
+    inc bc ;ready the next byte
+    ld h, a ;load in h to be used for vram location.
     and a
-    ret z
+    ret z ;If a = $00, then z is set and it returns from here, which is how it knows it's done.
     ld a, [bc]
     inc bc
-    ld l, a
+    ld l, a ;l for second vram location
     ld a, [bc]
     inc bc
-    ld [hl+], a
+    ld [hl+], a ;And here the first Tile Id is loaded into VRAM
     ld a, [bc]
     inc bc
-    ld [hl], a
-    ld a, [bc]
+    ld [hl], a ;And the second. HL doesn't inc this time
+    ld a, [bc] 
     inc bc
-    ld de, $001f
+    ld de, $001f ;This goes to the next line of the map. Eg, $9801 + $001F = $9820
     add hl, de
-    ld [hl+], a
-    ld a, [bc]
-    inc bc
-    ld [hl], a
-    jr .jr_000_1eee
+    ld [hl+], a ;Here it loads another tile ID into a, the first of the next line
+    ld a, [bc] 
+    inc bc ;bc then increments to the VRAM location of the next 2*2 (top left tile.)
+    ld [hl], a ;And the last tile of the 2*2
+    jr .loadNextTile ;It then repeats, using the new VRAM location. as I said earlier, when it reaches $00 it returns
 Call_000_1f08:
     ld a, [$d032]
     cp $05
@@ -4803,7 +4803,7 @@ Call_000_21a5:
     jp InitRamFuncD099
 
 
-InitRamFuncD099:
+InitRamFuncD099: ; Hi, person that dissasembled this. Too bad I'm not contributing to this right now, because it's used by the decompression algorithm.
 ; TODO: There is some self-modifying code in RAM. What is it used for?
 ; Initializes to the following routine:
 ;   nop
@@ -8777,3 +8777,223 @@ ColourPallets:
     ld [rOCPD], a
     ld [rOCPD], a
     jp Return
+
+VRAMBankSwitchTest:
+    call Call_000_1ee3
+    ld a, $FF
+    ld [rVBK], a ;Switch to the other VRAM bank
+    call CopyColormapBuffer
+    xor a
+    ld [rVBK], a ;Switch back
+    ret
+
+CopyColormapBuffer:
+    ldh a, [$8c]
+    bit 6, a
+    ret z
+    bit 5, a
+    ret z
+    ld bc, wColormapCopyBuffer ;This buffer contains 6 bytes for each tile. The first and second are loaded into h and l respectively, and are used for the tile's location. the last 4 bytes are loaded into a, and are the tiles' IDsthese tiles are arraged in a 2*2 pattern, before moving to the next set.
+.loadNextTile:
+    ld a, [bc] ;Load the first byte of the buffer
+    inc bc ;ready the next byte
+    ld h, a ;load in h to be used for vram location.
+    and a
+    ret z ;If a = $00, then z is set and it returns from here, which is how it knows it's done.
+    ld a, [bc]
+    inc bc
+    ld l, a ;l for second vram location
+    ld a, [bc]
+    inc bc
+    ld [hl+], a ;And here the first Tile Id is loaded into VRAM
+    ld a, [bc]
+    inc bc
+    ld [hl], a ;And the second. HL doesn't inc this time
+    ld a, [bc] 
+    inc bc
+    ld de, $001f ;This goes to the next line of the map. Eg, $9801 + $001F = $9820
+    add hl, de
+    ld [hl+], a ;Here it loads another tile ID into a, the first of the next line
+    ld a, [bc] 
+    inc bc ;bc then increments to the VRAM location of the next 2*2 (top left tile.)
+    ld [hl], a ;And the last tile of the 2*2
+    jr .loadNextTile ;It then repeats, using the new VRAM location. as I said earlier, when it reaches $00 it returns
+
+LoadTilemapCopyBuffer:
+    push bc
+    push hl
+    ld l, a ;A seems to be loaded from C100-? in wram. This file must be the tilemap, and points to the metatiles
+    ld h, $00
+    add hl, hl ;This part multiplies the offset by 4, since the metatiles are every 4 bytes
+    add hl, hl
+    ld bc, wMetatileDefinitions ;this loads C600, which seems to have some scattered metatiles.
+    add hl, bc ;this is where the a offset is loaded into hl, right before piecing together the data.
+    ld a, [$d057]
+    ld [wTemp], a
+    ld a, [$d058]
+    ld [$d06c], a
+    ld [$d07f], a
+    call MetatileLocationLoader ;This is called to load the metatile's location. It returns 1 line down to load the tile
+    ld a, [hli] ;HL here is an offset location of metatile definitions. It'll need to be changed to Colortile definitions: +E20
+    ld [de], a ;top left. DE is the tilemap copy buffer location. It'll need to be changed to Colortile copy Buffer: +D20   
+    inc de
+
+    push de
+    push hl
+    ld bc, $0D1F ;This is one less than it needs to be, since HL just incremented
+    ld h, d
+    ld l, e
+    add hl, bc ;This moves $0D1F down to the colortile copy buffer
+    ld d, h
+    ld e, l
+    pop hl
+    push hl
+    ld b, $0E
+    add hl, bc ;this moves $0E1F down to the colortile definitions
+    ld a, [hl]
+    ld [de], a
+    pop hl
+    pop de
+
+    ld a, [hli]
+    ld [de], a ;top right
+    inc de
+
+    push de
+    push hl
+    ld b, $0D ;This is one less than it needs to be, since HL just incremented
+    ld h, d
+    ld l, e
+    add hl, bc ;This moves $0D1F down to the colortile copy buffer
+    ld d, h
+    ld e, l
+    pop hl
+    push hl
+    ld b, $0E
+    add hl, bc ;this moves $0E1F down to the colortile definitions
+    ld a, [hl]
+    ld [de], a
+    pop hl
+    pop de
+
+    ld a, [hli]
+    ld [de], a ;bottom left
+    inc de
+
+    push de
+    push hl
+    ld b, $0D ;This is one less than it needs to be, since HL just incremented
+    ld h, d
+    ld l, e
+    add hl, bc ;This moves $0D1F down to the colortile copy buffer
+    ld d, h
+    ld e, l
+    pop hl
+    push hl
+    ld b, $0E
+    add hl, bc ;this moves $0E1F down to the colortile definitions
+    ld a, [hl]
+    ld [de], a
+    pop hl
+    pop de
+
+    ld a, [hl]
+    ld [de], a ;bottom right
+    inc de
+
+    push de
+    push hl
+    ld bc, $0D1F
+    ld h, d
+    ld l, e
+    add hl, bc ;This moves $0D20 down to the colortile copy buffer
+    ld d, h
+    ld e, l
+    pop hl
+    push hl
+    ld bc, $0E20
+    add hl, bc ;this moves $0E20 down to the colortile definitions
+    ld a, [hl]
+    ld [de], a
+    pop hl
+    pop de
+
+    ld a, [wTemp]
+    ld [$d057], a
+    ld a, [$d06c]
+    ld [$d058], a
+    pop hl
+    pop bc
+    ret
+
+MetatileLocationLoader:
+    push bc
+    push hl
+    ld hl, $9800
+    ld a, [$d057]
+    srl a
+    srl a
+    srl a
+    ld [$d06e], a
+    ld a, [$d058]
+    srl a
+    srl a
+    srl a
+    jr z, .jr_000_1375 ;this has something to do with how many times .jr_000_1371 repeats.
+    ld bc, $0020
+.jr_000_1371:
+    add hl, bc ;this might be how h checks its "progress"
+    dec a
+    jr nz, .jr_000_1371
+.jr_000_1375:
+    ld b, $00
+    ld a, [$d06e] ;The "progress" the tile loader makes is stored in D06E so that it can be restored here
+    ld c, a
+    add hl, bc ;hl is already defined before we get here, and b is 00, so it looks like hl retains its progress somewhere.
+    ld a, h
+    ld [de], a ;this loads the metatile location into the tilemap buffer
+
+    push hl ;This only occurs the first time I use this code, since L is needed
+    ld h, d ;This part basically loads de into hl indirectly (since `ld HL, r16` is invalid)
+    ld l, e ;Thanks, PinoBatch. I'm pretty dumb.
+    push de
+    ld de, $0D20
+    add hl, de ;Distance between TilemapCopyBuffer and ColormapCopyBuffer
+    ld [hl], a ;Load the color/metatile location in the colormap buffer
+    pop de
+    pop hl;This only occurs the first time I use this code, since L is needed
+
+    inc de
+    ld a, l ;and the second part
+    ld [de], a
+
+    ;The push HL from earlier is not used here because HL is no longer needed (about to be popped)
+    ld h, d ;This part basically loads de into hl indirectly (since `ld HL, r16` is invalid)
+    ld l, e ;Thanks, PinoBatch. I'm pretty dumb.
+    push de
+    ld de, $0D20
+    add hl, de ;Distance between TilemapCopyBuffer and ColormapCopyBuffer
+    ld [hl], a ;Load the color/metatile location in the colormap buffer
+    pop de
+    ;The pop HL from earlier is not used here because HL is no longer needed (about to be popped)
+
+    inc de
+    pop hl ;This loads the earlier defined offset in the metatile space
+    pop bc
+    ret ;when it returns the metatile is loaded
+
+StageColortileDefinitions:
+    db Bank(Colortiles_GreenGreens);These need to be replaced with the proper color tiles once I get this working
+    bigdw Colortiles_GreenGreens
+
+    db Bank(Metatiles_CastleLololo)
+    bigdw Metatiles_CastleLololo
+
+    db Bank(Metatiles_FloatIslands)
+    bigdw Metatiles_FloatIslands
+
+    db Bank(Metatiles_BubblyClouds)
+    bigdw Metatiles_BubblyClouds
+
+    db Bank(Metatiles_MtDedede)
+    bigdw Metatiles_MtDedede

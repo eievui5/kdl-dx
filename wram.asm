@@ -30,13 +30,14 @@ wTilemapCopyBuffer:: ; $cb00
 ; with their destination addresses.  The size of the data packets depends on the
 ; context of the data.  For example, metatiles are first queued here, and each data
 ; packet is the size of a metatile (4 bytes).
-	ds $500
+	ds $499
+wLoadedROMBank::
+	ds 1
 
 SECTION "WRAM Bank 1", WRAMX
 
 	ds $2c
 
-wLoadedROMBank:: ; $d02c
 	ds 1
 
 	ds 12
@@ -137,7 +138,19 @@ wCurrentAnimationCmd:: ; $d3d8
 wAnimationParserScriptReadAddress:: ; $d3d9
 	ds 2
 
-	ds $825
+	ds $45
+
+wColortileDefinitions:: ;d420
+	ds $400
+
+wColormapCopyBuffer:: ;d820
+	ds $3E0
 
 wdc00:: ; $dc00
 	ds $200
+
+SECTION "WRAM Color Bank", WRAMX
+	ds $400
+
+
+	ds $500
