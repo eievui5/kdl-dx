@@ -3442,7 +3442,7 @@ Call_000_1964:
     ldh a, [$8c]
     or $60
     ldh [$8c], a
-    call VRAMBankSwitchTest
+    call CopyTilemapBuffer
     ld a, [wTemp]
     xor a
     ldh [$8c], a
@@ -4014,7 +4014,7 @@ VBlank:
     ld hl, $d032
     inc [hl]
     call Call_000_1fb2
-    call VRAMBankSwitchTest
+    call CopyTilemapBuffer
     call Call_000_1e2e
     call $ff80
     ldh a, [$8c]
@@ -4298,7 +4298,7 @@ PlaySong:
     ret
 
 
-Call_000_1ee3:
+Call_000_1ee3_Old:
     ldh a, [$8c]
     bit 6, a
     ret z
@@ -8778,22 +8778,13 @@ ColourPallets:
     ld [rOCPD], a
     jp Return
 
-VRAMBankSwitchTest:
-    call Call_000_1ee3
-    ld a, $FF
-    ld [rVBK], a ;Switch to the other VRAM bank
-    call CopyColormapBuffer
-    xor a
-    ld [rVBK], a ;Switch back
-    ret
-
-CopyColormapBuffer:
+CopyTilemapBuffer:
     ldh a, [$8c]
     bit 6, a
     ret z
     bit 5, a
     ret z
-    ld bc, wColormapCopyBuffer ;This buffer contains 6 bytes for each tile. The first and second are loaded into h and l respectively, and are used for the tile's location. the last 4 bytes are loaded into a, and are the tiles' IDsthese tiles are arraged in a 2*2 pattern, before moving to the next set.
+    ld bc, wTilemapCopyBuffer ;This buffer contains 6 bytes for each tile. The first and second are loaded into h and l respectively, and are used for the tile's location. the last 4 bytes are loaded into a, and are the tiles' IDsthese tiles are arraged in a 2*2 pattern, before moving to the next set.
 .loadNextTile:
     ld a, [bc] ;Load the first byte of the buffer
     inc bc ;ready the next byte
@@ -8803,6 +8794,8 @@ CopyColormapBuffer:
     ld a, [bc]
     inc bc
     ld l, a ;l for second vram location
+    push hl ;this saves the value in hl to later be loaded
+
     ld a, [bc]
     inc bc
     ld [hl+], a ;And here the first Tile Id is loaded into VRAM
@@ -8817,6 +8810,41 @@ CopyColormapBuffer:
     ld a, [bc] 
     inc bc ;bc then increments to the VRAM location of the next 2*2 (top left tile.)
     ld [hl], a ;And the last tile of the 2*2
+
+    pop de ;Here we restore hl into de, 
+    push hl ;since the loop expects HL the way it left it
+    push bc
+    ld h, b ;ld hl, bc
+    ld l, c
+    ld bc, wColormapCopyBuffer - wTilemapCopyBuffer - 4
+    add hl, bc
+    ld b, h ;ld bc, hl
+    ld c, l
+    ld h, d ;ld hl, de
+    ld l, e
+    ld a, $FF 
+    ld [rVBK], a
+
+    ld a, [bc]
+    inc bc
+    ld [hl+], a ;And here the first Tile Id is loaded into VRAM
+    ld a, [bc]
+    inc bc
+    ld [hl], a ;And the second. HL doesn't inc this time
+    ld a, [bc] 
+    inc bc
+    ld de, $001f ;This goes to the next line of the map. Eg, $9801 + $001F = $9820
+    add hl, de
+    ld [hl+], a ;Here it loads another tile ID into a, the first of the next line
+    ld a, [bc] 
+    inc bc ;bc then increments to the VRAM location of the next 2*2 (top left tile.)
+    ld [hl], a ;And the last tile of the 2*2
+
+    xor a
+    ld [rVBK], a
+    pop bc
+    pop hl
+
     jr .loadNextTile ;It then repeats, using the new VRAM location. as I said earlier, when it reaches $00 it returns
 
 LoadTilemapCopyBuffer:
@@ -8840,7 +8868,7 @@ LoadTilemapCopyBuffer:
 
     push de
     push hl
-    ld bc, $0D1F ;This is one less than it needs to be, since HL just incremented
+    ld bc, wColormapCopyBuffer - wTilemapCopyBuffer - 1
     ld h, d
     ld l, e
     add hl, bc ;This moves $0D1F down to the colortile copy buffer
@@ -8848,7 +8876,7 @@ LoadTilemapCopyBuffer:
     ld e, l
     pop hl
     push hl
-    ld b, $0E
+    ld bc, wColortileDefinitions - wMetatileDefinitions - 1
     add hl, bc ;this moves $0E1F down to the colortile definitions
     ld a, [hl]
     ld [de], a
@@ -8861,7 +8889,7 @@ LoadTilemapCopyBuffer:
 
     push de
     push hl
-    ld b, $0D ;This is one less than it needs to be, since HL just incremented
+    ld bc, wColormapCopyBuffer - wTilemapCopyBuffer - 1
     ld h, d
     ld l, e
     add hl, bc ;This moves $0D1F down to the colortile copy buffer
@@ -8869,7 +8897,7 @@ LoadTilemapCopyBuffer:
     ld e, l
     pop hl
     push hl
-    ld b, $0E
+    ld bc, wColortileDefinitions - wMetatileDefinitions - 1
     add hl, bc ;this moves $0E1F down to the colortile definitions
     ld a, [hl]
     ld [de], a
@@ -8882,7 +8910,7 @@ LoadTilemapCopyBuffer:
 
     push de
     push hl
-    ld b, $0D ;This is one less than it needs to be, since HL just incremented
+    ld bc, wColormapCopyBuffer - wTilemapCopyBuffer - 1
     ld h, d
     ld l, e
     add hl, bc ;This moves $0D1F down to the colortile copy buffer
@@ -8890,7 +8918,7 @@ LoadTilemapCopyBuffer:
     ld e, l
     pop hl
     push hl
-    ld b, $0E
+    ld bc, wColortileDefinitions - wMetatileDefinitions - 1
     add hl, bc ;this moves $0E1F down to the colortile definitions
     ld a, [hl]
     ld [de], a
@@ -8903,7 +8931,7 @@ LoadTilemapCopyBuffer:
 
     push de
     push hl
-    ld bc, $0D1F
+    ld bc, wColormapCopyBuffer - wTilemapCopyBuffer - 1
     ld h, d
     ld l, e
     add hl, bc ;This moves $0D20 down to the colortile copy buffer
@@ -8911,7 +8939,7 @@ LoadTilemapCopyBuffer:
     ld e, l
     pop hl
     push hl
-    ld bc, $0E20
+    ld bc, wColortileDefinitions - wMetatileDefinitions ;This one is not one off since hl didn't inc
     add hl, bc ;this moves $0E20 down to the colortile definitions
     ld a, [hl]
     ld [de], a
@@ -8957,7 +8985,7 @@ MetatileLocationLoader:
     ld h, d ;This part basically loads de into hl indirectly (since `ld HL, r16` is invalid)
     ld l, e ;Thanks, PinoBatch. I'm pretty dumb.
     push de
-    ld de, $0D20
+    ld de, wColormapCopyBuffer - wTilemapCopyBuffer
     add hl, de ;Distance between TilemapCopyBuffer and ColormapCopyBuffer
     ld [hl], a ;Load the color/metatile location in the colormap buffer
     pop de
@@ -8971,7 +8999,7 @@ MetatileLocationLoader:
     ld h, d ;This part basically loads de into hl indirectly (since `ld HL, r16` is invalid)
     ld l, e ;Thanks, PinoBatch. I'm pretty dumb.
     push de
-    ld de, $0D20
+    ld de, wColormapCopyBuffer - wTilemapCopyBuffer
     add hl, de ;Distance between TilemapCopyBuffer and ColormapCopyBuffer
     ld [hl], a ;Load the color/metatile location in the colormap buffer
     pop de

@@ -141,10 +141,10 @@ wAnimationParserScriptReadAddress:: ; $d3d9
 	ds $45
 
 wColortileDefinitions:: ;d420
-	ds $400
+	ds $500
 
-wColormapCopyBuffer:: ;d820
-	ds $3E0
+wColormapCopyBuffer:: ;d920
+	ds $2E0
 
 wdc00:: ; $dc00
 	ds $200
