@@ -37,7 +37,7 @@ InitGame:
     ld a, Bank(InitRAM)
     ld [wLoadedROMBank], a
     ld [MBC1RomBank], a
-    call InitRAM
+    call InitRAMplus2xspeed
     call WriteDMACodeToHRAM
     call ClearSprites
     call InitRamFuncD099
@@ -8983,7 +8983,7 @@ MetatileLocationLoader:
 
     push hl ;This only occurs the first time I use this code, since L is needed
     ld h, d ;This part basically loads de into hl indirectly (since `ld HL, r16` is invalid)
-    ld l, e ;Thanks, PinoBatch. I'm pretty dumb.
+    ld l, e
     push de
     ld de, wColormapCopyBuffer - wTilemapCopyBuffer
     add hl, de ;Distance between TilemapCopyBuffer and ColormapCopyBuffer
@@ -8997,7 +8997,7 @@ MetatileLocationLoader:
 
     ;The push HL from earlier is not used here because HL is no longer needed (about to be popped)
     ld h, d ;This part basically loads de into hl indirectly (since `ld HL, r16` is invalid)
-    ld l, e ;Thanks, PinoBatch. I'm pretty dumb.
+    ld l, e
     push de
     ld de, wColormapCopyBuffer - wTilemapCopyBuffer
     add hl, de ;Distance between TilemapCopyBuffer and ColormapCopyBuffer
@@ -9010,18 +9010,27 @@ MetatileLocationLoader:
     pop bc
     ret ;when it returns the metatile is loaded
 
+InitRAMplus2xspeed:
+    call InitRAM
+    push af
+    ld a, %00000001
+    ld [rKEY1], a
+    pop af
+    stop
+    ret
+
 StageColortileDefinitions:
     db Bank(Colortiles_GreenGreens);These need to be replaced with the proper color tiles once I get this working
     bigdw Colortiles_GreenGreens
 
-    db Bank(Metatiles_CastleLololo)
+    db Bank(Metatiles_CastleLololo);todo
     bigdw Metatiles_CastleLololo
 
-    db Bank(Metatiles_FloatIslands)
+    db Bank(Metatiles_FloatIslands);todo
     bigdw Metatiles_FloatIslands
 
-    db Bank(Metatiles_BubblyClouds)
+    db Bank(Metatiles_BubblyClouds);todo
     bigdw Metatiles_BubblyClouds
 
-    db Bank(Metatiles_MtDedede)
+    db Bank(Metatiles_MtDedede) ;todo
     bigdw Metatiles_MtDedede

@@ -1,5 +1,5 @@
 Current Task:
-    ☐ Find out why random data is getting into the colormap buffer
+    ☐ Find out why vertical areas have corrupted tiles. CHECK THE RENDERER, it's the only major thing that's changed, it's probably the issue
 Next Tasks:
     ☐ Vewy Uwgent, fix Y
     ☐ Make Stars on titlescreen Yellow (Manip OAM)
