@@ -3320,7 +3320,8 @@ DrawMetaSprite:
 ; Input: a = oam attribute toggle (this is xor'd with each sprite's attribute)
 ;        b = x offset
 ;        c = y offset
-    ld [wTemp], a
+    ld [wTemp], a ;A is loaded into wTemp here to be used later. 
+    ;It looks like some of the attribute is stored in ROM somewhere, and can be toggled using this, for some reason. I cannot see a use for this
     ld a, [wLoadedROMBank]
     push af
     ld a, $0b
@@ -3349,7 +3350,7 @@ DrawMetaSprite:
     ld [de], a
     inc hl
     inc e
-    bit 0, a
+    bit 4, a ;This checks a bit in a, if it is set, it has completed the metasprite. It was originally checking bit 0, but I changed it to 4 because I need 0 for setting pallets.
     jr z, .loop
     ld a, e
     ld [wSpriteProcessingOffset], a
@@ -8684,7 +8685,7 @@ Call_000_3da9:
 ColourPallets:
     ld a, %10000000 ;Increment bit
     ld [rBCPS], a
-    ;Pallet 1
+    ;Pallet 0
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
@@ -8703,7 +8704,7 @@ ColourPallets:
     ld [rBCPD], a
     ld [rBCPD], a 
 
-    ;Pallet 2
+    ;Pallet 1
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
@@ -8721,7 +8722,7 @@ ColourPallets:
     ld a, $00
     ld [rBCPD], a
     ld [rBCPD], a 
-    ;Pallet 3
+    ;Pallet 2
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
@@ -8731,9 +8732,9 @@ ColourPallets:
     ld a, $1F
     ld [rBCPD], a
 
-    ld a, $00
+    ld a, $82
     ld [rBCPD], a
-    ld a, $1F
+    ld a, $09
     ld [rBCPD], a
 
     ld a, $00
@@ -8743,23 +8744,6 @@ ColourPallets:
     ld a, %10000000 ;increment bit 
     ld [rOCPS], a
 
-    ld [rOCPD], a
-    ld [rOCPD], a
-
-    ld a, $1F
-    ld [rOCPD], a
-    ld a, $68
-    ld [rOCPD], a
-
-    ld a, $1F
-    ld [rOCPD], a
-    ld a, $0C
-    ld [rOCPD], a
-
-    ld a, $00
-    ld [rOCPD], a
-    ld [rOCPD], a
-    ;again, temp rept
     ld [rOCPD], a
     ld [rOCPD], a
 

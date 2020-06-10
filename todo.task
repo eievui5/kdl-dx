@@ -1,7 +1,13 @@
 Current Task:
-    ☐ Find out why vertical areas have corrupted tiles. CHECK THE RENDERER, it's the only major thing that's changed, it's probably the issue
-Next Tasks:
-    ☐ Vewy Uwgent, fix Y
+    ☐ Decompile every metasprite in the game... You can use kdldx5.0 to help. Remeber to change bit 4 to 1 on the last part of the metasprite. This is *THE FINAL ENGINE CHANGE* @critical 
     ☐ Make Stars on titlescreen Yellow (Manip OAM)
     Find out how the game loads its OAM DMA packets and inject the color pallet of the OAM sprite.
+Next Tasks:
     ☐ Edit tiles to look better with color (Fill in letters on title)
+    ☐ And in more pallets to make green greens a little less green
+    ☐ Color all stills (Level intros) 
+    ☐ Find a way to load new pallets during level switch
+Archive:
+  ✔ The Metatile loader uses (xxx1) attribute bit to denote the end of a metasprite, which is why air-filled kirby only had one messed-up pallet. CHANGE THIS BIT TO (1xxx), IT IS UNUSED!! @critical @done(20-06-10 01:30) @project(Current Task)
+  ✔ Implement Full color Rendering into the level system @done(20-06-09 19:57) @project(Current Task)
+  ✔ Vewy Uwgent, fix Y @done(20-06-09 19:57) @project(Next Tasks)
