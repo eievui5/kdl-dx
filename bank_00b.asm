@@ -238,109 +238,245 @@ Metasprite_KirbyDance1Right: ;5B79
 Metasprite_KirbyDance2Right: ;5B81
     db $f8, $00, $14, $00
     db $f8, $f8, $08, $01
-Metasprite_Unknown2: ;5B89
+Metasprite_KirbyDance3Right: ;5B89
     db $f8, $00, $08, $20
     db $f8, $f8, $44, $21
-Metasprite_Unknown3: ;5B91
+Metasprite_KirbyDance1Left: ;5B91
     db $f8, $00, $08, $20
     db $f8, $f8, $50, $21
-Metasprite_Unknown4: ;5B99
+Metasprite_KirbyDance2Left: ;5B99
     db $f8, $f8, $14, $20
     db $f8, $00, $08, $21
-Metasprite_Unknown5: ;5BA1
+Metasprite_KirbyDance3Left: ;5BA1
     db $f8, $f8, $08, $00
     db $f8, $00, $44, $01
-Metasprite_Unknown6: ;5BA9
+Metasprite_KirbyFlattenedSideLeft1: ;5BA9
     db $f8, $fc, $54, $21
-Metasprite_Unknown7: ;5BAD
+Metasprite_KirbyFlattenedLeft1: ;5BAD
     db $f8, $00, $46, $20
     db $f8, $f8, $56, $21
-Metasprite_Unknown8: ;5BB5
+Metasprite_KirbyFlattenedLeft2: ;5BB5
     db $f0, $00, $46, $20
     db $f0, $f8, $56, $21
-Metasprite_Unknown9: ;5BBD
+Metasprite_KirbyFlattenedSideLeft2: ;5BBD
     db $f8, $00, $54, $21
-Metasprite_Unknown10: ;5BC1
+Metasprite_KirbyFlattenedSideLeft3: ;5BC1 Not sure why there are so many of these
     db $f8, $f8, $54, $21
-Metasprite_Unknown11: ;5BC5
+Metasprite_KirbyFlattenedSideRight1: ;5BC5
     db $f8, $fc, $54, $01
-Metasprite_Unknown12: ;5BC9
+Metasprite_KirbyFlattenedRight1: ;5BC9
     db $f8, $f8, $46, $00
     db $f8, $00, $56, $01
-Metasprite_Unknown13: ;5BD1
+Metasprite_KirbyFlattenedRight2: ;5BD1
     db $f0, $f8, $46, $00
     db $f0, $00, $56, $01
-Metasprite_Unknown14: ;5BD9
+Metasprite_KirbyFlattenedSideRight2: ;5BD9
     db $f8, $00, $54, $01
-Metasprite_Unknown15: ;5BDD
+Metasprite_KirbyFlattenedSideRight3: ;5BDD
     db $f8, $f8, $54, $01
-Metasprite_Unknown16: ;5BE1
+Metasprite_KirbyRoll1: ;5BE1
     db $f8, $f8, $48, $00
     db $f8, $00, $58, $01
-Metasprite_Unknown17: ;5BE9
+Metasprite_KirbyRoll2: ;5BE9
     db $f8, $f8, $48, $40
     db $f8, $00, $58, $41
-Metasprite_Unknown18: ;5BF1
+Metasprite_KirbyRoll3: ;5BF1
     db $f8, $00, $48, $20
     db $f8, $f8, $58, $21
-Metasprite_Unknown19: ;5BF9
+Metasprite_KirbyRoll4: ;5BF9
     db $f8, $f8, $58, $60
     db $f8, $00, $48, $61
-Metasprite_Unknown20: ;5C01
+Metasprite_KirbyRideStar: ;5C01
     db $00, $04, $2a, $00
     db $f0, $04, $2a, $40
     db $00, $fc, $3e, $00
     db $00, $f4, $2e, $00
     db $f0, $fc, $3c, $00
     db $f0, $f4, $2c, $01
-Metasprite_Unknown21: ;5C19
+Metasprite_KirbyAirParticles: ;5C19
     db $f8, $fc, $5a, $01
-Metasprite_Unknown22: ;5C1D
+Metasprite_SmallStar: ;5C1D
     db $f4, $fc, $82, $01
-Metasprite_Unknown23: ;5C21
+Metasprite_Smallstar2: ;5C21 Seems to be used during level intros. Can be seen in castle lololo
     db $f4, $fc, $c6, $01
-Metasprite_Unknown24: ;5C25
+Metasprite_Star1: ;5C25
     db $f8, $00, $72, $20
     db $f8, $f8, $72, $01
-Metasprite_Unknown25: ;5C2D
+Metasprite_Star2: ;5C2D
     db $f8, $00, $74, $00
     db $f8, $f8, $64, $01
-Metasprite_Unknown26: ;5C35
-    db $f8, $00, $74, $10 ;This could be an issue. Why Is bit 4 set? I changed the game's use for bit 0 to bit 4, so why is this here?
+Metasprite_UnkStar: ;5C35 Doesn't seem to be used. It's a copy of Star2 with the unused bit 4 set.
+    db $f8, $00, $74, $10 
     db $f8, $f8, $64, $11
-Metasprite_Unknown27: ;5C3D
+Metasprite_Star3: ;5C3D
     db $f8, $00, $72, $60
     db $f8, $f8, $72, $41
-Metasprite_Unknown28: ;5C45
+Metasprite_Star4: ;5C45
     db $f8, $00, $64, $60
     db $f8, $f8, $74, $61
-Metasprite_Unknown29: ;5C4D
+Metasprite_Bomb: ;5C4D
     db $f8, $00, $76, $00
     db $f8, $f8, $66, $01
-Metasprite_Unknown30: ;5C55
-    db $f6, $00, $76, $10 ;Here's bit 4 again. I hope it's a mistake and not a potential issue.
+Metasprite_UnkBomb: ;5C55 Another use of bit 4
+    db $f6, $00, $76, $10 
     db $f6, $f8, $66, $11
-Metasprite_Unknown31: ;5C5D
+Metasprite_HyperCandy: ;5C5D
     db $f8, $00, $78, $00
     db $f8, $f8, $68, $01
-Metasprite_Unknown32: ;5C65
+Metasprite_Curry: ;5C65
     db $f8, $00, $7a, $00
     db $f8, $f8, $6a, $01
-Metasprite_Unknown33: ;5C6D
+Metasprite_MintLeaf: ;5C6D
     db $f8, $00, $7c, $60
     db $f8, $f8, $7c, $01
-Metasprite_Unknown34: ;5C75
+Metasprite_Mic: ;5C75
     db $f8, $00, $7e, $20
     db $f8, $f8, $7e, $01
-Metasprite_Unknown35: ;5C7D
+Metasprite_EnergyDrink: ;5C7D
     db $f8, $fc, $6e, $01
-Metasprite_Unknown36: ;5C81
+Metasprite_MaximTomato: ;5C81 Occording to the manual this is actually called "Bag of food."
     db $f8, $00, $6c, $20
     db $f8, $f8, $6c, $01
+Metasprite_1UP: ;5C89
+    db $f8, $00, $70, $00
+    db $f8, $f8, $60, $01
+Metasprite_2StarsImpact: ;5C91 Can be seen after using the warp star in green greens
+    db $f3, $fd, $82, $60
+    db $fa, $00, $72, $20
+    db $fa, $f8, $72, $01
+Metasprite_2StarsImpact2: ;5C9D
+    db $f6, $02, $82, $60
+    db $fa, $f6, $64, $00
+    db $fa, $fe, $74, $01
+Metasprite_2StarsImpact3: ;5CA9
+    db $fa, $04, $82, $60
+    db $f8, $fc, $72, $60
+    db $f8, $f4, $72, $41
+Metasprite_2StarsImpact4: ;5CB5
+    db $f7, $03, $82, $20
+    db $f5, $f6, $74, $60
+    db $f5, $fe, $64, $61
+Metasprite_2StarsImpact5: ;5CC1
+    db $fa, $fd, $82, $20
+    db $f2, $00, $72, $20
+    db $f2, $f8, $72, $01
+Metasprite_2StarsImpact6: ;5CCD
+    db $f8, $f8, $82, $00
+    db $f5, $05, $74, $00
+    db $f5, $fd, $64, $01
+Metasprite_2StarsImpact7: ;5CD9
+    db $fa, $f5, $82, $40
+    db $f8, $fd, $72, $40
+    db $f8, $05, $72, $61
+Metasprite_2StarsImpact8: ;5CE5
+    db $f6, $f7, $82, $40
+    db $fb, $04, $64, $20
+    db $fb, $fc, $74, $21
+Metasprite_AirPuffRight: ;5CF1
+    db $f8, $f8, $4c, $00
+    db $f8, $00, $5c, $01
+Metasprite_AirPuffLeft: ;5CF9
+    db $f8, $f8, $5c, $20
+    db $f8, $00, $4c, $21
+Metasprite_AirPuffRightUnk: ;5D01 Another Unused sprite with bit 4 set.
+    db $f8, $f8, $4a, $10
+    db $f8, $00, $5c, $11
+Metasprite_AirPuffFlippedUnk: ;5D09 This one is flipped upside down, along with bit 4 being set
+    db $f8, $f8, $4a, $50
+    db $f8, $00, $5c, $51
+Metasprite_AirPuffLeftUnk: ;5D11
+    db $f8, $00, $4a, $30
+    db $f8, $f8, $5c, $31
+Metasprite_AirPuffFlippedLeftUnk: ;5D19
+    db $f8, $00, $4a, $70
+    db $f8, $f8, $5c, $71
+Metasprite_Explosion: ;5D21
+    db $f8, $00, $62, $20
+    db $f8, $f8, $62, $01
+Metasprite_Smoke1: ;5D29
+    db $f8, $00, $5e, $60
+    db $f8, $f8, $5e, $01
+Metasprite_Smoke2: ;5D31
+    db $f8, $00, $4e, $60
+    db $f8, $f8, $4e, $01
+Metasprite_ExplosionAndSmoke1: ;5D39
+    db $f8, $06, $62, $20
+    db $f8, $fe, $62, $00
+    db $e8, $03, $4e, $60
+    db $e8, $fb, $4e, $00
+    db $08, $fd, $5e, $60
+    db $08, $f5, $5e, $01
+Metasprite_ExplosionAndSmoke2: ;5D51
+    db $fc, $04, $62, $20
+    db $fc, $fc, $62, $00
+    db $f0, $0e, $5e, $60
+    db $f0, $06, $5e, $00
+    db $00, $f2, $4e, $60
+    db $00, $ea, $4e, $01
+Metasprite_ExplosionAndSmoke3: ;5D69
+    db $fe, $00, $62, $20
+    db $fe, $f8, $62, $00
+    db $fb, $10, $4e, $60
+    db $fb, $08, $4e, $00
+    db $f5, $f0, $5e, $60
+    db $f5, $e8, $5e, $01
+Metasprite_ExplosionAndSmoke4: ;5D81
+    db $fc, $fc, $62, $20
+    db $fc, $f4, $62, $00
+    db $ea, $ef, $4e, $40
+    db $ea, $f7, $4e, $20
+    db $06, $01, $5e, $40
+    db $06, $09, $5e, $21
+Metasprite_ExplosionAndSmoke5: ;5D99
+    db $f8, $fa, $62, $60
+    db $f8, $f2, $62, $00
+    db $ea, $09, $5e, $60
+    db $ea, $01, $5e, $00
+    db $06, $f7, $4e, $60
+    db $06, $ef, $4e, $01
+Metasprite_ExplosionAndSmoke6: ;5DB1
+    db $f4, $fc, $62, $60
+    db $f4, $f4, $62, $00
+    db $f5, $10, $4e, $60
+    db $f5, $08, $4e, $00
+    db $fb, $f0, $5e, $60
+    db $fb, $e8, $5e, $01
+Metasprite_ExplosionAndSmoke7: ;5DC9
+    db $f2, $00, $62, $60
+    db $f2, $f8, $62, $00
+    db $f0, $ea, $4e, $40
+    db $f0, $f2, $4e, $20
+    db $00, $06, $5e, $00
+    db $00, $0e, $5e, $61
+Metasprite_ExplosionAndSmoke8: ;5DE1
+    db $f4, $04, $62, $20
+    db $f4, $fc, $62, $00
+    db $e8, $f5, $5e, $40
+    db $e8, $fd, $5e, $20
+    db $08, $fb, $4e, $40
+    db $08, $03, $4e, $21
+Metasprite_StarBlock: ;5DF9 This one has bit 4 set and is actually used.
+    db $f8, $00, $90, $10
+    db $f8, $f8, $80, $11
+Metasprite_EnemyBeamRight: ;5E01
+    db $f8, $fc, $84, $11
+Metasprite_EnemyBeamDownRight;5E05
+    db $f8, $fc, $84, $51
+Metasprite_EnemyBeamDownLeft: ;5E09
+    db $f8, $fc, $84, $71
+Metasprite_EnemyBeamLeft: ;5E0D
+    db $f8, $fc, $84, $31 
+Metasprite_Unknown: ;5E11
+    db $00, $00, $86, $00
+    db $00, $f8, $86, $01
+Metasprite_Unknown2: ;5E19
+    db $00, $08, $86, $00
+    db $00, $00, $86, $00
+    db $00, $f8, $86, $00
+    db $00, $f0, $86, $01
 
-    
 
-INCBIN "baserom.gb", $2db81, $2e8a9 - $2db81
+INCBIN "baserom.gb", $2dc89, $2e8a9 - $2dc89
 
 ; free space padding
 INCBIN "baserom.gb", $2e8a9, $30000 - $2e8a9
