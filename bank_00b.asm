@@ -238,7 +238,107 @@ Metasprite_KirbyDance1Right: ;5B79
 Metasprite_KirbyDance2Right: ;5B81
     db $f8, $00, $14, $00
     db $f8, $f8, $08, $01
+Metasprite_Unknown2: ;5B89
+    db $f8, $00, $08, $20
+    db $f8, $f8, $44, $21
+Metasprite_Unknown3: ;5B91
+    db $f8, $00, $08, $20
+    db $f8, $f8, $50, $21
+Metasprite_Unknown4: ;5B99
+    db $f8, $f8, $14, $20
+    db $f8, $00, $08, $21
+Metasprite_Unknown5: ;5BA1
+    db $f8, $f8, $08, $00
+    db $f8, $00, $44, $01
+Metasprite_Unknown6: ;5BA9
+    db $f8, $fc, $54, $21
+Metasprite_Unknown7: ;5BAD
+    db $f8, $00, $46, $20
+    db $f8, $f8, $56, $21
+Metasprite_Unknown8: ;5BB5
+    db $f0, $00, $46, $20
+    db $f0, $f8, $56, $21
+Metasprite_Unknown9: ;5BBD
+    db $f8, $00, $54, $21
+Metasprite_Unknown10: ;5BC1
+    db $f8, $f8, $54, $21
+Metasprite_Unknown11: ;5BC5
+    db $f8, $fc, $54, $01
+Metasprite_Unknown12: ;5BC9
+    db $f8, $f8, $46, $00
+    db $f8, $00, $56, $01
+Metasprite_Unknown13: ;5BD1
+    db $f0, $f8, $46, $00
+    db $f0, $00, $56, $01
+Metasprite_Unknown14: ;5BD9
+    db $f8, $00, $54, $01
+Metasprite_Unknown15: ;5BDD
+    db $f8, $f8, $54, $01
+Metasprite_Unknown16: ;5BE1
+    db $f8, $f8, $48, $00
+    db $f8, $00, $58, $01
+Metasprite_Unknown17: ;5BE9
+    db $f8, $f8, $48, $40
+    db $f8, $00, $58, $41
+Metasprite_Unknown18: ;5BF1
+    db $f8, $00, $48, $20
+    db $f8, $f8, $58, $21
+Metasprite_Unknown19: ;5BF9
+    db $f8, $f8, $58, $60
+    db $f8, $00, $48, $61
+Metasprite_Unknown20: ;5C01
+    db $00, $04, $2a, $00
+    db $f0, $04, $2a, $40
+    db $00, $fc, $3e, $00
+    db $00, $f4, $2e, $00
+    db $f0, $fc, $3c, $00
+    db $f0, $f4, $2c, $01
+Metasprite_Unknown21: ;5C19
+    db $f8, $fc, $5a, $01
+Metasprite_Unknown22: ;5C1D
+    db $f4, $fc, $82, $01
+Metasprite_Unknown23: ;5C21
+    db $f4, $fc, $c6, $01
+Metasprite_Unknown24: ;5C25
+    db $f8, $00, $72, $20
+    db $f8, $f8, $72, $01
+Metasprite_Unknown25: ;5C2D
+    db $f8, $00, $74, $00
+    db $f8, $f8, $64, $01
+Metasprite_Unknown26: ;5C35
+    db $f8, $00, $74, $10 ;This could be an issue. Why Is bit 4 set? I changed the game's use for bit 0 to bit 4, so why is this here?
+    db $f8, $f8, $64, $11
+Metasprite_Unknown27: ;5C3D
+    db $f8, $00, $72, $60
+    db $f8, $f8, $72, $41
+Metasprite_Unknown28: ;5C45
+    db $f8, $00, $64, $60
+    db $f8, $f8, $74, $61
+Metasprite_Unknown29: ;5C4D
+    db $f8, $00, $76, $00
+    db $f8, $f8, $66, $01
+Metasprite_Unknown30: ;5C55
+    db $f6, $00, $76, $10 ;Here's bit 4 again. I hope it's a mistake and not a potential issue.
+    db $f6, $f8, $66, $11
+Metasprite_Unknown31: ;5C5D
+    db $f8, $00, $78, $00
+    db $f8, $f8, $68, $01
+Metasprite_Unknown32: ;5C65
+    db $f8, $00, $7a, $00
+    db $f8, $f8, $6a, $01
+Metasprite_Unknown33: ;5C6D
+    db $f8, $00, $7c, $60
+    db $f8, $f8, $7c, $01
+Metasprite_Unknown34: ;5C75
+    db $f8, $00, $7e, $20
+    db $f8, $f8, $7e, $01
+Metasprite_Unknown35: ;5C7D
+    db $f8, $fc, $6e, $01
+Metasprite_Unknown36: ;5C81
+    db $f8, $00, $6c, $20
+    db $f8, $f8, $6c, $01
 
+    
 
 INCBIN "baserom.gb", $2db81, $2e8a9 - $2db81
 
