@@ -466,26 +466,127 @@ Metasprite_EnemyBeamDownLeft: ;5E09
     db $f8, $fc, $84, $71
 Metasprite_EnemyBeamLeft: ;5E0D
     db $f8, $fc, $84, $31 
-Metasprite_Unknown: ;5E11
+Metasprite_Unknown: ;5E11 These two are weird particles, they might be enemies or something in a certain level
     db $00, $00, $86, $00
     db $00, $f8, $86, $01
-Metasprite_Unknown2: ;5E19
+Metasprite_Unknown2: ;5E19 
     db $00, $08, $86, $00
     db $00, $00, $86, $00
     db $00, $f8, $86, $00
     db $00, $f0, $86, $01
-Metasprite_Unknown3: ;5E29
+Metasprite_CannonBall1: ;5E29 The various location offsets are responsible for the cannonball's "spin"
     db $f8, $fc, $88, $01
-Metasprite_Unknown4: ;5E2D
+Metasprite_CannonBall2: ;5E2D
     db $f6, $fb, $88, $01
-Metasprite_Unknown5: ;5E31
+Metasprite_CannonBall3: ;5E31
     db $f6, $fd, $88, $01
-Metasprite_Unknown6: ;5E35
+Metasprite_CannonBall4: ;5E35
     db $f8, $ff, $88, $01
-Metasprite_Unknown7: ;5E39
+Metasprite_CannonBall5: ;5E39
     db $fa, $fd, $88, $01
-Metasprite_Unknown8: ;5E3D
+Metasprite_CannonBall6: ;5E3D
     db $fa, $fb, $88, $01
+Metasprite_CannonBall7: ;5E41
+    db $f8, $fa, $88, $01
+Metasprite_Gordo1: ;5E45
+    db $f8, $00, $8a, $20
+    db $f8, $f8, $8a, $41
+Metasprite_Gordo2: ;5E4D
+    db $f8, $f8, $8a, $00
+    db $f8, $00, $8a, $61
+Metasprite_WaddleDeeLeft1: ;5E55 The enemy sprites are facing the opposite direction of Kirby. Left comes first
+    db $f8, $00, $98, $00
+    db $f8, $f8, $8c, $01
+Metasprite_WaddleDeeLeft2: ;5E5D
+    db $f8, $00, $9a, $00
+    db $f8, $f8, $8e, $01
+Metasprite_WaddleDeeRight1: ;5E65
+    db $f8, $f8, $98, $20
+    db $f8, $00, $8c, $21
+Metasprite_WaddleDeeRight2: ;5E6D
+    db $f8, $f8, $9a, $20
+    db $f8, $00, $8e, $21
+Metasprite_WaddleDooLeft1: ;5E75
+    db $f8, $00, $98, $00
+    db $f8, $f8, $92, $01
+Metasprite_WaddleDooLeft2: ;5E7D
+    db $f8, $00, $9a, $00
+    db $f8, $f8, $94, $01
+Metasprite_WaddleDooBeamLeft: ;5E85
+    db $f8, $f8, $96, $00
+    db $f8, $00, $98, $01
+Metasprite_WaddleDooLeftUnk1: ;5E8D Bit 4 makes me sad :(
+    db $f8, $01, $98, $10
+    db $f8, $f9, $92, $11
+Metasprite_WaddleDooLeftUnk2: ;5E95
+    db $f8, $01, $98, $10
+    db $f8, $f9, $96, $11
+Metasprite_WaddleDooRight1: ;5E9D
+    db $f8, $f8, $98, $20
+    db $f8, $00, $92, $21
+Metasprite_WaddleDooRight2: ;5EA5
+    db $f8, $f8, $9a, $20
+    db $f8, $00, $94, $21
+Metasprite_WaddleDooBeamRight: ;5EAD
+    db $f8, $00, $96, $20
+    db $f8, $f8, $98, $21
+Metasprite_WaddleDooRightUnk1: ;5EB5
+    db $f8, $f7, $98, $30
+    db $f8, $ff, $92, $31
+Metasprite_WaddleDooRightUnk2: ;5EBD
+    db $f8, $f7, $98, $30
+    db $f8, $ff, $96, $31
+Metasprite_BrontoBurtLeft1: ;5EC5
+    db $f8, $00, $9e, $00
+    db $f8, $f8, $9c, $01
+Metasprite_BrontoBurtLeft2: ;5ECD
+    db $f8, $00, $a2, $00
+    db $f8, $f8, $a0, $01
+Metasprite_BrontoBurtRight1: ;5ED5
+    db $f8, $f8, $9e, $20
+    db $f8, $00, $9c, $21
+Metasprite_BrontoBurtRight2: ;5EDD
+    db $f8, $f8, $a2, $20
+    db $f8, $00, $a0, $21
+Metasprite_CannonLeft: ;5EE5
+    db $f8, $00, $ac, $00
+    db $f8, $f8, $aa, $01
+Metasprite_CannonUpLeft: ;5EED
+    db $f8, $00, $a8, $00
+    db $f8, $f8, $a6, $01
+Metasprite_CannonUp: ;5EF5
+    db $f8, $00, $a4, $20
+    db $f8, $f8, $a4, $01
+Metasprite_CannonUpRight: ;5EFD
+    db $f8, $f8, $a8, $20
+    db $f8, $00, $a6, $21
+Metasprite_CannonRight: ;5F05
+    db $f8, $f8, $ac, $20
+    db $f8, $00, $aa, $21
+Metasprite_LololoBlock: ;5F0D Possibly. The data matches but I set a breakpoint and it didn't trigger
+    db $f8, $00, $e6, $20
+    db $f8, $f8, $e6, $01
+MetaspriteUnknown3: ;5F15
+    db $f8, $00, $e8, $20
+    db $f8, $f8, $e8, $01
+MetaspriteUnkown4: ;5F1D
+    db $f8, $00, $e4, $20
+    db $f8, $f8, $e4, $01
+Metasprite_WhispyWoodsEye: ;5F25 Possibly. The data matches but the next sprite doesn't make sense
+    db $f8, $00, $f2, $20
+    db $f8, $f8, $f2, $01
+Metasprite_Unknown5: ;5F2D
+    db $f8, $00, $f2, $20
+    db $f8, $f8, $ea, $01
+Metasprite_Unknown6: ;5F35
+    db $f8, $00, $f8, $00
+    db $f8, $f8, $fa, $01
+Metasprite_Unknown7: ;5F3D
+    db $f8, $00, $ec, $00
+    db $f8, $f8, $f0, $01
+Metasprite_Unknown8: ;5F45 Reversed Unknown6
+    db $f8, $f8, $f8, $20
+    db $f8, $00, $fa, $21
 
 
 INCBIN "baserom.gb", $2dc89, $2e8a9 - $2dc89
