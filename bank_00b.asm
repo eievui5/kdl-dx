@@ -474,6 +474,18 @@ Metasprite_Unknown2: ;5E19
     db $00, $00, $86, $00
     db $00, $f8, $86, $00
     db $00, $f0, $86, $01
+Metasprite_Unknown3: ;5E29
+    db $f8, $fc, $88, $01
+Metasprite_Unknown4: ;5E2D
+    db $f6, $fb, $88, $01
+Metasprite_Unknown5: ;5E31
+    db $f6, $fd, $88, $01
+Metasprite_Unknown6: ;5E35
+    db $f8, $ff, $88, $01
+Metasprite_Unknown7: ;5E39
+    db $fa, $fd, $88, $01
+Metasprite_Unknown8: ;5E3D
+    db $fa, $fb, $88, $01
 
 
 INCBIN "baserom.gb", $2dc89, $2e8a9 - $2dc89
