@@ -8685,26 +8685,26 @@ Call_000_3da9:
 ColourPallets:
     ld a, %10000000 ;Increment bit
     ld [rBCPS], a
-    ;Pallet 0
+    ;BG0
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
 
-    ld a, $7F
+    ld a, $1F
     ld [rBCPD], a
-    ld a, $40
-    ld [rBCPD], a
-
-    ld a, $7C
-    ld [rBCPD], a
-    ld a, $00
+    ld a, $68
     ld [rBCPD], a
 
-    ld a, $00
+    ld a, $1F
+    ld [rBCPD], a
+    ld a, $0C
+    ld [rBCPD], a
+
+    xor a
     ld [rBCPD], a
     ld [rBCPD], a 
 
-    ;Pallet 1
+    ;BG1
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
@@ -8719,10 +8719,10 @@ ColourPallets:
     ld a, $E0
     ld [rBCPD], a
 
-    ld a, $00
+    xor a
     ld [rBCPD], a
     ld [rBCPD], a 
-    ;Pallet 2
+    ;BG2
     ld a, $FF
     ld [rBCPD], a
     ld [rBCPD], a
@@ -8737,13 +8737,13 @@ ColourPallets:
     ld a, $09
     ld [rBCPD], a
 
-    ld a, $00
+    xor a
     ld [rBCPD], a
     ld [rBCPD], a 
     ;similar code for sprites
     ld a, %10000000 ;increment bit 
     ld [rOCPS], a
-
+    ;OBJ0
     ld [rOCPD], a
     ld [rOCPD], a
 
@@ -8757,7 +8757,24 @@ ColourPallets:
     ld a, $0C
     ld [rOCPD], a
 
-    ld a, $00
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+    ;OBJ1
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $FF
+    ld [rOCPD], a
+    ld a, $2B
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $68
+    ld [rOCPD], a
+
+    xor a
     ld [rOCPD], a
     ld [rOCPD], a
     jp Return
