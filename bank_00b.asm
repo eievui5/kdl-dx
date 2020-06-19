@@ -13,144 +13,144 @@ SECTION "ROM Bank $00b", ROMX[$4000], BANK[$b]
 ;0: Palette number bit 1 (GB Color only)
 
 Metasprite_WhispyWoods: ;$4000
-    db $11, $fb, $f2, $00
-    db $f0, $01, $f2, $00
-    db $f0, $f9, $f2, $10
+    db $11, $fb, $f2, $07
+    db $f0, $01, $f2, $07
+    db $f0, $f9, $f2, $17
 Metasprite_WhispyWoodsBlink1: ;$400C
-    db $0e, $fb, $f4, $00
-    db $f0, $01, $f4, $00
-    db $f0, $f9, $f4, $10
+    db $0e, $fb, $f4, $07
+    db $f0, $01, $f4, $07
+    db $f0, $f9, $f4, $17
 Metasprite_WhispyWoodsBlink2: ;$4018
-    db $0a, $fb, $f4, $00
-    db $f0, $01, $fc, $00
-    db $f0, $f9, $fc, $10
+    db $0a, $fb, $f4, $07
+    db $f0, $01, $fc, $07
+    db $f0, $f9, $fc, $17
 Metasprite_WhispyWoodsBlow1: ;$4024
-    db $0d, $f9, $f6, $20
-    db $0d, $00, $f6, $00
-    db $f1, $01, $f4, $00
-    db $f0, $f9, $f2, $10
+    db $0d, $f9, $f6, $27
+    db $0d, $00, $f6, $07
+    db $f1, $01, $f4, $07
+    db $f0, $f9, $f2, $17
 Metasprite_WhispyWoodsBlow2: ;$4034
-    db $11, $fb, $f6, $20
-    db $11, $02, $f6, $00
-    db $e8, $03, $f4, $40
-    db $e6, $fb, $f2, $10
+    db $11, $fb, $f6, $27
+    db $11, $02, $f6, $07
+    db $e8, $03, $f4, $47
+    db $e6, $fb, $f2, $17
 Metasprite_WhispyWoodsCry: ;$4044
-    db $fe, $02, $fa, $00
-    db $0d, $f9, $f6, $20
-    db $0d, $00, $f6, $00
-    db $f3, $02, $f6, $00
-    db $f0, $f9, $f2, $10
+    db $fe, $02, $fa, $06
+    db $0d, $f9, $f6, $27
+    db $0d, $00, $f6, $07
+    db $f3, $02, $f6, $07
+    db $f0, $f9, $f2, $17
 Metasprite_WhispyWoodsBlow3: ;$4058
-    db $0f, $fa, $f8, $00
-    db $0f, $02, $fe, $00
-    db $f0, $01, $f2, $00
-    db $f0, $f9, $f2, $10
+    db $0f, $fa, $f8, $07
+    db $0f, $02, $fe, $07
+    db $f0, $01, $f2, $07
+    db $f0, $f9, $f2, $17
 Metasprite_WhispyWoodsBlow4: ;$4068
-    db $0f, $f6, $f8, $00
-    db $0f, $fe, $fe, $00
-    db $f0, $01, $f2, $00
-    db $f0, $f9, $f2, $10
+    db $0f, $f6, $f8, $07
+    db $0f, $fe, $fe, $07
+    db $f0, $01, $f2, $07
+    db $f0, $f9, $f2, $17
 Metasprite_WhispyWoodsBlow5: ;$4078
-    db $0f, $f3, $f8, $00
-    db $0f, $fb, $fe, $00
-    db $f0, $01, $f2, $00
-    db $f0, $f9, $f2, $10
+    db $0f, $f3, $f8, $07
+    db $0f, $fb, $fe, $07
+    db $f0, $01, $f2, $07
+    db $f0, $f9, $f2, $17
 Metasprite_PoppyBrosSr1: ;$4088
-    db $04, $00, $bc, $00
-    db $04, $f8, $b8, $00
-    db $f9, $fe, $b4, $00
-    db $f9, $f6, $b0, $10
+    db $04, $00, $bc, $02
+    db $04, $f8, $b8, $02
+    db $f9, $fe, $b4, $02
+    db $f9, $f6, $b0, $12
 Metasprite_PoppyBrosSr2: ;$4098
-    db $04, $00, $bc, $00
-    db $04, $f8, $ba, $00
-    db $f9, $ff, $b4, $00
-    db $f9, $f7, $b0, $10
+    db $04, $00, $bc, $02
+    db $04, $f8, $ba, $02
+    db $f9, $ff, $b4, $02
+    db $f9, $f7, $b0, $12
 Metasprite_PoppyBrosSr3: ;$40A8
-    db $04, $fb, $ba, $20
-    db $04, $f3, $bc, $20
-    db $f9, $00, $b4, $00
-    db $f9, $f8, $b0, $10
+    db $04, $fb, $ba, $22
+    db $04, $f3, $bc, $22
+    db $f9, $00, $b4, $02
+    db $f9, $f8, $b0, $12
 Metasprite_PoppyBrosSr4: ;$40B8
-    db $04, $fc, $b8, $20
-    db $04, $f4, $bc, $20
-    db $f9, $01, $b4, $00
-    db $f9, $f9, $b0, $10
+    db $04, $fc, $b8, $22
+    db $04, $f4, $bc, $22
+    db $f9, $01, $b4, $02
+    db $f9, $f9, $b0, $12
 Metasprite_PoppyBrosSr5: ;$40C8
-    db $06, $f2, $ae, $00
-    db $04, $00, $bc, $00
-    db $04, $f8, $b8, $00
-    db $f9, $fe, $b4, $00
-    db $f9, $f6, $b0, $10
+    db $06, $f2, $ae, $02
+    db $04, $00, $bc, $02
+    db $04, $f8, $b8, $02
+    db $f9, $fe, $b4, $02
+    db $f9, $f6, $b0, $12
 Metasprite_PoppyBrosSr6: ;$40DC
-    db $02, $ed, $ae, $00
-    db $04, $00, $bc, $00
-    db $04, $f8, $b8, $00
-    db $f9, $fe, $b6, $00
-    db $f9, $f6, $b2, $10
+    db $02, $ed, $ae, $02
+    db $04, $00, $bc, $02
+    db $04, $f8, $b8, $02
+    db $f9, $fe, $b6, $02
+    db $f9, $f6, $b2, $12
 Metasprite_PoppyBrosSrBomb1: ;$40F0
-    db $09, $e7, $66, $00
-    db $09, $ef, $76, $00
-    db $06, $f2, $ae, $00
-    db $04, $00, $bc, $00
-    db $04, $f8, $b8, $00
-    db $f9, $fe, $b4, $00
-    db $f9, $f6, $b0, $10
+    db $09, $e7, $66, $07
+    db $09, $ef, $76, $07
+    db $06, $f2, $ae, $02
+    db $04, $00, $bc, $02
+    db $04, $f8, $b8, $02
+    db $f9, $fe, $b4, $02
+    db $f9, $f6, $b0, $12
 Metasprite_PoppyBrosSrBomb2: ;$410C
-    db $ff, $e4, $66, $00
-    db $ff, $ec, $76, $00
-    db $02, $ef, $ae, $00
-    db $04, $00, $bc, $00
-    db $04, $f8, $b8, $00
-    db $f9, $fe, $b6, $00
-    db $f9, $f6, $b2, $10
+    db $ff, $e4, $66, $07
+    db $ff, $ec, $76, $07
+    db $02, $ef, $ae, $02
+    db $04, $00, $bc, $02
+    db $04, $f8, $b8, $02
+    db $f9, $fe, $b6, $02
+    db $f9, $f6, $b2, $12
 Metasprite_PoppyBrosSrBomb3: ;$4128
-    db $f1, $e6, $66, $00
-    db $f1, $ee, $76, $00
-    db $f8, $ef, $ae, $00
-    db $04, $00, $bc, $00
-    db $04, $f8, $ba, $00
-    db $f9, $ff, $b6, $00
-    db $f9, $f7, $b2, $10
+    db $f1, $e6, $66, $07
+    db $f1, $ee, $76, $07
+    db $f8, $ef, $ae, $02
+    db $04, $00, $bc, $02
+    db $04, $f8, $ba, $02
+    db $f9, $ff, $b6, $02
+    db $f9, $f7, $b2, $12
 Metasprite_PoppyBrosSrBomb4: ;$4144
-    db $e4, $fa, $76, $00
-    db $e4, $f2, $66, $00
-    db $f0, $f6, $ae, $00
-    db $04, $fb, $ba, $20
-    db $04, $f3, $bc, $20
-    db $f9, $00, $b6, $00
-    db $f9, $f8, $b2, $10
+    db $e4, $fa, $76, $07
+    db $e4, $f2, $66, $07
+    db $f0, $f6, $ae, $02
+    db $04, $fb, $ba, $22
+    db $04, $f3, $bc, $22
+    db $f9, $00, $b6, $02
+    db $f9, $f8, $b2, $12
 Metasprite_PoppyBrosSrBomb5: ;$4160
-    db $eb, $0c, $76, $00
-    db $eb, $04, $66, $00
-    db $f4, $03, $ae, $00
-    db $04, $fc, $b8, $20
-    db $04, $f4, $bc, $20
-    db $f9, $01, $b6, $00
-    db $f9, $f9, $b2, $10
+    db $eb, $0c, $76, $07
+    db $eb, $04, $66, $07
+    db $f4, $03, $ae, $02
+    db $04, $fc, $b8, $22
+    db $04, $f4, $bc, $22
+    db $f9, $01, $b6, $02
+    db $f9, $f9, $b2, $12
 Metasprite_PoppyBrosJrLeft1: ;$417C
-    db $f8, $00, $c2, $00
-    db $f8, $f8, $be, $10
+    db $f8, $00, $c2, $02
+    db $f8, $f8, $be, $12
 Metasprite_PoppyBrosJrLeft2: ;$4184
-    db $f8, $00, $c4, $00
-    db $f8, $f8, $c0, $10
+    db $f8, $00, $c4, $02
+    db $f8, $f8, $c0, $12
 Metasprite_PoppyBrosJrRight1: ;418C
-    db $f8, $f8, $c2, $20
-    db $f8, $00, $be, $30
+    db $f8, $f8, $c2, $22
+    db $f8, $00, $be, $32
 Metasprite_PoppyBrosJrRight2: ;4194
-    db $f8, $f8, $c4, $20
-    db $f8, $00, $c0, $30
+    db $f8, $f8, $c4, $22
+    db $f8, $00, $c0, $32
 Metasprite_CappyLeft1: ;419C
-    db $f8, $02, $d6, $00
-    db $f8, $fa, $d0, $30
+    db $f8, $02, $d6, $03
+    db $f8, $fa, $d0, $13
 Metasprite_CappyLeft2: ;41A4
-    db $f8, $fe, $d4, $00
-    db $f8, $f6, $d2, $30
+    db $f8, $fe, $d4, $03
+    db $f8, $f6, $d2, $13
 Metasprite_CappyRight1: ;41AC
-    db $f8, $f5, $d6, $20
-    db $f8, $fd, $d0, $30
+    db $f8, $f5, $d6, $23
+    db $f8, $fd, $d0, $33
 Metasprite_CappyRight2: ;41B4
-    db $f8, $f8, $d4, $20
-    db $f8, $00, $d2, $30
+    db $f8, $f8, $d4, $23
+    db $f8, $00, $d2, $33
 Metasprite_CappyCappedLeft: ;41BC
     db $f8, $01, $da, $00
     db $f8, $f9, $d8, $10
@@ -173,165 +173,165 @@ Metasprite_Apple4: ;41EC
     db $f8, $00, $e0, $40
     db $f8, $f8, $de, $50
 Metasprite_TwizzyLandedLeft: ;41F4
-    db $f8, $00, $ca, $00
-    db $f8, $f8, $c6, $10
+    db $f8, $00, $ca, $03
+    db $f8, $f8, $c6, $13
 Metasprite_TwizzyFlyLeft1: ;41FC
-    db $f7, $00, $cc, $00
-    db $f7, $f8, $c6, $10
+    db $f7, $00, $cc, $03
+    db $f7, $f8, $c6, $13
 Metasprite_TwizzyFlyLeft2: ;4204
-    db $f9, $00, $ce, $00
-    db $f9, $f8, $c8, $10
+    db $f9, $00, $ce, $03
+    db $f9, $f8, $c8, $13
 Metasprite_TwizzyLandedRight: ;420C
-    db $f8, $f8, $ca, $20
-    db $f8, $00, $c6, $30
+    db $f8, $f8, $ca, $23
+    db $f8, $00, $c6, $33
 Metasprite_TwizzyFlyRight1: ;4214
-    db $f7, $f8, $cc, $20
-    db $f7, $00, $c6, $30
+    db $f7, $f8, $cc, $23
+    db $f7, $00, $c6, $33
 Metasprite_TwizzyFlyRight2: ;421C
-    db $f9, $f8, $ce, $20
-    db $f9, $00, $c8, $30
+    db $f9, $f8, $ce, $23
+    db $f9, $00, $c8, $33
 Metasprite_GrizzoLeft1: ;4224
-    db $00, $04, $f0, $20
-    db $00, $fc, $ee, $00
-    db $00, $f4, $f0, $00
-    db $f0, $04, $e6, $00
-    db $f0, $fc, $e4, $00
-    db $f0, $f4, $e2, $10
+    db $00, $04, $f0, $24
+    db $00, $fc, $ee, $04
+    db $00, $f4, $f0, $04
+    db $f0, $04, $e6, $04
+    db $f0, $fc, $e4, $04
+    db $f0, $f4, $e2, $14
 Metasprite_GrizzoLeft2: ;423C
-    db $ff, $04, $ec, $00
-    db $ff, $fc, $ea, $00
-    db $ff, $f4, $e8, $00
-    db $ef, $04, $e6, $00
-    db $ef, $fc, $e4, $00
-    db $ef, $f4, $e2, $10
+    db $ff, $04, $ec, $04
+    db $ff, $fc, $ea, $04
+    db $ff, $f4, $e8, $04
+    db $ef, $04, $e6, $04
+    db $ef, $fc, $e4, $04
+    db $ef, $f4, $e2, $14
 Metasprite_GrizzoLeft3: ;4254
-    db $ff, $04, $f0, $20
-    db $ff, $fc, $ea, $00
-    db $ff, $f4, $e8, $00
-    db $ef, $04, $e6, $00
-    db $ef, $fc, $e4, $00
-    db $ef, $f4, $e2, $10
+    db $ff, $04, $f0, $24
+    db $ff, $fc, $ea, $04
+    db $ff, $f4, $e8, $04
+    db $ef, $04, $e6, $04
+    db $ef, $fc, $e4, $04
+    db $ef, $f4, $e2, $14
 Metasprite_GrizzoRight1: ;426C
-    db $00, $f4, $f0, $00
-    db $00, $fc, $ee, $20
-    db $00, $04, $f0, $20
-    db $f0, $f4, $e6, $20
-    db $f0, $fc, $e4, $20
-    db $f0, $04, $e2, $30
+    db $00, $f4, $f0, $04
+    db $00, $fc, $ee, $24
+    db $00, $04, $f0, $24
+    db $f0, $f4, $e6, $24
+    db $f0, $fc, $e4, $24
+    db $f0, $04, $e2, $34
 Metasprite_GrizzoRight2: ;4284
-    db $ff, $f4, $ec, $20
-    db $ff, $fc, $ea, $20
-    db $ff, $04, $e8, $20
-    db $ef, $f4, $e6, $20
-    db $ef, $fc, $e4, $20
-    db $ef, $04, $e2, $30
+    db $ff, $f4, $ec, $24
+    db $ff, $fc, $ea, $24
+    db $ff, $04, $e8, $24
+    db $ef, $f4, $e6, $24
+    db $ef, $fc, $e4, $24
+    db $ef, $04, $e2, $34
 Metasprite_GrizzoRight3: ;429D
-    db $ff, $f4, $f0, $00
-    db $ff, $fc, $ea, $20
-    db $ff, $04, $e8, $20
-    db $ef, $f4, $e6, $20
-    db $ef, $fc, $e4, $20
-    db $ef, $04, $e2, $30
+    db $ff, $f4, $f0, $04
+    db $ff, $fc, $ea, $24
+    db $ff, $04, $e8, $24
+    db $ef, $f4, $e6, $24
+    db $ef, $fc, $e4, $24
+    db $ef, $04, $e2, $34
 Metasprite_PoppyRidingGrizzoLeft1: ;42B4
-    db $ff, $04, $ec, $00
-    db $ff, $fc, $ea, $00
-    db $ff, $f4, $e8, $00
-    db $ef, $04, $e6, $00
-    db $ef, $fc, $e4, $00
-    db $ef, $f4, $e2, $00
-    db $e3, $03, $c2, $00
-    db $e3, $fb, $be, $10
+    db $ff, $04, $ec, $04
+    db $ff, $fc, $ea, $04
+    db $ff, $f4, $e8, $04
+    db $ef, $04, $e6, $04
+    db $ef, $fc, $e4, $04
+    db $ef, $f4, $e2, $04
+    db $e3, $03, $c2, $02
+    db $e3, $fb, $be, $12
 Metasprite_PoppyRidingGrizzoLeft2: ;42D4
-    db $00, $04, $f0, $20
-    db $00, $fc, $ee, $00
-    db $00, $f4, $f0, $00
-    db $f0, $04, $e6, $00
-    db $f0, $fc, $e4, $00
-    db $f0, $f4, $e2, $00
-    db $e5, $03, $c4, $00
-    db $e5, $fb, $c0, $10
+    db $00, $04, $f0, $24
+    db $00, $fc, $ee, $04
+    db $00, $f4, $f0, $04
+    db $f0, $04, $e6, $04
+    db $f0, $fc, $e4, $04
+    db $f0, $f4, $e2, $04
+    db $e5, $03, $c4, $02
+    db $e5, $fb, $c0, $12
 Metasprite_PoppyRidingAppleLeft1: ;42F4
-    db $e8, $00, $c4, $00
-    db $e8, $f8, $c0, $00
+    db $e8, $00, $c4, $02
+    db $e8, $f8, $c0, $02
     db $f8, $00, $e0, $00
     db $f8, $f8, $de, $10
 Metasprite_PoppyRidingAppleLeft2: ;4304
-    db $e8, $f8, $be, $00
-    db $e8, $00, $c2, $00
+    db $e8, $f8, $be, $02
+    db $e8, $00, $c2, $02
     db $f8, $f8, $e0, $20
     db $f8, $00, $de, $30
 Metasprite_PoppyRidingAppleLeft3: ;4314
-    db $e8, $00, $c4, $00
-    db $e8, $f8, $c0, $00
+    db $e8, $00, $c4, $02
+    db $e8, $f8, $c0, $02
     db $f8, $f8, $e0, $60
     db $f8, $00, $de, $70
 Metasprite_PoppyRidingAppleLeft4: ;4324
-    db $e8, $00, $c2, $00
-    db $e8, $f8, $be, $00
+    db $e8, $00, $c2, $02
+    db $e8, $f8, $be, $02
     db $f8, $00, $e0, $40
     db $f8, $f8, $de, $50
 Metasprite_PoppyRidingGrizzoRight1: ;4334
-    db $00, $f4, $f0, $00
-    db $00, $fc, $ee, $20
-    db $00, $04, $f0, $20
-    db $f0, $f4, $e6, $20
-    db $f0, $fc, $e4, $20
-    db $f0, $04, $e2, $20
-    db $e3, $f4, $c2, $20
-    db $e3, $fc, $be, $30
+    db $00, $f4, $f0, $04
+    db $00, $fc, $ee, $24
+    db $00, $04, $f0, $24
+    db $f0, $f4, $e6, $24
+    db $f0, $fc, $e4, $24
+    db $f0, $04, $e2, $24
+    db $e3, $f4, $c2, $22
+    db $e3, $fc, $be, $32
 Metasprite_PoppyRidingGrizzoRight2: ;4354
-    db $ff, $f4, $ec, $20
-    db $ff, $fc, $ea, $20
-    db $ff, $04, $e8, $20
-    db $ef, $f4, $e6, $20
-    db $ef, $fc, $e4, $20
-    db $ef, $04, $e2, $20
-    db $e5, $f4, $c4, $20
-    db $e5, $fc, $c0, $30
+    db $ff, $f4, $ec, $24
+    db $ff, $fc, $ea, $24
+    db $ff, $04, $e8, $24
+    db $ef, $f4, $e6, $24
+    db $ef, $fc, $e4, $24
+    db $ef, $04, $e2, $24
+    db $e5, $f4, $c4, $22
+    db $e5, $fc, $c0, $32
 Metasprite_BoolerLeft1: ;4374
-    db $f8, $f8, $c8, $00
-    db $f8, $00, $ca, $10
+    db $f8, $f8, $c8, $07
+    db $f8, $00, $ca, $17
 Metasprite_BoolerLeft2: ;437C
-    db $f8, $f8, $cc, $00
-    db $f8, $00, $ce, $10
+    db $f8, $f8, $cc, $07
+    db $f8, $00, $ce, $17
 Metasprite_BoolerLeft3: ;4384 
-    db $f8, $f8, $cc, $00
-    db $f8, $00, $d0, $10
+    db $f8, $f8, $cc, $07
+    db $f8, $00, $d0, $17
 Metasprite_BoolerRight1: ;438C
-    db $f8, $f8, $ca, $20
-    db $f8, $00, $c8, $30
+    db $f8, $f8, $ca, $27
+    db $f8, $00, $c8, $37
 Metasprite_BoolerRight2: ;4394
-    db $f8, $f8, $ce, $20
-    db $f8, $00, $cc, $30
+    db $f8, $f8, $ce, $27
+    db $f8, $00, $cc, $37
 Metasprite_BoolerRight3: ;439C
-    db $f8, $f8, $d0, $20
-    db $f8, $00, $cc, $30
+    db $f8, $f8, $d0, $27
+    db $f8, $00, $cc, $37
 Metasprite_BoolerFlippedLeft: ;43A4
-    db $f8, $f8, $cc, $40
-    db $f8, $00, $d0, $50
+    db $f8, $f8, $cc, $47
+    db $f8, $00, $d0, $57
 Metasprite_BoolerFlippedRight: ;43AC
-    db $f8, $f8, $d0, $60
-    db $f8, $00, $cc, $70
+    db $f8, $f8, $d0, $67
+    db $f8, $00, $cc, $77
 Metasprite_FlapperLeft1: ;43B4
-    db $f8, $f5, $b2, $00
-    db $f8, $fd, $b4, $00
-    db $f8, $05, $b6, $10
+    db $f8, $f5, $b2, $07
+    db $f8, $fd, $b4, $07
+    db $f8, $05, $b6, $17
 Metasprite_FlapperLeft2: ;43C0
-    db $f8, $f8, $b8, $00
-    db $f8, $00, $ba, $10
+    db $f8, $f8, $b8, $07
+    db $f8, $00, $ba, $17
 Metasprite_FlapperRight1: ;43C8
-    db $f8, $f5, $b6, $20
-    db $f8, $fd, $b4, $20
-    db $f8, $05, $b2, $30
+    db $f8, $f5, $b6, $27
+    db $f8, $fd, $b4, $27
+    db $f8, $05, $b2, $37
 Metasprite_FlapperRight2: ;43D4
-    db $f8, $f8, $ba, $20
-    db $f8, $00, $b8, $30
+    db $f8, $f8, $ba, $27
+    db $f8, $00, $b8, $37
 Metasprite_FlapperFlippedRight: ;43DC
-    db $f8, $f8, $ba, $60
-    db $f8, $00, $b8, $70
+    db $f8, $f8, $ba, $67
+    db $f8, $00, $b8, $77
 Metasprite_FlapperFlippedLeft: ;43E4
-    db $f8, $f8, $b8, $40
-    db $f8, $00, $ba, $50
+    db $f8, $f8, $b8, $47
+    db $f8, $00, $ba, $57
 Metasprite_Glunk1: ;43EC
     db $f8, $f8, $d2, $00
     db $f8, $00, $d2, $30
@@ -346,48 +346,48 @@ Metasprite_Unknown10: ;4404
 Metasprite_Unknown11: ;4408
     db $f4, $fc, $ea, $10
 Metasprite_Chuckie1: ;440C
-    db $f8, $f8, $ae, $00
-    db $f8, $00, $b0, $10
+    db $f8, $f8, $ae, $04
+    db $f8, $00, $b0, $14
 Metasprite_Chuckie2: ;4414
-    db $f8, $f8, $b0, $20
-    db $f8, $00, $ae, $30
+    db $f8, $f8, $b0, $24
+    db $f8, $00, $ae, $34
 Metasprite_MumbiesLeft1: ;441C
-    db $f8, $f8, $c0, $00
-    db $f8, $00, $c2, $10
+    db $f8, $f8, $c0, $07
+    db $f8, $00, $c2, $17
 Metasprite_MumbiesLeft2: ;4424
-    db $f8, $f8, $c4, $00
-    db $f8, $00, $c6, $10
+    db $f8, $f8, $c4, $07
+    db $f8, $00, $c6, $17
 Metasprite_MumbiesRight1: ;442C
-    db $f8, $f8, $c2, $20
-    db $f8, $00, $c0, $30
+    db $f8, $f8, $c2, $27
+    db $f8, $00, $c0, $37
 Metasprite_MumbiesRight2: ;4434
-    db $f8, $f8, $c6, $20
-    db $f8, $00, $c4, $30
+    db $f8, $f8, $c6, $27
+    db $f8, $00, $c4, $37
 Metasprite_TwoFaceIdle: ;443C
-    db $f8, $f8, $e0, $00
-    db $f8, $00, $e0, $30
+    db $f8, $f8, $e0, $03
+    db $f8, $00, $e0, $33
 Metasprite_TwoFaceEvil: ;4444
-    db $f8, $f8, $e2, $00
-    db $f8, $00, $e2, $30
+    db $f8, $f8, $e2, $04
+    db $f8, $00, $e2, $34
 Metasprite_TwoFaceSide1: ;444C
-    db $f8, $f8, $bc, $10
+    db $f8, $f8, $bc, $14
 Metasprite_TwoFaceSide2: ;4450
-    db $f8, $00, $bc, $30
+    db $f8, $00, $bc, $34
 Metasprite_TwoFaceBack: ;4454
-    db $f8, $f8, $be, $00
-    db $f8, $00, $be, $30
+    db $f8, $f8, $be, $04
+    db $f8, $00, $be, $34
 Metasprite_BroomHatter1: ;445C
-    db $f8, $f8, $dc, $00
-    db $f8, $00, $de, $10
+    db $f8, $f8, $dc, $04
+    db $f8, $00, $de, $14
 Metasprite_BroomHatter2: ;4464
-    db $f8, $f8, $da, $20
-    db $f8, $00, $d8, $30
+    db $f8, $f8, $da, $24
+    db $f8, $00, $d8, $34
 Metasprite_BroomHatter3: ;446C
-    db $f8, $00, $da, $00
-    db $f8, $f8, $d8, $10
+    db $f8, $00, $da, $04
+    db $f8, $f8, $d8, $14
 Metasprite_BroomHatter4: ;4474
-    db $f8, $00, $dc, $20
-    db $f8, $f8, $de, $30
+    db $f8, $00, $dc, $24
+    db $f8, $f8, $de, $34
 Metasprite_GlunkFlipped1: ;447C
     db $f8, $00, $d2, $60
     db $f8, $f8, $d2, $50
@@ -398,80 +398,80 @@ Metasprite_GlunkFlipped3: ;448C
     db $f8, $00, $d6, $60
     db $f8, $f8, $d6, $50
 Metasprite_LololoBlock: ;4494
-    db $f8, $00, $e6, $20
-    db $f8, $f8, $e6, $10
+    db $f8, $00, $e6, $25
+    db $f8, $f8, $e6, $15
 Metasprite_Unknown16: ;449C
     db $f8, $fc, $e8, $30
 Metasprite_Unknown17: ;44A0
     db $f8, $00, $e4, $20
     db $f8, $f8, $e4, $10
 Metasprite_LololoFront: ;44A8
-    db $f8, $00, $f2, $20
-    db $f8, $f8, $f2, $10
+    db $f8, $00, $f2, $22
+    db $f8, $f8, $f2, $12
 Metasprite_LololoFront2: ;44B0
-    db $f8, $00, $f2, $20
-    db $f8, $f8, $ea, $10
+    db $f8, $00, $f2, $22
+    db $f8, $f8, $ea, $12
 Metasprite_LololoWalkLeft1: ;44B8
-    db $f8, $00, $f8, $00
-    db $f8, $f8, $fa, $10
+    db $f8, $00, $f8, $02
+    db $f8, $f8, $fa, $12
 Metasprite_LololoWalkLeft2: ;44C0
-    db $f8, $00, $ec, $00
-    db $f8, $f8, $f0, $10
+    db $f8, $00, $ec, $02
+    db $f8, $f8, $f0, $12
 Metasprite_LololoWalkRight1: ;44C8
-    db $f8, $f8, $f8, $20
-    db $f8, $00, $fa, $30
+    db $f8, $f8, $f8, $22
+    db $f8, $00, $fa, $32
 Metasprite_LololoWalkRight2: ;44D0
-    db $f8, $f8, $ec, $20
-    db $f8, $00, $f0, $30
+    db $f8, $f8, $ec, $22
+    db $f8, $00, $f0, $32
 Metasprite_LololoBack: ;44D8
-    db $f8, $00, $fc, $20
-    db $f8, $f8, $fc, $10
+    db $f8, $00, $fc, $22
+    db $f8, $f8, $fc, $12
 Metasprite_LalalaFront: ;44E0
-    db $f8, $00, $f4, $00
-    db $f8, $f8, $f2, $10
+    db $f8, $00, $f4, $04
+    db $f8, $f8, $f2, $14
 Metasprite_LalalaFront2: ;44E8
-    db $f8, $00, $f4, $00
-    db $f8, $f8, $ea, $10
+    db $f8, $00, $f4, $04
+    db $f8, $f8, $ea, $14
 Metasprite_LalalaWalkLeft1: ;44F0
-    db $f8, $00, $ee, $00
-    db $f8, $f8, $f0, $10
+    db $f8, $00, $ee, $04
+    db $f8, $f8, $f0, $14
 Metasprite_LalalaWalkLeft2: ;44F8
-    db $f8, $00, $f6, $00
-    db $f8, $f8, $fa, $10
+    db $f8, $00, $f6, $04
+    db $f8, $f8, $fa, $14
 Metasprite_LalalaWalkRight1: ;4500
-    db $f8, $f8, $ee, $20
-    db $f8, $00, $f0, $30
+    db $f8, $f8, $ee, $24
+    db $f8, $00, $f0, $34
 Metasprite_LalalaWalkRight2: ;4508
-    db $f8, $f8, $f6, $20
-    db $f8, $00, $fa, $30
+    db $f8, $f8, $f6, $24
+    db $f8, $00, $fa, $34
 Metasprite_LalalaBack: ;4510
-    db $f8, $00, $fc, $20
-    db $f8, $f8, $fe, $10
-Metasprite_Unknown18: ;4518
-    db $f8, $f8, $b8, $00
-    db $f8, $00, $ba, $10
-Metasprite_Unknown19: ;4520
-    db $f8, $f8, $bc, $00
-    db $f8, $00, $be, $10
-Metasprite_Unknown20: ;4528
-    db $f8, $00, $b8, $20
-    db $f8, $f8, $ba, $30
-Metasprite_Unknown21: ;4530
-    db $f8, $00, $bc, $20
-    db $f8, $f8, $be, $30
-Metasprite_Unknown22: ;4538
-    db $f8, $f8, $b0, $00
-    db $f8, $00, $b2, $10
-Metasprite_Unknown23: ;4540
-    db $f8, $f8, $b4, $00
-    db $f8, $00, $b6, $10
-Metasprite_Unknown24: ;4548
-    db $f8, $f8, $b0, $40
-    db $f8, $00, $b2, $50
-Metasprite_Unknown25: ;4550
-    db $f8, $f8, $b6, $20
-    db $f8, $00, $b4, $30
-Metasprite_Unknown26: ;4558
+    db $f8, $00, $fc, $24
+    db $f8, $f8, $fe, $14
+Metasprite_CloudBoiLeft1: ;4518
+    db $f8, $f8, $b8, $07
+    db $f8, $00, $ba, $17
+Metasprite_CloudBoiLeft2: ;4527
+    db $f8, $f8, $bc, $07
+    db $f8, $00, $be, $17
+Metasprite_CloudBoiRight1: ;4527
+    db $f8, $00, $b8, $27
+    db $f8, $f8, $ba, $37
+Metasprite_CloudBoiRight2: ;4537
+    db $f8, $00, $bc, $27
+    db $f8, $f8, $be, $37
+Metasprite_FallingTongueKid1: ;4538
+    db $f8, $f8, $b0, $04
+    db $f8, $00, $b2, $14
+Metasprite_FallingTongueKid2: ;4540
+    db $f8, $f8, $b4, $04
+    db $f8, $00, $b6, $14
+Metasprite_FallingTongueKid3: ;4548
+    db $f8, $f8, $b0, $44
+    db $f8, $00, $b2, $54
+Metasprite_FallingTongueKid4: ;4550
+    db $f8, $f8, $b6, $24
+    db $f8, $00, $b4, $34
+Metasprite_BitchThings1: ;4558
     db $f8, $f8, $c0, $00
     db $f8, $00, $c2, $10
 Metasprite_Unknown27: ;4560
@@ -495,7 +495,7 @@ Metasprite_Unknown32: ;4588
 Metasprite_Unknown33: ;4590
     db $f8, $f8, $c6, $20
     db $f8, $00, $e8, $30
-Metasprite_Unknown34: ;4598
+Metasprite_BitchThings2: ;4598
     db $f8, $f8, $c2, $20
     db $f8, $00, $ea, $30
 Metasprite_Unknown35: ;45A0
@@ -506,205 +506,205 @@ Metasprite_Unknown36: ;45A8
 Metasprite_Unknown37: ;45B0
     db $f4, $fc, $88, $10
 Metasprite_Unknown38: ;45B8
-    db $f8, $00, $d8, $00
-    db $f8, $f8, $c8, $10
-Metasprite_Unknown39: ;45C0
-    db $f8, $00, $da, $00
-    db $f8, $f8, $ca, $10
-Metasprite_Unknown40: ;45C0
-    db $f8, $f8, $ca, $00
-    db $f8, $00, $d6, $10
-Metasprite_Unknown41: ;45C8
-    db $f8, $00, $dc, $00
-    db $f8, $f8, $cc, $10
-Metasprite_Unknown42: ;45D0
-    db $f8, $f8, $d8, $20
-    db $f8, $00, $c8, $30
-Metasprite_Unknown43: ;45D8
-    db $f8, $f8, $da, $20
-    db $f8, $00, $ca, $30
-Metasprite_Unknown44: ;45E0
-    db $f8, $00, $ca, $20
-    db $f8, $f8, $d6, $30
-Metasprite_Unknown45: ;45E8
-    db $f8, $f8, $dc, $20
-    db $f8, $00, $cc, $30
+    db $f8, $00, $d8, $05
+    db $f8, $f8, $c8, $15
+Metasprite_Unknown39: ;45C5
+    db $f8, $00, $da, $05
+    db $f8, $f8, $ca, $15
+Metasprite_Unknown40: ;45C5
+    db $f8, $f8, $ca, $05
+    db $f8, $00, $d6, $15
+Metasprite_Unknown41: ;45C5
+    db $f8, $00, $dc, $05
+    db $f8, $f8, $cc, $15
+Metasprite_Unknown42: ;45D5
+    db $f8, $f8, $d8, $25
+    db $f8, $00, $c8, $35
+Metasprite_Unknown43: ;45D5
+    db $f8, $f8, $da, $25
+    db $f8, $00, $ca, $35
+Metasprite_Unknown44: ;45E5
+    db $f8, $00, $ca, $25
+    db $f8, $f8, $d6, $35
+Metasprite_Unknown45: ;45E5
+    db $f8, $f8, $dc, $25
+    db $f8, $00, $cc, $35
 Metasprite_Unknown46: ;45F0
-    db $f8, $00, $ce, $20
-    db $f8, $f8, $de, $30
-Metasprite_Unknown47: ;45F8
-    db $fa, $02, $d4, $70
-Metasprite_Unknown48: ;45FC
-    db $f8, $f8, $ce, $40
-    db $f8, $00, $de, $50
-Metasprite_Unknown49: ;4604
-    db $f6, $f6, $d4, $10
-Metasprite_Unknown50: ;4608
-    db $f8, $f8, $ce, $00
-    db $f8, $00, $de, $10
-Metasprite_Unknown51: ;4610
-    db $fa, $f6, $d4, $50
-Metasprite_Unknown52: ;4614
-    db $f8, $00, $ce, $60
-    db $f8, $f8, $de, $70
+    db $f8, $00, $ce, $25
+    db $f8, $f8, $de, $35
+Metasprite_Unknown47: ;45F5
+    db $fa, $02, $d4, $75
+Metasprite_Unknown48: ;45F5
+    db $f8, $f8, $ce, $45
+    db $f8, $00, $de, $55
+Metasprite_Unknown49: ;4605
+    db $f6, $f6, $d4, $15
+Metasprite_Unknown50: ;4605
+    db $f8, $f8, $ce, $05
+    db $f8, $00, $de, $15
+Metasprite_Unknown51: ;4615
+    db $fa, $f6, $d4, $55
+Metasprite_Unknown52: ;4615
+    db $f8, $00, $ce, $65
+    db $f8, $f8, $de, $75
 Metasprite_Unknown53: ;461C
     db $f6, $03, $d4, $30
-Metasprite_Unknown54: ;4620
-    db $f8, $00, $e0, $20
-    db $f8, $f8, $e0, $10
-Metasprite_Unknown55: ;4628
-    db $f8, $00, $e2, $20
-    db $f8, $f8, $e2, $10
-Metasprite_Unknown56: ;4630
-    db $f8, $f8, $e4, $00
-    db $f8, $00, $e4, $30
-Metasprite_Unknown57: ;4638
-    db $f8, $fc, $ae, $10
+Metasprite_Cubething: ;4620
+    db $f8, $00, $e0, $22
+    db $f8, $f8, $e0, $12
+Metasprite_Unknown55: ;4622
+    db $f8, $00, $e2, $22
+    db $f8, $f8, $e2, $12
+Metasprite_cubething2: ;4632
+    db $f8, $f8, $e4, $02
+    db $f8, $00, $e4, $32
+Metasprite_waterfall: ;4638
+    db $f8, $fc, $ae, $16
 Metasprite_Unknown58: ;463C
-    db $f8, $f7, $e6, $10
-Metasprite_Unknown59: ;4640
-    db $f8, $fa, $e6, $10
-Metasprite_Unknown60: ;4644
-    db $f8, $fe, $e6, $10
-Metasprite_Unknown61: ;4648
-    db $f8, $01, $e6, $10
-Metasprite_Unknown62: ;464C
-    db $f8, $f3, $e6, $10
-Metasprite_Unknown63: ;4650
-    db $f8, $05, $e6, $10
-Metasprite_Unknown64: ;4654
-    db $f8, $ff, $d0, $20
-    db $f8, $f8, $d0, $10
-Metasprite_Unknown65: ;465C
-    db $f8, $ff, $d2, $20
-    db $f8, $f8, $d2, $10
+    db $f8, $f7, $e6, $16
+Metasprite_Unknown59: ;4646
+    db $f8, $fa, $e6, $16
+Metasprite_Unknown60: ;4646
+    db $f8, $fe, $e6, $16
+Metasprite_Unknown61: ;4646
+    db $f8, $01, $e6, $16
+Metasprite_Unknown62: ;4646
+    db $f8, $f3, $e6, $16
+Metasprite_Unknown63: ;4656
+    db $f8, $05, $e6, $16
+Metasprite_umbrellas1: ;4654
+    db $f8, $ff, $d0, $24
+    db $f8, $f8, $d0, $14
+Metasprite_umbrella2: ;4654
+    db $f8, $ff, $d2, $24
+    db $f8, $f8, $d2, $14
 Metasprite_Unknown66: ;4664
     db $f8, $00, $98, $00
     db $f8, $f8, $92, $00
-    db $e8, $ff, $d0, $20
-    db $e8, $f8, $d0, $10
+    db $e8, $ff, $d0, $24
+    db $e8, $f8, $d0, $14
 Metasprite_Unknown67: ;4674
     db $f8, $00, $9a, $00
     db $f8, $f8, $94, $00
-    db $ea, $ff, $d0, $20
-    db $ea, $f8, $d0, $10
+    db $ea, $ff, $d0, $24
+    db $ea, $f8, $d0, $14
 Metasprite_Unknown68: ;4684
     db $f8, $00, $92, $20
     db $f8, $f8, $98, $20
-    db $e8, $ff, $d0, $20
-    db $e8, $f8, $d0, $10
+    db $e8, $ff, $d0, $24
+    db $e8, $f8, $d0, $14
 Metasprite_Unknown69: ;4694
     db $f8, $00, $94, $20
     db $f8, $f8, $9a, $20
-    db $ea, $ff, $d0, $20
-    db $ea, $f8, $d0, $10
+    db $ea, $ff, $d0, $24
+    db $ea, $f8, $d0, $14
 Metasprite_Unknown70: ;46A4
     db $f8, $00, $98, $00
     db $f8, $f8, $8c, $00
-    db $e8, $ff, $d0, $20
-    db $e8, $f8, $d0, $10
+    db $e8, $ff, $d0, $24
+    db $e8, $f8, $d0, $14
 Metasprite_Unknown71: ;46B4
     db $f8, $00, $9a, $00
     db $f8, $f8, $8e, $00
-    db $ea, $ff, $d0, $20
-    db $ea, $f8, $d0, $10
+    db $ea, $ff, $d0, $24
+    db $ea, $f8, $d0, $14
 Metasprite_Unknown72: ;46C4
     db $f8, $00, $8c, $20
     db $f8, $f8, $98, $20
-    db $e8, $ff, $d0, $20
-    db $e8, $f8, $d0, $10
+    db $e8, $ff, $d0, $24
+    db $e8, $f8, $d0, $14
 Metasprite_Unknown73: ;46D4
     db $f8, $00, $8e, $20
     db $f8, $f8, $9a, $20
-    db $ea, $ff, $d0, $20
-    db $ea, $f8, $d0, $10
+    db $ea, $ff, $d0, $24
+    db $ea, $f8, $d0, $14
 Metasprite_Unknown74: ;46E4
     db $f8, $00, $ac, $00
     db $f8, $f8, $aa, $00
-    db $eb, $01, $d0, $20
-    db $eb, $fa, $d0, $10
+    db $eb, $01, $d0, $24
+    db $eb, $fa, $d0, $14
 Metasprite_Unknown75: ;46F4
-    db $f8, $f8, $a4, $40
-    db $f8, $00, $a4, $60
-    db $eb, $00, $d0, $20
-    db $eb, $f9, $d0, $10
+    db $f8, $f8, $a4, $47
+    db $f8, $00, $a4, $67
+    db $eb, $00, $d0, $24
+    db $eb, $f9, $d0, $14
 Metasprite_Unknown76: ;4704
     db $f8, $ff, $da, $00
     db $f8, $f7, $ca, $00
-    db $e8, $01, $d0, $20
-    db $e8, $fa, $d0, $10
+    db $e8, $01, $d0, $24
+    db $e8, $fa, $d0, $14
 Metasprite_Unknown77: ;4714
     db $f8, $00, $6c, $20
     db $f8, $f8, $6c, $00
-    db $e9, $ff, $d0, $20
-    db $e9, $f8, $d0, $10
+    db $e9, $ff, $d0, $24
+    db $e9, $f8, $d0, $14
 Metasprite_Unknown78: ;4724
-    db $f8, $00, $d8, $00
-    db $f8, $f8, $c8, $10
-Metasprite_Unknown79: ;472C
-    db $f8, $00, $da, $00
-    db $f8, $f8, $ca, $10
-Metasprite_Unknown80: ;4734
-    db $f8, $f8, $ca, $00
-    db $f8, $00, $d6, $10
-Metasprite_Unknown81: ;473C
-    db $f8, $00, $dc, $00
-    db $f8, $f8, $cc, $10
-Metasprite_Unknown82: ;4744
-    db $f8, $f8, $d8, $20
-    db $f8, $00, $c8, $30
-Metasprite_Unknown83: ;474C
-    db $f8, $f8, $da, $20
-    db $f8, $00, $ca, $30
-Metasprite_Unknown84: ;4754
-    db $f8, $00, $ca, $20
-    db $f8, $f8, $d6, $30
-Metasprite_Unknown85: ;475C
-    db $f8, $f8, $dc, $20
-    db $f8, $00, $cc, $30
-Metasprite_Unknown86: ;4764
-    db $f8, $00, $ce, $20
-    db $f8, $f8, $de, $30
-Metasprite_Unknown87: ;476C
-    db $fa, $02, $d4, $70
-Metasprite_Unknown88: ;4770
-    db $f8, $f8, $ce, $40
-    db $f8, $00, $de, $50
-Metasprite_Unknown89: ;4778
-    db $f6, $f6, $d4, $10
-Metasprite_Unknown90: ;477C
-    db $f8, $f8, $ce, $00
-    db $f8, $00, $de, $10
-Metasprite_Unknown91: ;4784
-    db $fa, $f6, $d4, $50
-Metasprite_Unknown92: ;4788
-    db $f8, $00, $ce, $60
-    db $f8, $f8, $de, $70
-Metasprite_Unknown93: ;4790
-    db $f6, $03, $d4, $30
+    db $f8, $00, $d8, $05
+    db $f8, $f8, $c8, $15
+Metasprite_Unknown79: ;4725
+    db $f8, $00, $da, $05
+    db $f8, $f8, $ca, $15
+Metasprite_Unknown80: ;4735
+    db $f8, $f8, $ca, $05
+    db $f8, $00, $d6, $15
+Metasprite_Unknown81: ;4735
+    db $f8, $00, $dc, $05
+    db $f8, $f8, $cc, $15
+Metasprite_Unknown82: ;4745
+    db $f8, $f8, $d8, $25
+    db $f8, $00, $c8, $35
+Metasprite_Unknown83: ;4745
+    db $f8, $f8, $da, $25
+    db $f8, $00, $ca, $35
+Metasprite_Unknown84: ;4755
+    db $f8, $00, $ca, $25
+    db $f8, $f8, $d6, $35
+Metasprite_Unknown85: ;4755
+    db $f8, $f8, $dc, $25
+    db $f8, $00, $cc, $35
+Metasprite_Unknown86: ;4765
+    db $f8, $00, $ce, $25
+    db $f8, $f8, $de, $35
+Metasprite_Unknown87: ;4765
+    db $fa, $02, $d4, $75
+Metasprite_Unknown88: ;4775
+    db $f8, $f8, $ce, $45
+    db $f8, $00, $de, $55
+Metasprite_Unknown89: ;4775
+    db $f6, $f6, $d4, $15
+Metasprite_Unknown90: ;4775
+    db $f8, $f8, $ce, $05
+    db $f8, $00, $de, $15
+Metasprite_Unknown91: ;4785
+    db $fa, $f6, $d4, $55
+Metasprite_Unknown92: ;4785
+    db $f8, $00, $ce, $65
+    db $f8, $f8, $de, $75
+Metasprite_Unknown93: ;4795
+    db $f6, $03, $d4, $35
 Metasprite_Unknown94: ;4794
-    db $f8, $00, $e0, $20
-    db $f8, $f8, $e0, $10
-Metasprite_Unknown95: ;479C
-    db $f8, $00, $e2, $20
-    db $f8, $f8, $e2, $10
-Metasprite_Unknown96: ;47A4
-    db $f8, $f8, $e4, $00
-    db $f8, $00, $e4, $30
+    db $f8, $00, $e0, $22
+    db $f8, $f8, $e0, $12
+Metasprite_Unknown95: ;4792
+    db $f8, $00, $e2, $22
+    db $f8, $f8, $e2, $12
+Metasprite_Cubething3: ;47A2
+    db $f8, $f8, $e4, $02
+    db $f8, $00, $e4, $32
 Metasprite_Unknown97: ;47AC
-    db $f8, $fc, $ae, $10
+    db $f8, $fc, $ae, $16
 Metasprite_Unknown98: ;47B0
-    db $f8, $f7, $e6, $10
-Metasprite_Unknown99: ;47B4
-    db $f8, $fa, $e6, $10
-Metasprite_Unknown100: ;47B8
-    db $f8, $fe, $e6, $10
-Metasprite_Unknown101: ;47BC
-    db $f8, $01, $e6, $10
-Metasprite_Unknown102: ;47C0
-    db $f8, $f3, $e6, $10
+    db $f8, $f7, $e6, $16
+Metasprite_Unknown99: ;47B6
+    db $f8, $fa, $e6, $16
+Metasprite_Unknown100: ;47B6
+    db $f8, $fe, $e6, $16
+Metasprite_Unknown101: ;47B6
+    db $f8, $01, $e6, $16
+Metasprite_Unknown102: ;47C6
+    db $f8, $f3, $e6, $16
 Metasprite_Unknown103: ;47C4
-    db $f8, $05, $e6, $10
+    db $f8, $05, $e6, $16
 Metasprite_Unknown104: ;47C8 
     db $02, $04, $8e, $00
     db $02, $fc, $8c, $00
@@ -961,37 +961,37 @@ Metasprite_Unknown141: ;4B14
     db $f0, $f8, $88, $20
     db $f0, $00, $da, $20
     db $f0, $08, $d8, $30
-Metasprite_Unknown142: ;4B30
-    db $20, $18, $ec, $20
-    db $20, $10, $ec, $20
-    db $10, $10, $ec, $20
-    db $20, $08, $ec, $20
-    db $10, $08, $ec, $20
-    db $00, $08, $ec, $20
-    db $20, $00, $e8, $20
-    db $10, $00, $e8, $20
-    db $00, $00, $e8, $20
-    db $f0, $00, $e8, $20
-    db $20, $f8, $e8, $00
-    db $20, $f0, $ec, $00
-    db $20, $e8, $ec, $00
-    db $20, $e0, $ec, $00
-    db $10, $f8, $e8, $00
-    db $00, $f8, $e8, $00
-    db $10, $f0, $ec, $00
-    db $f0, $f8, $ec, $00
-    db $00, $f0, $ec, $00
-    db $10, $e8, $ec, $00
-    db $20, $20, $ea, $20
-    db $20, $d8, $ea, $00
-    db $10, $18, $ea, $20
-    db $00, $10, $ea, $20
-    db $f0, $08, $ea, $20
-    db $10, $e0, $ea, $00
-    db $00, $e8, $ea, $00
-    db $f0, $f0, $ea, $00
-    db $e0, $00, $ee, $20
-    db $e0, $f8, $ee, $10
+Metasprite_CastleDedede: ;4B30
+    db $20, $18, $ec, $23
+    db $20, $10, $ec, $23
+    db $10, $10, $ec, $23
+    db $20, $08, $ec, $23
+    db $10, $08, $ec, $23
+    db $00, $08, $ec, $23
+    db $20, $00, $e8, $23
+    db $10, $00, $e8, $23
+    db $00, $00, $e8, $23
+    db $f0, $00, $e8, $23
+    db $20, $f8, $e8, $03
+    db $20, $f0, $ec, $03
+    db $20, $e8, $ec, $03
+    db $20, $e0, $ec, $03
+    db $10, $f8, $e8, $03
+    db $00, $f8, $e8, $03
+    db $10, $f0, $ec, $03
+    db $f0, $f8, $ec, $03
+    db $00, $f0, $ec, $03
+    db $10, $e8, $ec, $03
+    db $20, $20, $ea, $23
+    db $20, $d8, $ea, $03
+    db $10, $18, $ea, $23
+    db $00, $10, $ea, $23
+    db $f0, $08, $ea, $23
+    db $10, $e0, $ea, $03
+    db $00, $e8, $ea, $03
+    db $f0, $f0, $ea, $03
+    db $e0, $00, $ee, $27
+    db $e0, $f8, $ee, $17
 Metasprite_Unknown143: ;4BA8
     db $f8, $f8, $a2, $10
 Metasprite_Unknown144: ;4BAC
@@ -1003,26 +1003,26 @@ Metasprite_Unknown146: ;4BB4
 Metasprite_Unknown147: ;4BB8
     db $f8, $fc, $c4, $30
 Metasprite_Unknown148: ;4BBC
-    db $06, $18, $a8, $00
-    db $f0, $08, $a4, $00
+    db $06, $18, $a8, $06
+    db $f0, $08, $a4, $06
     db $f8, $00, $b2, $00
     db $f8, $f8, $b0, $10
 Metasprite_Unknown149: ;4BCC
-    db $06, $18, $aa, $00
-    db $f0, $08, $a6, $00
+    db $06, $18, $aa, $06
+    db $f0, $08, $a6, $06
     db $f8, $00, $b2, $00
     db $f8, $f8, $b0, $10
 Metasprite_Unknown150: ;4BDC
-    db $f8, $1e, $8e, $00
-    db $f8, $12, $8e, $20
-    db $f8, $18, $9e, $00
+    db $f8, $1e, $8e, $06
+    db $f8, $12, $8e, $26
+    db $f8, $18, $9e, $06
     db $e8, $00, $a2, $00
     db $f8, $f8, $b0, $00
     db $f8, $00, $b4, $10
 Metasprite_Unknown151: ;4BF4
-    db $f4, $24, $8e, $00
-    db $f4, $0d, $8e, $20
-    db $f1, $18, $9e, $00
+    db $f4, $24, $8e, $06
+    db $f4, $0d, $8e, $26
+    db $f1, $18, $9e, $06
     db $ec, $f3, $a0, $00
     db $f8, $f8, $08, $00
     db $f8, $00, $bc, $10
@@ -1105,45 +1105,45 @@ Metasprite_Unknown169: ;4CE4
     db $00, $fc, $20, $60
     db $00, $f4, $0c, $70
 Metasprite_Unknown170: ;4CFC
-    db $08, $f8, $ae, $20
-    db $08, $f0, $ae, $00
-    db $00, $10, $de, $00
-    db $00, $18, $dc, $00
-    db $e8, $08, $ae, $60
-    db $e8, $00, $ae, $40
-    db $f0, $e8, $de, $60
-    db $f0, $e0, $dc, $70
-Metasprite_Unknown171: ;4D1C
-    db $08, $f0, $ae, $20
-    db $08, $e8, $ae, $00
-    db $08, $10, $ae, $20
-    db $08, $08, $ae, $00
-    db $e8, $10, $ae, $60
-    db $e8, $08, $ae, $40
-    db $e8, $f0, $ae, $60
-    db $e8, $e8, $ae, $50
-Metasprite_Unknown172: ;4D3C
-    db $08, $08, $ae, $20
-    db $08, $00, $ae, $00
-    db $00, $e8, $de, $20
-    db $00, $e0, $dc, $20
-    db $f0, $10, $de, $40
-    db $f0, $18, $dc, $40
-    db $e8, $f8, $ae, $60
-    db $e8, $f0, $ae, $50
-Metasprite_Unknown173: ;4D5C
-    db $e8, $00, $ae, $60
-    db $e8, $f8, $ae, $40
-    db $08, $00, $ae, $20
-    db $08, $f8, $ae, $10
+    db $08, $f8, $ae, $27
+    db $08, $f0, $ae, $07
+    db $00, $10, $de, $07
+    db $00, $18, $dc, $07
+    db $e8, $08, $ae, $67
+    db $e8, $00, $ae, $47
+    db $f0, $e8, $de, $67
+    db $f0, $e0, $dc, $77
+Metasprite_Unknown171: ;4D17
+    db $08, $f0, $ae, $27
+    db $08, $e8, $ae, $07
+    db $08, $10, $ae, $27
+    db $08, $08, $ae, $07
+    db $e8, $10, $ae, $67
+    db $e8, $08, $ae, $47
+    db $e8, $f0, $ae, $67
+    db $e8, $e8, $ae, $57
+Metasprite_Unknown172: ;4D37
+    db $08, $08, $ae, $27
+    db $08, $00, $ae, $07
+    db $00, $e8, $de, $27
+    db $00, $e0, $dc, $27
+    db $f0, $10, $de, $47
+    db $f0, $18, $dc, $47
+    db $e8, $f8, $ae, $67
+    db $e8, $f0, $ae, $57
+Metasprite_Unknown173: ;4D57
+    db $e8, $00, $ae, $67
+    db $e8, $f8, $ae, $47
+    db $08, $00, $ae, $27
+    db $08, $f8, $ae, $17
 Metasprite_Unknown174: ;4D6C
-    db $f1, $f6, $8e, $20
-    db $f1, $03, $8e, $00
-    db $f1, $fd, $9e, $10
-Metasprite_Unknown175: ;4D78
-    db $e8, $09, $8e, $00
-    db $e8, $f0, $8e, $20
-    db $e5, $fc, $9e, $30
+    db $f1, $f6, $8e, $26
+    db $f1, $03, $8e, $06
+    db $f1, $fd, $9e, $16
+Metasprite_Unknown175: ;4D76
+    db $e8, $09, $8e, $06
+    db $e8, $f0, $8e, $26
+    db $e5, $fc, $9e, $36
 Metasprite_Unknown176: ;4D84
     db $f8, $00, $ca, $00
     db $f8, $f8, $c8, $10
@@ -2288,7 +2288,7 @@ Metasprite_KirbyRideStar: ;5C01
     db $f0, $fc, $3c, $01
     db $f0, $f4, $2c, $11
 Metasprite_KirbyAirParticles: ;5C19
-    db $f8, $fc, $5a, $10
+    db $f8, $fc, $5a, $17
 Metasprite_SmallStar: ;5C1D
     db $f4, $fc, $82, $11
 Metasprite_Smallstar2: ;5C21 Seems to be used during level intros. Can be seen in castle lololo
@@ -2309,20 +2309,20 @@ Metasprite_Star4: ;5C45
     db $f8, $00, $64, $61
     db $f8, $f8, $74, $71
 Metasprite_Bomb: ;5C4D
-    db $f8, $00, $76, $00
-    db $f8, $f8, $66, $10
-Metasprite_UnkBomb: ;5C55 Another use of bit 4
+    db $f8, $00, $76, $07
+    db $f8, $f8, $66, $17
+Metasprite_UnkBomb: ;5C55 
     db $f6, $00, $76, $00
     db $f6, $f8, $66, $10
 Metasprite_HyperCandy: ;5C5D
     db $f8, $00, $78, $00
     db $f8, $f8, $68, $10
 Metasprite_Curry: ;5C65
-    db $f8, $00, $7a, $00
-    db $f8, $f8, $6a, $10
+    db $f8, $00, $7a, $04
+    db $f8, $f8, $6a, $14
 Metasprite_MintLeaf: ;5C6D
-    db $f8, $00, $7c, $60
-    db $f8, $f8, $7c, $10
+    db $f8, $00, $7c, $66
+    db $f8, $f8, $7c, $16
 Metasprite_Mic: ;5C75
     db $f8, $00, $7e, $20
     db $f8, $f8, $7e, $10
@@ -2367,99 +2367,99 @@ Metasprite_2StarsImpact8: ;5CE5
     db $fb, $04, $64, $21
     db $fb, $fc, $74, $31
 Metasprite_AirPuffRight: ;5CF1
-    db $f8, $f8, $4c, $00
-    db $f8, $00, $5c, $10
+    db $f8, $f8, $4c, $07
+    db $f8, $00, $5c, $17
 Metasprite_AirPuffLeft: ;5CF9
-    db $f8, $f8, $5c, $20
-    db $f8, $00, $4c, $30
+    db $f8, $f8, $5c, $27
+    db $f8, $00, $4c, $37
 Metasprite_AirPuffRightUnk: ;5D01 Another Unused sprite with bit 4 set.
-    db $f8, $f8, $4a, $00
-    db $f8, $00, $5c, $10
+    db $f8, $f8, $4a, $07
+    db $f8, $00, $5c, $17
 Metasprite_AirPuffFlippedUnk: ;5D09 This one is flipped upside down, along with bit 4 being set
-    db $f8, $f8, $4a, $40
-    db $f8, $00, $5c, $50
+    db $f8, $f8, $4a, $47
+    db $f8, $00, $5c, $57
 Metasprite_AirPuffLeftUnk: ;5D11
-    db $f8, $00, $4a, $20
-    db $f8, $f8, $5c, $30
+    db $f8, $00, $4a, $27
+    db $f8, $f8, $5c, $37
 Metasprite_AirPuffFlippedLeftUnk: ;5D19
-    db $f8, $00, $4a, $60
-    db $f8, $f8, $5c, $70
-Metasprite_Explosion: ;5D21
-    db $f8, $00, $62, $20
-    db $f8, $f8, $62, $10
-Metasprite_Smoke1: ;5D29
-    db $f8, $00, $5e, $60
-    db $f8, $f8, $5e, $10
-Metasprite_Smoke2: ;5D31
-    db $f8, $00, $4e, $60
-    db $f8, $f8, $4e, $10
-Metasprite_ExplosionAndSmoke1: ;5D39
-    db $f8, $06, $62, $20
-    db $f8, $fe, $62, $00
-    db $e8, $03, $4e, $60
-    db $e8, $fb, $4e, $00
-    db $08, $fd, $5e, $60
-    db $08, $f5, $5e, $10
-Metasprite_ExplosionAndSmoke2: ;5D51
-    db $fc, $04, $62, $20
-    db $fc, $fc, $62, $00
-    db $f0, $0e, $5e, $60
-    db $f0, $06, $5e, $00
-    db $00, $f2, $4e, $60
-    db $00, $ea, $4e, $10
-Metasprite_ExplosionAndSmoke3: ;5D69
-    db $fe, $00, $62, $20
-    db $fe, $f8, $62, $00
-    db $fb, $10, $4e, $60
-    db $fb, $08, $4e, $00
-    db $f5, $f0, $5e, $60
-    db $f5, $e8, $5e, $10
-Metasprite_ExplosionAndSmoke4: ;5D81
-    db $fc, $fc, $62, $20
-    db $fc, $f4, $62, $00
-    db $ea, $ef, $4e, $40
-    db $ea, $f7, $4e, $20
-    db $06, $01, $5e, $40
-    db $06, $09, $5e, $30
-Metasprite_ExplosionAndSmoke5: ;5D99
-    db $f8, $fa, $62, $60
-    db $f8, $f2, $62, $00
-    db $ea, $09, $5e, $60
-    db $ea, $01, $5e, $00
-    db $06, $f7, $4e, $60
-    db $06, $ef, $4e, $10
-Metasprite_ExplosionAndSmoke6: ;5DB1
-    db $f4, $fc, $62, $60
-    db $f4, $f4, $62, $00
-    db $f5, $10, $4e, $60
-    db $f5, $08, $4e, $00
-    db $fb, $f0, $5e, $60
-    db $fb, $e8, $5e, $10
-Metasprite_ExplosionAndSmoke7: ;5DC9
-    db $f2, $00, $62, $60
-    db $f2, $f8, $62, $00
-    db $f0, $ea, $4e, $40
-    db $f0, $f2, $4e, $20
-    db $00, $06, $5e, $00
-    db $00, $0e, $5e, $70
-Metasprite_ExplosionAndSmoke8: ;5DE1
-    db $f4, $04, $62, $20
-    db $f4, $fc, $62, $00
-    db $e8, $f5, $5e, $40
-    db $e8, $fd, $5e, $20
-    db $08, $fb, $4e, $40
-    db $08, $03, $4e, $30
+    db $f8, $00, $4a, $67
+    db $f8, $f8, $5c, $77
+Metasprite_Explosion: ;5D27
+    db $f8, $00, $62, $27
+    db $f8, $f8, $62, $17
+Metasprite_Smoke1: ;5D27
+    db $f8, $00, $5e, $67
+    db $f8, $f8, $5e, $17
+Metasprite_Smoke2: ;5D37
+    db $f8, $00, $4e, $67
+    db $f8, $f8, $4e, $17
+Metasprite_ExplosionAndSmoke1: ;5D37
+    db $f8, $06, $62, $27
+    db $f8, $fe, $62, $07
+    db $e8, $03, $4e, $67
+    db $e8, $fb, $4e, $07
+    db $08, $fd, $5e, $67
+    db $08, $f5, $5e, $17
+Metasprite_ExplosionAndSmoke2: ;5D57
+    db $fc, $04, $62, $27
+    db $fc, $fc, $62, $07
+    db $f0, $0e, $5e, $67
+    db $f0, $06, $5e, $07
+    db $00, $f2, $4e, $67
+    db $00, $ea, $4e, $17
+Metasprite_ExplosionAndSmoke3: ;5D67
+    db $fe, $00, $62, $27
+    db $fe, $f8, $62, $07
+    db $fb, $10, $4e, $67
+    db $fb, $08, $4e, $07
+    db $f5, $f0, $5e, $67
+    db $f5, $e8, $5e, $17
+Metasprite_ExplosionAndSmoke4: ;5D87
+    db $fc, $fc, $62, $27
+    db $fc, $f4, $62, $07
+    db $ea, $ef, $4e, $47
+    db $ea, $f7, $4e, $27
+    db $06, $01, $5e, $47
+    db $06, $09, $5e, $37
+Metasprite_ExplosionAndSmoke5: ;5D97
+    db $f8, $fa, $62, $67
+    db $f8, $f2, $62, $07
+    db $ea, $09, $5e, $67
+    db $ea, $01, $5e, $07
+    db $06, $f7, $4e, $67
+    db $06, $ef, $4e, $17
+Metasprite_ExplosionAndSmoke6: ;5DB7
+    db $f4, $fc, $62, $67
+    db $f4, $f4, $62, $07
+    db $f5, $10, $4e, $67
+    db $f5, $08, $4e, $07
+    db $fb, $f0, $5e, $67
+    db $fb, $e8, $5e, $17
+Metasprite_ExplosionAndSmoke7: ;5DC7
+    db $f2, $00, $62, $67
+    db $f2, $f8, $62, $07
+    db $f0, $ea, $4e, $47
+    db $f0, $f2, $4e, $27
+    db $00, $06, $5e, $07
+    db $00, $0e, $5e, $77
+Metasprite_ExplosionAndSmoke8: ;5DE7
+    db $f4, $04, $62, $27
+    db $f4, $fc, $62, $07
+    db $e8, $f5, $5e, $47
+    db $e8, $fd, $5e, $27
+    db $08, $fb, $4e, $47
+    db $08, $03, $4e, $37
 Metasprite_StarBlock: ;5DF9 
-    db $f8, $00, $90, $01
-    db $f8, $f8, $80, $11
+    db $f8, $00, $90, $05
+    db $f8, $f8, $80, $15
 Metasprite_EnemyBeamRight: ;5E01
-    db $f8, $fc, $84, $10
+    db $f8, $fc, $84, $15
 Metasprite_EnemyBeamDownRight;5E05
-    db $f8, $fc, $84, $50
-Metasprite_EnemyBeamDownLeft: ;5E09
-    db $f8, $fc, $84, $70
-Metasprite_EnemyBeamLeft: ;5E0D
-    db $f8, $fc, $84, $30
+    db $f8, $fc, $84, $55
+Metasprite_EnemyBeamDownLeft: ;5E05
+    db $f8, $fc, $84, $75
+Metasprite_EnemyBeamLeft: ;5E05
+    db $f8, $fc, $84, $35
 Metasprite_Part2Unknown: ;5E11 
     db $00, $00, $86, $00
     db $00, $f8, $86, $10
@@ -2469,25 +2469,25 @@ Metasprite_Part2Unknown2: ;5E19
     db $00, $f8, $86, $00
     db $00, $f0, $86, $10
 Metasprite_CannonBall1: ;5E29 The various location offsets are responsible for the cannonball's "spin"
-    db $f8, $fc, $88, $10
+    db $f8, $fc, $88, $17
 Metasprite_CannonBall2: ;5E2D
-    db $f6, $fb, $88, $10
+    db $f6, $fb, $88, $17
 Metasprite_CannonBall3: ;5E31
-    db $f6, $fd, $88, $10
+    db $f6, $fd, $88, $17
 Metasprite_CannonBall4: ;5E35
-    db $f8, $ff, $88, $10
+    db $f8, $ff, $88, $17
 Metasprite_CannonBall5: ;5E39
-    db $fa, $fd, $88, $10
+    db $fa, $fd, $88, $17
 Metasprite_CannonBall6: ;5E3D
-    db $fa, $fb, $88, $10
+    db $fa, $fb, $88, $17
 Metasprite_CannonBall7: ;5E41
-    db $f8, $fa, $88, $10
+    db $f8, $fa, $88, $17
 Metasprite_Gordo1: ;5E45
-    db $f8, $00, $8a, $20
-    db $f8, $f8, $8a, $50
+    db $f8, $00, $8a, $27
+    db $f8, $f8, $8a, $57
 Metasprite_Gordo2: ;5E4D
-    db $f8, $f8, $8a, $00
-    db $f8, $00, $8a, $70
+    db $f8, $f8, $8a, $07
+    db $f8, $00, $8a, $77
 Metasprite_WaddleDeeLeft1: ;5E55 The enemy sprites are facing the opposite direction of Kirby. Left comes first
     db $f8, $00, $98, $00
     db $f8, $f8, $8c, $10
@@ -2543,20 +2543,20 @@ Metasprite_BrontoBurtRight2: ;5EDD
     db $f8, $f8, $a2, $20
     db $f8, $00, $a0, $30
 Metasprite_ShotzoLeft: ;5EE5
-    db $f8, $00, $ac, $00
-    db $f8, $f8, $aa, $10
+    db $f8, $00, $ac, $07
+    db $f8, $f8, $aa, $17
 Metasprite_ShotzoUpLeft: ;5EED
-    db $f8, $00, $a8, $00
-    db $f8, $f8, $a6, $10
+    db $f8, $00, $a8, $07
+    db $f8, $f8, $a6, $17
 Metasprite_ShotzoUp: ;5EF5
-    db $f8, $00, $a4, $20
-    db $f8, $f8, $a4, $10
+    db $f8, $00, $a4, $27
+    db $f8, $f8, $a4, $17
 Metasprite_ShotzoUpRight: ;5EFD
-    db $f8, $f8, $a8, $20
-    db $f8, $00, $a6, $30
+    db $f8, $f8, $a8, $27
+    db $f8, $00, $a6, $37
 Metasprite_ShotzoRight: ;5F05
-    db $f8, $f8, $ac, $20
-    db $f8, $00, $aa, $30
+    db $f8, $f8, $ac, $27
+    db $f8, $00, $aa, $37
 Metasprite_HuhIDontKnow: 
     db $f8, $00, $e6, $20
     db $f8, $f8, $e6, $10
@@ -2608,659 +2608,659 @@ Metasprite_Part2Unknown16: ;5F85
 Metasprite_Part2Unknown17: ;5F8D
     db $f8, $00, $fc, $20
     db $f8, $f8, $fe, $10
-Metasprite_Part2Unknown18: ;5F95
+Metasprite_SnailLeft1: ;5F95
     db $f8, $ff, $b4, $00
     db $f8, $f7, $b0, $10
-Metasprite_Part2Unknown19: ;5F9D
+Metasprite_SnailLeft2: ;5F9D
     db $f8, $00, $b4, $00
     db $f8, $f8, $ae, $10
-Metasprite_Part2Unknown20: ;5FA5
+Metasprite_SnailShellLeft: ;5FA5
     db $f8, $00, $b4, $00
     db $f8, $f8, $b2, $10
-Metasprite_Part2Unknown21: ;5FAD
+Metasprite_SnailRight1: ;5FAD
     db $f8, $f7, $b4, $20
     db $f8, $ff, $b0, $30
-Metasprite_Part2Unknown22: ;5FB5
+Metasprite_SnailRight2: ;5FB5
     db $f8, $f6, $b4, $20
     db $f8, $fe, $ae, $30
-Metasprite_Part2Unknown23: ;5FBD
+Metasprite_SnailShellRight: ;5FBD
     db $f8, $f6, $b4, $20
     db $f8, $fe, $b2, $30
-Metasprite_Part2Unknown24: ;5FC5
-    db $f8, $00, $ce, $00
-    db $f8, $f8, $cc, $10
-Metasprite_Part2Unknown25: ;5FCD
-    db $f8, $00, $d2, $00
-    db $f8, $f8, $d0, $10
-Metasprite_Part2Unknown26: ;5FD5
-    db $f8, $01, $d2, $00
-    db $f8, $f9, $d0, $10
-Metasprite_Part2Unknown27: ;5FDD
-    db $f8, $f8, $ce, $20
-    db $f8, $00, $cc, $30
-Metasprite_Part2Unknown28: ;5FE5
-    db $f8, $f8, $d2, $20
-    db $f8, $00, $d0, $30
-Metasprite_Part2Unknown29: ;5FED
-    db $f8, $f7, $d2, $20
-    db $f8, $ff, $d0, $30
-Metasprite_Part2Unknown30: ;5FF5
-    db $f8, $00, $d6, $00
-    db $f8, $f8, $d4, $10
-Metasprite_Part2Unknown31: ;5FFD
-    db $f8, $00, $da, $00
-    db $f8, $f8, $d8, $10
-Metasprite_Part2Unknown32: ;6005
-    db $f8, $00, $de, $00
-    db $f8, $f8, $dc, $10
-Metasprite_Part2Unknown33: ;600D
-    db $f8, $00, $d8, $60
-    db $f8, $f8, $d6, $70
-Metasprite_Part2Unknown34: ;6015
-    db $f8, $00, $dc, $60
-    db $f8, $f8, $de, $70
-Metasprite_Part2Unknown35: ;601D
-    db $f8, $f8, $d6, $20
-    db $f8, $00, $d4, $30
-Metasprite_Part2Unknown36: ;6025
-    db $f8, $f8, $da, $20
-    db $f8, $00, $d8, $30
-Metasprite_Part2Unknown37: ;602D
-    db $f8, $f8, $de, $20
-    db $f8, $00, $dc, $30
-Metasprite_Part2Unknown38: ;6035
-    db $f8, $00, $da, $40
-    db $f8, $f8, $d8, $50
-Metasorite_Part2Unknown39: ;603D
-    db $f8, $00, $de, $40
-    db $f8, $f8, $dc, $50
-Metasprite_Part2Unknown40: ;6045
-    db $f8, $00, $ba, $20
-    db $f8, $f8, $ba, $10
-Metasprite_Part2Unknown41: ;604D
-    db $f8, $00, $be, $00
-    db $f8, $f8, $bc, $10
-Metasprite_Part2Unknown42: ;6055
-    db $f8, $00, $be, $00
-    db $f8, $f8, $be, $30
-Metasprite_Part2Unknown43: ;605D
-    db $f8, $f8, $be, $20
-    db $f8, $00, $bc, $30
-Metasprite_Part2Unknown44: ;6065
-    db $f8, $00, $b8, $20
-    db $f8, $f8, $b8, $10
+Metasprite_ShellLeft: ;5FC5
+    db $f8, $00, $ce, $03
+    db $f8, $f8, $cc, $13
+Metasprite_ShellFishLeft: ;5FCD
+    db $f8, $00, $d2, $03
+    db $f8, $f8, $d0, $13
+Metasprite_ShellFishLeftShake: ;5FD5
+    db $f8, $01, $d2, $03
+    db $f8, $f9, $d0, $13
+Metasprite_ShellRight: ;5FDD
+    db $f8, $f8, $ce, $23
+    db $f8, $00, $cc, $33
+Metasprite_ShellFishRight: ;5FE5
+    db $f8, $f8, $d2, $23
+    db $f8, $00, $d0, $33
+Metasprite_ShellFishRightShake: ;5FED
+    db $f8, $f7, $d2, $23
+    db $f8, $ff, $d0, $33
+Metasprite_FishLeft1: ;5FF5
+    db $f8, $00, $d6, $02
+    db $f8, $f8, $d4, $12
+Metasprite_FishLeft2: ;5FF2
+    db $f8, $00, $da, $02
+    db $f8, $f8, $d8, $12
+Metasprite_FishLeft3: ;6002
+    db $f8, $00, $de, $02
+    db $f8, $f8, $dc, $12
+Metasprite_FishLeftFlip1: ;6002
+    db $f8, $00, $d8, $62
+    db $f8, $f8, $d6, $72
+Metasprite_FishLeftFlip2: ;6012
+    db $f8, $00, $dc, $62
+    db $f8, $f8, $de, $72
+Metasprite_FishRight1: ;6012
+    db $f8, $f8, $d6, $22
+    db $f8, $00, $d4, $32
+Metasprite_FishRight2: ;6022
+    db $f8, $f8, $da, $22
+    db $f8, $00, $d8, $32
+Metasprite_FishRight3: ;6022
+    db $f8, $f8, $de, $22
+    db $f8, $00, $dc, $32
+Metasprite_FishRightFlip1: ;6032
+    db $f8, $00, $da, $42
+    db $f8, $f8, $d8, $52
+Metasorite_FishRightFlip2: ;6032
+    db $f8, $00, $de, $42
+    db $f8, $f8, $dc, $52
+Metasprite_KabuForward: ;6045
+    db $f8, $00, $ba, $23
+    db $f8, $f8, $ba, $13
+Metasprite_KabuFaceLeft: ;604D
+    db $f8, $00, $be, $03
+    db $f8, $f8, $bc, $13
+Metasprite_KabuBack: ;6055
+    db $f8, $00, $be, $03
+    db $f8, $f8, $be, $33
+Metasprite_KabuFaceRight: ;605D
+    db $f8, $f8, $be, $23
+    db $f8, $00, $bc, $33
+Metasprite_KabuSquish: ;6065
+    db $f8, $00, $b8, $23
+    db $f8, $f8, $b8, $13
 Metasprite_Part2Unknown45: ;606D
-    db $07, $fe, $f2, $40
-    db $07, $f6, $f0, $40
-    db $f8, $08, $e2, $40
-    db $e8, $08, $e2, $00
-    db $f8, $00, $e8, $60
-    db $e8, $00, $e8, $20
-    db $f8, $f8, $e8, $40
-    db $e8, $f8, $e8, $00
-    db $f8, $f0, $e0, $40
-    db $e8, $f0, $e0, $10
+    db $07, $fe, $f2, $47
+    db $07, $f6, $f0, $47
+    db $f8, $08, $e2, $42
+    db $e8, $08, $e2, $02
+    db $f8, $00, $e8, $62
+    db $e8, $00, $e8, $22
+    db $f8, $f8, $e8, $42
+    db $e8, $f8, $e8, $02
+    db $f8, $f0, $e0, $42
+    db $e8, $f0, $e0, $12
 Metasprite_Part2Unknown46: ;6095
-    db $fe, $08, $e4, $40
-    db $ee, $08, $e6, $00
-    db $fe, $00, $ee, $40
-    db $ee, $00, $ea, $20
-    db $fe, $f8, $ec, $40
-    db $ee, $f8, $ea, $00
-    db $fe, $f0, $e0, $40
-    db $ee, $f0, $e0, $10
+    db $fe, $08, $e4, $42
+    db $ee, $08, $e6, $02
+    db $fe, $00, $ee, $42
+    db $ee, $00, $ea, $22
+    db $fe, $f8, $ec, $42
+    db $ee, $f8, $ea, $02
+    db $fe, $f0, $e0, $42
+    db $ee, $f0, $e0, $12
 Metasprite_Part2Unknown47: ;60B5
-    db $f2, $08, $e4, $00
-    db $02, $08, $e6, $40
-    db $f2, $00, $ee, $00
-    db $02, $00, $ea, $60
-    db $f2, $f8, $ec, $00
-    db $02, $f8, $ea, $40
-    db $f2, $f0, $e0, $00
-    db $02, $f0, $e0, $50
-Metasprite_Part2Unknown48: ;60D5
-    db $e9, $fe, $f2, $00
-    db $e9, $f6, $f0, $00
-    db $08, $08, $e2, $40
-    db $f8, $08, $e2, $00
-    db $08, $00, $e8, $60
-    db $f8, $00, $e8, $20
-    db $08, $f8, $e8, $40
-    db $f8, $f8, $e8, $00
-    db $08, $f0, $e0, $40
-    db $f8, $f0, $e0, $50
+    db $f2, $08, $e4, $02
+    db $02, $08, $e6, $42
+    db $f2, $00, $ee, $02
+    db $02, $00, $ea, $62
+    db $f2, $f8, $ec, $02
+    db $02, $f8, $ea, $42
+    db $f2, $f0, $e0, $02
+    db $02, $f0, $e0, $52
+Metasprite_Blimp: ;60D5
+    db $e9, $fe, $f2, $07
+    db $e9, $f6, $f0, $07
+    db $08, $08, $e2, $42
+    db $f8, $08, $e2, $02
+    db $08, $00, $e8, $62
+    db $f8, $00, $e8, $22
+    db $08, $f8, $e8, $42
+    db $f8, $f8, $e8, $02
+    db $08, $f0, $e0, $42
+    db $f8, $f0, $e0, $12
 Metasprite_Part2Unknown49: ;60FD
-    db $07, $f9, $5e, $20
-    db $07, $f1, $5e, $40
-    db $07, $0a, $f2, $40
-    db $07, $02, $f0, $40
-    db $f8, $0d, $e2, $40
-    db $e8, $0d, $e2, $00
-    db $f8, $05, $e8, $60
-    db $e8, $05, $e8, $20
-    db $f8, $fd, $e8, $40
-    db $e8, $fd, $e8, $00
-    db $f8, $f5, $e0, $40
-    db $e8, $f5, $e0, $10
+    db $07, $f9, $5e, $22
+    db $07, $f1, $5e, $42
+    db $07, $0a, $f2, $47
+    db $07, $02, $f0, $47
+    db $f8, $0d, $e2, $42
+    db $e8, $0d, $e2, $02
+    db $f8, $05, $e8, $62
+    db $e8, $05, $e8, $22
+    db $f8, $fd, $e8, $42
+    db $e8, $fd, $e8, $02
+    db $f8, $f5, $e0, $42
+    db $e8, $f5, $e0, $12
 Metasprite_Part2Unknown50: ;612D
-    db $07, $ef, $4e, $20
-    db $07, $e7, $4e, $40
-    db $07, $05, $f2, $40
-    db $07, $fd, $f0, $40
-    db $f8, $0a, $e2, $40
-    db $e8, $0a, $e2, $00
-    db $f8, $02, $e8, $60
-    db $e8, $02, $e8, $20
-    db $f8, $fa, $e8, $40
-    db $e8, $fa, $e8, $00
-    db $f8, $f2, $e0, $40
-    db $e8, $f2, $e0, $10
+    db $07, $ef, $4e, $22
+    db $07, $e7, $4e, $42
+    db $07, $05, $f2, $47
+    db $07, $fd, $f0, $47
+    db $f8, $0a, $e2, $42
+    db $e8, $0a, $e2, $02
+    db $f8, $02, $e8, $62
+    db $e8, $02, $e8, $22
+    db $f8, $fa, $e8, $42
+    db $e8, $fa, $e8, $02
+    db $f8, $f2, $e0, $42
+    db $e8, $f2, $e0, $12
 Metasprite_Part2Unknown51: ;6135
-    db $07, $e0, $4e, $60
-    db $07, $d8, $4e, $00
-    db $07, $01, $f2, $40
-    db $07, $f9, $f0, $40
-    db $f8, $09, $e2, $40
-    db $e8, $09, $e2, $00
-    db $f8, $01, $e8, $60
-    db $e8, $01, $e8, $20
-    db $f8, $f9, $e8, $40
-    db $e8, $f9, $e8, $00
-    db $f8, $f1, $e0, $40
-    db $e8, $f1, $e0, $10
+    db $07, $e0, $4e, $62
+    db $07, $d8, $4e, $02
+    db $07, $01, $f2, $47
+    db $07, $f9, $f0, $47
+    db $f8, $09, $e2, $42
+    db $e8, $09, $e2, $02
+    db $f8, $01, $e8, $62
+    db $e8, $01, $e8, $22
+    db $f8, $f9, $e8, $42
+    db $e8, $f9, $e8, $02
+    db $f8, $f1, $e0, $42
+    db $e8, $f1, $e0, $12
 Metasprite_Part2Unknown52: ;618D
-    db $e9, $f9, $5e, $60
-    db $e9, $f1, $5e, $00
-    db $e9, $0a, $f2, $00
-    db $e9, $02, $f0, $00
-    db $f8, $0d, $e2, $00
-    db $08, $0d, $e2, $40
-    db $f8, $05, $e8, $20
-    db $08, $05, $e8, $60
-    db $f8, $fd, $e8, $00
-    db $08, $fd, $e8, $40
-    db $f8, $f5, $e0, $00
-    db $08, $f5, $e0, $50
+    db $e9, $f9, $5e, $62
+    db $e9, $f1, $5e, $02
+    db $e9, $0a, $f2, $07
+    db $e9, $02, $f0, $07
+    db $f8, $0d, $e2, $02
+    db $08, $0d, $e2, $42
+    db $f8, $05, $e8, $22
+    db $08, $05, $e8, $62
+    db $f8, $fd, $e8, $02
+    db $08, $fd, $e8, $42
+    db $f8, $f5, $e0, $02
+    db $08, $f5, $e0, $52
 Metasprite_Part2Unknown53: ;61BD
-    db $e9, $ef, $4e, $60
-    db $e9, $e7, $4e, $00
-    db $e9, $05, $f2, $00
-    db $e9, $fd, $f0, $00
-    db $f8, $0a, $e2, $00
-    db $08, $0a, $e2, $40
-    db $f8, $02, $e8, $20
-    db $08, $02, $e8, $60
-    db $f8, $fa, $e8, $00
-    db $08, $fa, $e8, $40
-    db $f8, $f2, $e0, $00
-    db $08, $f2, $e0, $50
+    db $e9, $ef, $4e, $62
+    db $e9, $e7, $4e, $02
+    db $e9, $05, $f2, $07
+    db $e9, $fd, $f0, $07
+    db $f8, $0a, $e2, $02
+    db $08, $0a, $e2, $42
+    db $f8, $02, $e8, $22
+    db $08, $02, $e8, $62
+    db $f8, $fa, $e8, $02
+    db $08, $fa, $e8, $42
+    db $f8, $f2, $e0, $02
+    db $08, $f2, $e0, $52
 Metasprite_Part2Unknown54: ;61ED
-    db $e9, $e0, $4e, $20
-    db $e9, $d8, $4e, $40
-    db $e9, $01, $f2, $00
-    db $e9, $f9, $f0, $00
-    db $f8, $09, $e2, $00
-    db $08, $09, $e2, $40
-    db $f8, $01, $e8, $20
-    db $08, $01, $e8, $60
-    db $f8, $f9, $e8, $00
-    db $08, $f9, $e8, $40
-    db $f8, $f1, $e0, $00
-    db $08, $f1, $e0, $50
-Metasprite_Part2Unknown55: ;621D
-    db $f8, $00, $ca, $00
-    db $f8, $f8, $c8, $10
-Metasprite_Part2Unknown56: ;6225
-    db $f8, $00, $c6, $00
-    db $f8, $f8, $c4, $10
-Metasprite_Part2Unknown57: ;622D
-    db $f8, $f8, $ca, $20
-    db $f8, $00, $c8, $30
-Metasprite_Part2Unknown58: ;6235
-    db $f8, $f8, $c6, $20
-    db $f8, $00, $c4, $30
-Metasprite_Part2Unknown59: ;623D
-    db $f8, $00, $c0, $20
-    db $f8, $f8, $c0, $10
-Metasprite_Part2Unknown60: ;6245
-    db $f8, $00, $c2, $20
-    db $f8, $f8, $c2, $10
-Metasprite_Part2Unknown61: ;624D
-    db $f8, $00, $b6, $60
-    db $f8, $f8, $b6, $10
-Metasprite_Part2Unknown62: ;6255
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $10
-Metasprite_Part2Unknown63: ;625D
-    db $ea, $f9, $f4, $00
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $10
-Metasprite_Part2Unknown64: ;6269
-    db $da, $f9, $f4, $00
-    db $ea, $f9, $f6, $00
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $10
-Metasprite_Part2Unknown65: ;6279
-    db $da, $f9, $f6, $00
-    db $ea, $f9, $f6, $00
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $10
-Metasprite_Part2Unknown66: ;6289
-    db $da, $fa, $f6, $20
-    db $ea, $fa, $f6, $20
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $10
-Metasprite_Part2Unknown67: ;6299
-    db $18, $00, $f8, $20
-    db $18, $f8, $f8, $10
+    db $e9, $e0, $4e, $22
+    db $e9, $d8, $4e, $42
+    db $e9, $01, $f2, $07
+    db $e9, $f9, $f0, $07
+    db $f8, $09, $e2, $02
+    db $08, $09, $e2, $42
+    db $f8, $01, $e8, $22
+    db $08, $01, $e8, $62
+    db $f8, $f9, $e8, $02
+    db $08, $f9, $e8, $42
+    db $f8, $f1, $e0, $02
+    db $08, $f1, $e0, $52
+Metasprite_SquidTurnLeft: ;621D
+    db $f8, $00, $ca, $03
+    db $f8, $f8, $c8, $13
+Metasprite_SquidWalkLeft: ;6225
+    db $f8, $00, $c6, $03
+    db $f8, $f8, $c4, $13
+Metasprite_SquidTurnRight: ;622D
+    db $f8, $f8, $ca, $23
+    db $f8, $00, $c8, $33
+Metasprite_SquidWalkRight: ;6235
+    db $f8, $f8, $c6, $23
+    db $f8, $00, $c4, $33
+Metasprite_SquidFaceForward: ;623D
+    db $f8, $00, $c0, $23
+    db $f8, $f8, $c0, $13
+Metasprite_SquidBounce: ;6245
+    db $f8, $00, $c2, $23
+    db $f8, $f8, $c2, $13
+Metasprite_Nut: ;624D
+    db $f8, $00, $b6, $63
+    db $f8, $f8, $b6, $13
+Metasprite_DistantWhale: ;6255 ~
+    db $f8, $00, $fe, $06
+    db $f8, $f8, $fc, $16
+Metasprite_DistantWhaleBurst1: ;625D
+    db $ea, $f9, $f4, $06
+    db $f8, $00, $fe, $06
+    db $f8, $f8, $fc, $16
+Metasprite_DistantWhaleBurst2: ;6269
+    db $da, $f9, $f4, $06
+    db $ea, $f9, $f6, $06
+    db $f8, $00, $fe, $06
+    db $f8, $f8, $fc, $16
+Metasprite_DistantWhaleLoop1: ;6279
+    db $da, $f9, $f6, $06
+    db $ea, $f9, $f6, $06
+    db $f8, $00, $fe, $06
+    db $f8, $f8, $fc, $16
+Metasprite_DistantWhaleLoop2: ;6289
+    db $da, $fa, $f6, $26
+    db $ea, $fa, $f6, $26
+    db $f8, $00, $fe, $06
+    db $f8, $f8, $fc, $16
+Metasprite_WhaleBlowhole: ;6299
+    db $18, $00, $f8, $26
+    db $18, $f8, $f8, $16
 Metasprite_Part2Unknown68: ;62A1
     db $1c, $f8, $58, $a0
     db $1c, $00, $48, $B0
 Metasprite_Part2Unknown69: ;62A9
     db $0d, $f8, $58, $20
     db $0d, $00, $48, $20
-    db $0d, $0c, $f4, $20
-    db $0d, $ec, $f4, $00
-    db $13, $06, $f4, $20
-    db $13, $f2, $f4, $00
-    db $1d, $00, $fa, $e0
-    db $1d, $f8, $fa, $90
+    db $0d, $0c, $f4, $26
+    db $0d, $ec, $f4, $06
+    db $13, $06, $f4, $26
+    db $13, $f2, $f4, $06
+    db $1d, $00, $fa, $e6
+    db $1d, $f8, $fa, $96
 Metasprite_Part2Unknown71: ;62C9
     db $f8, $f8, $58, $20
     db $f8, $00, $48, $20
-    db $f8, $0c, $f4, $20
-    db $f8, $ec, $f4, $00
-    db $fe, $06, $f4, $20
-    db $fe, $f2, $f4, $00
-    db $08, $00, $fa, $60
-    db $08, $f8, $fa, $00
-    db $18, $00, $fa, $e0
-    db $18, $f8, $fa, $90
+    db $f8, $0c, $f4, $26
+    db $f8, $ec, $f4, $06
+    db $fe, $06, $f4, $26
+    db $fe, $f2, $f4, $06
+    db $08, $00, $fa, $66
+    db $08, $f8, $fa, $06
+    db $18, $00, $fa, $e6
+    db $18, $f8, $fa, $96
 Metasprite_Part2Unknown72: ;62F1
-    db $18, $00, $fa, $e0
-    db $18, $f8, $fa, $80
-    db $08, $00, $fa, $e0
-    db $08, $f8, $fa, $80
+    db $18, $00, $fa, $e6
+    db $18, $f8, $fa, $86
+    db $08, $00, $fa, $e6
+    db $08, $f8, $fa, $86
     db $d8, $f8, $58, $a0
     db $d8, $00, $48, $a0
-    db $d8, $0c, $f4, $a0
-    db $d8, $ec, $f4, $80
-    db $de, $06, $f4, $a0
-    db $de, $f2, $f4, $80
-    db $e8, $00, $fa, $e0
-    db $e8, $f8, $fa, $80
-    db $f8, $00, $fa, $60
-    db $f8, $f8, $fa, $10
-Metasprite_Part2Unknown73: ;6329
-    db $18, $00, $fa, $e0
-    db $18, $f8, $fa, $80
-    db $08, $00, $fa, $60
-    db $08, $f8, $fa, $00
-    db $f8, $00, $fa, $60
-    db $f8, $f8, $fa, $00
-    db $e8, $00, $fa, $e0
-    db $e8, $f8, $fa, $80
-    db $c8, $00, $fa, $e0
-    db $c8, $f8, $fa, $80
-    db $d8, $00, $fa, $e0
-    db $d8, $f8, $fa, $90
-Metasprite_Part2Unknown74: ;6359
-    db $1d, $f8, $fa, $c0
-    db $1d, $00, $fa, $a0
-    db $0d, $f8, $fa, $40
-    db $0d, $00, $fa, $20
-    db $fd, $f8, $fa, $40
-    db $fd, $00, $fa, $20
-    db $ed, $f8, $fa, $c0
-    db $ed, $00, $fa, $a0
-    db $cd, $f8, $fa, $c0
-    db $cd, $00, $fa, $a0
-    db $dd, $f8, $fa, $c0
-    db $dd, $00, $fa, $b0
-Metasprite_Part2Unknown75: ;6389
-    db $90, $00, $fa, $60
-    db $80, $00, $fa, $60
-    db $70, $00, $fa, $60
-    db $60, $00, $fa, $60
-    db $50, $00, $fa, $60
-    db $40, $00, $fa, $60
-    db $30, $00, $fa, $60
-    db $20, $00, $fa, $60
-    db $10, $00, $fa, $60
-    db $90, $f8, $fa, $00
-    db $80, $f8, $fa, $00
-    db $70, $f8, $fa, $00
-    db $60, $f8, $fa, $00
-    db $50, $f8, $fa, $00
-    db $40, $f8, $fa, $00
-    db $30, $f8, $fa, $00
-    db $20, $f8, $fa, $00
-    db $10, $f8, $fa, $00
-    db $00, $00, $fa, $60
-    db $00, $f8, $fa, $10
-Metasprite_Part2Unknown76: ;63D9
-    db $90, $f8, $fa, $40
-    db $80, $f8, $fa, $40
-    db $70, $f8, $fa, $40
-    db $60, $f8, $fa, $40
-    db $50, $f8, $fa, $40
-    db $40, $f8, $fa, $40
-    db $30, $f8, $fa, $40
-    db $20, $f8, $fa, $40
-    db $10, $f8, $fa, $40
-    db $90, $00, $fa, $20
-    db $80, $00, $fa, $20
-    db $70, $00, $fa, $20
-    db $60, $00, $fa, $20
-    db $50, $00, $fa, $20
-    db $40, $00, $fa, $20
-    db $30, $00, $fa, $20
-    db $20, $00, $fa, $20
-    db $10, $00, $fa, $20
-    db $00, $f8, $fa, $40
-    db $00, $00, $fa, $30
+    db $d8, $0c, $f4, $a6
+    db $d8, $ec, $f4, $86
+    db $de, $06, $f4, $a6
+    db $de, $f2, $f4, $86
+    db $e8, $00, $fa, $e6
+    db $e8, $f8, $fa, $86
+    db $f8, $00, $fa, $66
+    db $f8, $f8, $fa, $16
+Metasprite_WaterBurst1: ;6329
+    db $18, $00, $fa, $e6
+    db $18, $f8, $fa, $86
+    db $08, $00, $fa, $66
+    db $08, $f8, $fa, $06
+    db $f8, $00, $fa, $66
+    db $f8, $f8, $fa, $06
+    db $e8, $00, $fa, $e6
+    db $e8, $f8, $fa, $86
+    db $c8, $00, $fa, $e6
+    db $c8, $f8, $fa, $86
+    db $d8, $00, $fa, $e6
+    db $d8, $f8, $fa, $96
+Metasprite_WaterBurst2: ;6359
+    db $1d, $f8, $fa, $c6
+    db $1d, $00, $fa, $a6
+    db $0d, $f8, $fa, $46
+    db $0d, $00, $fa, $26
+    db $fd, $f8, $fa, $46
+    db $fd, $00, $fa, $26
+    db $ed, $f8, $fa, $c6
+    db $ed, $00, $fa, $a6
+    db $cd, $f8, $fa, $c6
+    db $cd, $00, $fa, $a6
+    db $dd, $f8, $fa, $c6
+    db $dd, $00, $fa, $b6
+Metasprite_WaterBurst3: ;6389
+    db $90, $00, $fa, $66
+    db $80, $00, $fa, $66
+    db $70, $00, $fa, $66
+    db $60, $00, $fa, $66
+    db $50, $00, $fa, $66
+    db $40, $00, $fa, $66
+    db $30, $00, $fa, $66
+    db $20, $00, $fa, $66
+    db $10, $00, $fa, $66
+    db $90, $f8, $fa, $06
+    db $80, $f8, $fa, $06
+    db $70, $f8, $fa, $06
+    db $60, $f8, $fa, $06
+    db $50, $f8, $fa, $06
+    db $40, $f8, $fa, $06
+    db $30, $f8, $fa, $06
+    db $20, $f8, $fa, $06
+    db $10, $f8, $fa, $06
+    db $00, $00, $fa, $66
+    db $00, $f8, $fa, $16
+Metasprite_WaterBurst4: ;63D9
+    db $90, $f8, $fa, $46
+    db $80, $f8, $fa, $46
+    db $70, $f8, $fa, $46
+    db $60, $f8, $fa, $46
+    db $50, $f8, $fa, $46
+    db $40, $f8, $fa, $46
+    db $30, $f8, $fa, $46
+    db $20, $f8, $fa, $46
+    db $10, $f8, $fa, $46
+    db $90, $00, $fa, $26
+    db $80, $00, $fa, $26
+    db $70, $00, $fa, $26
+    db $60, $00, $fa, $26
+    db $50, $00, $fa, $26
+    db $40, $00, $fa, $26
+    db $30, $00, $fa, $26
+    db $20, $00, $fa, $26
+    db $10, $00, $fa, $26
+    db $00, $f8, $fa, $46
+    db $00, $00, $fa, $36
 Metasprite_Part2Unknown77: ;6429
-    db $f8, $08, $fe, $00
-    db $f8, $f0, $fe, $00
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $00
-    db $00, $10, $ee, $60
-    db $08, $08, $f0, $60
-    db $08, $00, $f2, $60
-    db $08, $f8, $f2, $40
-    db $08, $f0, $f0, $40
-    db $00, $e8, $ee, $40
-    db $f0, $10, $ee, $20
-    db $e8, $08, $f0, $20
-    db $e8, $00, $f2, $20
-    db $e8, $f8, $f2, $00
-    db $e8, $f0, $f0, $00
-    db $f0, $e8, $ee, $10
-Metasprite_Part2Unknown78: ;6469
-    db $f8, $08, $fe, $00
-    db $f8, $f0, $fe, $00
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $00
-    db $00, $10, $f4, $60
-    db $08, $08, $f6, $60
-    db $08, $00, $f8, $60
-    db $08, $f8, $f8, $40
-    db $08, $f0, $f6, $40
-    db $00, $e8, $f4, $40
-    db $f0, $10, $f4, $20
-    db $e8, $08, $f6, $20
-    db $e8, $00, $f8, $20
-    db $e8, $f8, $f8, $00
-    db $e8, $f0, $f6, $00
-    db $f0, $e8, $f4, $10
-Metasprite_Part2Unknown79: ;64A9
-    db $f8, $f0, $fe, $20
-    db $f8, $08, $fe, $20
-    db $f8, $f8, $fc, $20
-    db $f8, $00, $fa, $20
-    db $00, $e8, $ee, $40
-    db $08, $f0, $f0, $40
-    db $08, $f8, $f2, $40
-    db $08, $00, $f2, $60
-    db $08, $08, $f0, $60
-    db $00, $10, $ee, $60
-    db $f0, $e8, $ee, $00
-    db $e8, $f0, $f0, $00
-    db $e8, $f8, $f2, $00
-    db $e8, $00, $f2, $20
-    db $e8, $08, $f0, $20
-    db $f0, $10, $ee, $30
-Metasprite_Part2Unknown80: ;64E9
-    db $f8, $f0, $fe, $20
-    db $f8, $08, $fe, $20
-    db $f8, $f8, $fc, $20
-    db $f8, $00, $fa, $20
-    db $00, $e8, $f4, $40
-    db $08, $f0, $f6, $40
-    db $08, $f8, $f8, $40
-    db $08, $00, $f8, $60
-    db $08, $08, $f6, $60
-    db $00, $10, $f4, $60
-    db $f0, $e8, $f4, $00
-    db $e8, $f0, $f6, $00
-    db $e8, $f8, $f8, $00
-    db $e8, $00, $f8, $20
-    db $e8, $08, $f6, $20
-    db $f0, $10, $f4, $30
-Metasprite_Part2Unknown81: ;6529
-    db $f8, $08, $fe, $40
-    db $f8, $f0, $fe, $40
-    db $f8, $00, $fc, $40
-    db $f8, $f8, $fa, $40
-    db $f0, $10, $ee, $20
-    db $e8, $08, $f0, $20
-    db $e8, $00, $f2, $20
-    db $e8, $f8, $f2, $00
-    db $e8, $f0, $f0, $00
-    db $f0, $e8, $ee, $00
-    db $00, $10, $ee, $60
-    db $08, $08, $f0, $60
-    db $08, $00, $f2, $60
-    db $08, $f8, $f2, $40
-    db $08, $f0, $f0, $40
-    db $00, $e8, $ee, $50
-Metasprite_Part2Unknown82: ;6569
-    db $f8, $08, $fe, $40
-    db $f8, $f0, $fe, $40
-    db $f8, $00, $fc, $40
-    db $f8, $f8, $fa, $40
-    db $f0, $10, $f4, $20
-    db $e8, $08, $f6, $20
-    db $e8, $00, $f8, $20
-    db $e8, $f8, $f8, $00
-    db $e8, $f0, $f6, $00
-    db $f0, $e8, $f4, $00
-    db $00, $10, $f4, $60
-    db $08, $08, $f6, $60
-    db $08, $00, $f8, $60
-    db $08, $f8, $f8, $40
-    db $08, $f0, $f6, $40
-    db $00, $e8, $f4, $50
-Metasprite_Part2Unknown83: ;65A9
-    db $f8, $f0, $fe, $60
-    db $f8, $08, $fe, $60
-    db $f8, $f8, $fc, $60
-    db $f8, $00, $fa, $60
-    db $f0, $e8, $ee, $00
-    db $e8, $f0, $f0, $00
-    db $e8, $f8, $f2, $00
-    db $e8, $00, $f2, $20
-    db $e8, $08, $f0, $20
-    db $f0, $10, $ee, $20
-    db $00, $e8, $ee, $40
-    db $08, $f0, $f0, $40
-    db $08, $f8, $f2, $40
-    db $08, $00, $f2, $60
-    db $08, $08, $f0, $60
-    db $00, $10, $ee, $70
-Metasprite_Part2Unknown84: ;65E9
-    db $f8, $f0, $fe, $60
-    db $f8, $08, $fe, $60
-    db $f8, $f8, $fc, $60
-    db $f8, $00, $fa, $60
-    db $f0, $e8, $f4, $00
-    db $e8, $f0, $f6, $00
-    db $e8, $f8, $f8, $00
-    db $e8, $00, $f8, $20
-    db $e8, $08, $f6, $20
-    db $f0, $10, $f4, $20
-    db $00, $e8, $f4, $40
-    db $08, $f0, $f6, $40
-    db $08, $f8, $f8, $40
-    db $08, $00, $f8, $60
-    db $08, $08, $f6, $60
-    db $00, $10, $f4, $70
-Metasprite_Part2Unknown85: ;6629
-    db $f8, $08, $fe, $00
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $00
-    db $f8, $f0, $fa, $00
-    db $f0, $e8, $ee, $00
-    db $e8, $f0, $f0, $00
-    db $e8, $f8, $f2, $00
-    db $e8, $00, $f2, $20
-    db $e8, $08, $f0, $20
-    db $f0, $10, $ee, $20
-    db $00, $e8, $ee, $40
-    db $08, $f0, $f0, $40
-    db $08, $f8, $f2, $40
-    db $08, $00, $f2, $60
-    db $08, $08, $f0, $60
-    db $00, $10, $ee, $70
-Metasprite_Part2Unknown86: ;6669
-    db $f8, $08, $fe, $00
-    db $f8, $00, $fe, $00
-    db $f8, $f8, $fc, $00
-    db $f8, $f0, $fa, $00
-    db $f0, $e8, $f4, $00
-    db $e8, $f0, $f6, $00
-    db $e8, $f8, $f8, $00
-    db $e8, $00, $f8, $20
-    db $e8, $08, $f6, $20
-    db $f0, $10, $f4, $20
-    db $00, $e8, $f4, $40
-    db $08, $f0, $f6, $40
-    db $08, $f8, $f8, $40
-    db $08, $00, $f8, $60
-    db $08, $08, $f6, $60
-    db $00, $10, $f4, $70
-Metasprite_Part2Unknown87: ;66A9
-    db $f8, $f0, $fe, $20
-    db $f8, $f8, $fe, $20
-    db $f8, $00, $fc, $20
-    db $f8, $08, $fa, $20
-    db $f0, $10, $ee, $20
-    db $e8, $08, $f0, $20
-    db $e8, $00, $f2, $20
-    db $e8, $f8, $f2, $00
-    db $e8, $f0, $f0, $00
-    db $f0, $e8, $ee, $00
-    db $00, $10, $ee, $60
-    db $08, $08, $f0, $60
-    db $08, $00, $f2, $60
-    db $08, $f8, $f2, $40
-    db $08, $f0, $f0, $40
-    db $00, $e8, $ee, $50
-Metasprite_Part2Unknown88: ;66E9
-    db $f8, $f0, $fe, $20
-    db $f8, $f8, $fe, $20
-    db $f8, $00, $fc, $20
-    db $f8, $08, $fa, $20
-    db $f0, $10, $f4, $20
-    db $e8, $08, $f6, $20
-    db $e8, $00, $f8, $20
-    db $e8, $f8, $f8, $00
-    db $e8, $f0, $f6, $00
-    db $f0, $e8, $f4, $00
-    db $00, $10, $f4, $60
-    db $08, $08, $f6, $60
-    db $08, $00, $f8, $60
-    db $08, $f8, $f8, $40
-    db $08, $f0, $f6, $40
-    db $00, $e8, $f4, $50
-Metasprite_Part2Unknown89: ;6729
-    db $f8, $f8, $fa, $00
-    db $f8, $00, $fc, $00
-    db $00, $ec, $4e, $00
-    db $00, $f4, $4e, $60
-    db $f0, $04, $4e, $00
-    db $f0, $0c, $4e, $70
-Metasprite_Part2Unknown90: ;6741
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $00
-    db $f8, $0e, $5e, $60
-    db $f8, $06, $5e, $00
-    db $f8, $f0, $5e, $60
-    db $f8, $e8, $5e, $10
+    db $f8, $08, $fe, $07
+    db $f8, $f0, $fe, $07
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $07
+    db $00, $10, $ee, $67
+    db $08, $08, $f0, $67
+    db $08, $00, $f2, $67
+    db $08, $f8, $f2, $47
+    db $08, $f0, $f0, $47
+    db $00, $e8, $ee, $47
+    db $f0, $10, $ee, $27
+    db $e8, $08, $f0, $27
+    db $e8, $00, $f2, $27
+    db $e8, $f8, $f2, $07
+    db $e8, $f0, $f0, $07
+    db $f0, $e8, $ee, $17
+Metasprite_Part2Unknown78: ;6467
+    db $f8, $08, $fe, $07
+    db $f8, $f0, $fe, $07
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $07
+    db $00, $10, $f4, $67
+    db $08, $08, $f6, $67
+    db $08, $00, $f8, $67
+    db $08, $f8, $f8, $47
+    db $08, $f0, $f6, $47
+    db $00, $e8, $f4, $47
+    db $f0, $10, $f4, $27
+    db $e8, $08, $f6, $27
+    db $e8, $00, $f8, $27
+    db $e8, $f8, $f8, $07
+    db $e8, $f0, $f6, $07
+    db $f0, $e8, $f4, $17
+Metasprite_Part2Unknown79: ;64A7
+    db $f8, $f0, $fe, $27
+    db $f8, $08, $fe, $27
+    db $f8, $f8, $fc, $27
+    db $f8, $00, $fa, $27
+    db $00, $e8, $ee, $47
+    db $08, $f0, $f0, $47
+    db $08, $f8, $f2, $47
+    db $08, $00, $f2, $67
+    db $08, $08, $f0, $67
+    db $00, $10, $ee, $67
+    db $f0, $e8, $ee, $07
+    db $e8, $f0, $f0, $07
+    db $e8, $f8, $f2, $07
+    db $e8, $00, $f2, $27
+    db $e8, $08, $f0, $27
+    db $f0, $10, $ee, $37
+Metasprite_Part2Unknown80: ;64E7
+    db $f8, $f0, $fe, $27
+    db $f8, $08, $fe, $27
+    db $f8, $f8, $fc, $27
+    db $f8, $00, $fa, $27
+    db $00, $e8, $f4, $47
+    db $08, $f0, $f6, $47
+    db $08, $f8, $f8, $47
+    db $08, $00, $f8, $67
+    db $08, $08, $f6, $67
+    db $00, $10, $f4, $67
+    db $f0, $e8, $f4, $07
+    db $e8, $f0, $f6, $07
+    db $e8, $f8, $f8, $07
+    db $e8, $00, $f8, $27
+    db $e8, $08, $f6, $27
+    db $f0, $10, $f4, $37
+Metasprite_Part2Unknown81: ;6527
+    db $f8, $08, $fe, $47
+    db $f8, $f0, $fe, $47
+    db $f8, $00, $fc, $47
+    db $f8, $f8, $fa, $47
+    db $f0, $10, $ee, $27
+    db $e8, $08, $f0, $27
+    db $e8, $00, $f2, $27
+    db $e8, $f8, $f2, $07
+    db $e8, $f0, $f0, $07
+    db $f0, $e8, $ee, $07
+    db $00, $10, $ee, $67
+    db $08, $08, $f0, $67
+    db $08, $00, $f2, $67
+    db $08, $f8, $f2, $47
+    db $08, $f0, $f0, $47
+    db $00, $e8, $ee, $57
+Metasprite_Part2Unknown82: ;6567
+    db $f8, $08, $fe, $47
+    db $f8, $f0, $fe, $47
+    db $f8, $00, $fc, $47
+    db $f8, $f8, $fa, $47
+    db $f0, $10, $f4, $27
+    db $e8, $08, $f6, $27
+    db $e8, $00, $f8, $27
+    db $e8, $f8, $f8, $07
+    db $e8, $f0, $f6, $07
+    db $f0, $e8, $f4, $07
+    db $00, $10, $f4, $67
+    db $08, $08, $f6, $67
+    db $08, $00, $f8, $67
+    db $08, $f8, $f8, $47
+    db $08, $f0, $f6, $47
+    db $00, $e8, $f4, $57
+Metasprite_Part2Unknown83: ;65A7
+    db $f8, $f0, $fe, $67
+    db $f8, $08, $fe, $67
+    db $f8, $f8, $fc, $67
+    db $f8, $00, $fa, $67
+    db $f0, $e8, $ee, $07
+    db $e8, $f0, $f0, $07
+    db $e8, $f8, $f2, $07
+    db $e8, $00, $f2, $27
+    db $e8, $08, $f0, $27
+    db $f0, $10, $ee, $27
+    db $00, $e8, $ee, $47
+    db $08, $f0, $f0, $47
+    db $08, $f8, $f2, $47
+    db $08, $00, $f2, $67
+    db $08, $08, $f0, $67
+    db $00, $10, $ee, $77
+Metasprite_Part2Unknown84: ;65E7
+    db $f8, $f0, $fe, $67
+    db $f8, $08, $fe, $67
+    db $f8, $f8, $fc, $67
+    db $f8, $00, $fa, $67
+    db $f0, $e8, $f4, $07
+    db $e8, $f0, $f6, $07
+    db $e8, $f8, $f8, $07
+    db $e8, $00, $f8, $27
+    db $e8, $08, $f6, $27
+    db $f0, $10, $f4, $27
+    db $00, $e8, $f4, $47
+    db $08, $f0, $f6, $47
+    db $08, $f8, $f8, $47
+    db $08, $00, $f8, $67
+    db $08, $08, $f6, $67
+    db $00, $10, $f4, $77
+Metasprite_Part2Unknown85: ;6627
+    db $f8, $08, $fe, $07
+    db $f8, $00, $fe, $07
+    db $f8, $f8, $fc, $07
+    db $f8, $f0, $fa, $07
+    db $f0, $e8, $ee, $07
+    db $e8, $f0, $f0, $07
+    db $e8, $f8, $f2, $07
+    db $e8, $00, $f2, $27
+    db $e8, $08, $f0, $27
+    db $f0, $10, $ee, $27
+    db $00, $e8, $ee, $47
+    db $08, $f0, $f0, $47
+    db $08, $f8, $f2, $47
+    db $08, $00, $f2, $67
+    db $08, $08, $f0, $67
+    db $00, $10, $ee, $77
+Metasprite_Part2Unknown86: ;6667
+    db $f8, $08, $fe, $07
+    db $f8, $00, $fe, $07
+    db $f8, $f8, $fc, $07
+    db $f8, $f0, $fa, $07
+    db $f0, $e8, $f4, $07
+    db $e8, $f0, $f6, $07
+    db $e8, $f8, $f8, $07
+    db $e8, $00, $f8, $27
+    db $e8, $08, $f6, $27
+    db $f0, $10, $f4, $27
+    db $00, $e8, $f4, $47
+    db $08, $f0, $f6, $47
+    db $08, $f8, $f8, $47
+    db $08, $00, $f8, $67
+    db $08, $08, $f6, $67
+    db $00, $10, $f4, $77
+Metasprite_Part2Unknown87: ;66A7
+    db $f8, $f0, $fe, $27
+    db $f8, $f8, $fe, $27
+    db $f8, $00, $fc, $27
+    db $f8, $08, $fa, $27
+    db $f0, $10, $ee, $27
+    db $e8, $08, $f0, $27
+    db $e8, $00, $f2, $27
+    db $e8, $f8, $f2, $07
+    db $e8, $f0, $f0, $07
+    db $f0, $e8, $ee, $07
+    db $00, $10, $ee, $67
+    db $08, $08, $f0, $67
+    db $08, $00, $f2, $67
+    db $08, $f8, $f2, $47
+    db $08, $f0, $f0, $47
+    db $00, $e8, $ee, $57
+Metasprite_Part2Unknown88: ;66E7
+    db $f8, $f0, $fe, $27
+    db $f8, $f8, $fe, $27
+    db $f8, $00, $fc, $27
+    db $f8, $08, $fa, $27
+    db $f0, $10, $f4, $27
+    db $e8, $08, $f6, $27
+    db $e8, $00, $f8, $27
+    db $e8, $f8, $f8, $07
+    db $e8, $f0, $f6, $07
+    db $f0, $e8, $f4, $07
+    db $00, $10, $f4, $67
+    db $08, $08, $f6, $67
+    db $08, $00, $f8, $67
+    db $08, $f8, $f8, $47
+    db $08, $f0, $f6, $47
+    db $00, $e8, $f4, $57
+Metasprite_Part2Unknown89: ;6727
+    db $f8, $f8, $fa, $07
+    db $f8, $00, $fc, $07
+    db $00, $ec, $4e, $07
+    db $00, $f4, $4e, $67
+    db $f0, $04, $4e, $07
+    db $f0, $0c, $4e, $77
+Metasprite_Part2Unknown90: ;6747
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $07
+    db $f8, $0e, $5e, $67
+    db $f8, $06, $5e, $07
+    db $f8, $f0, $5e, $67
+    db $f8, $e8, $5e, $17
 Metasprite_Part2Unknown91: ;6759
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $00
-    db $00, $0c, $4e, $60
-    db $00, $04, $4e, $00
-    db $f0, $f4, $4e, $60
-    db $f0, $ec, $4e, $10
-Metasprite_Part2Unknown92: ;6771
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $00
-    db $04, $08, $5e, $60
-    db $04, $00, $5e, $00
-    db $ec, $f8, $5e, $60
-    db $ec, $f0, $5e, $10
-Metasprite_Part2Unknown93: ;6789
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $00
-    db $06, $00, $4e, $60
-    db $06, $f8, $4e, $00
-    db $ea, $00, $4e, $60
-    db $ea, $f8, $4e, $10
-Metasprite_Part2Unknown94: ;67A1
-    db $f8, $f8, $fa, $00
-    db $f8, $00, $fc, $00
-    db $04, $f0, $5e, $00
-    db $04, $f8, $5e, $60
-    db $ec, $00, $5e, $00
-    db $ec, $08, $5e, $70
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $07
+    db $00, $0c, $4e, $67
+    db $00, $04, $4e, $07
+    db $f0, $f4, $4e, $67
+    db $f0, $ec, $4e, $17
+Metasprite_Part2Unknown92: ;6777
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $07
+    db $04, $08, $5e, $67
+    db $04, $00, $5e, $07
+    db $ec, $f8, $5e, $67
+    db $ec, $f0, $5e, $17
+Metasprite_Part2Unknown93: ;6787
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $07
+    db $06, $00, $4e, $67
+    db $06, $f8, $4e, $07
+    db $ea, $00, $4e, $67
+    db $ea, $f8, $4e, $17
+Metasprite_Part2Unknown94: ;67A7
+    db $f8, $f8, $fa, $07
+    db $f8, $00, $fc, $07
+    db $04, $f0, $5e, $07
+    db $04, $f8, $5e, $67
+    db $ec, $00, $5e, $07
+    db $ec, $08, $5e, $77
 Metasprite_Part2Unknown95: ;67B9
-    db $eb, $fc, $ec, $00
-    db $05, $fc, $ec, $00
-    db $f8, $09, $ec, $00
-    db $f8, $ef, $ec, $00
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $10
+    db $eb, $fc, $ec, $05
+    db $05, $fc, $ec, $05
+    db $f8, $09, $ec, $05
+    db $f8, $ef, $ec, $05
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $17
 Metasprite_Part2Unknown96: ;67D1
-    db $04, $f6, $ec, $00
-    db $ec, $01, $ec, $00
-    db $fe, $07, $ec, $00
-    db $f2, $f0, $ec, $00
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $10
+    db $04, $f6, $ec, $05
+    db $ec, $01, $ec, $05
+    db $fe, $07, $ec, $05
+    db $f2, $f0, $ec, $05
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $17
 Metasprite_Part2Unknown97: ;67E9
-    db $ef, $05, $ec, $00
-    db $01, $f2, $ec, $00
-    db $01, $05, $ec, $00
-    db $ef, $f2, $ec, $00
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $10
+    db $ef, $05, $ec, $05
+    db $01, $f2, $ec, $05
+    db $01, $05, $ec, $05
+    db $ef, $f2, $ec, $05
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $17
 Metasprite_Part2Unknown98: ;6801
-    db $f4, $08, $ec, $00
-    db $fd, $ef, $ec, $00
-    db $05, $00, $ec, $00
-    db $ec, $f7, $ec, $00
-    db $f8, $00, $fc, $00
-    db $f8, $f8, $fa, $10
+    db $f4, $08, $ec, $05
+    db $fd, $ef, $ec, $05
+    db $05, $00, $ec, $05
+    db $ec, $f7, $ec, $05
+    db $f8, $00, $fc, $07
+    db $f8, $f8, $fa, $17
 Metasprite_Part2Unknown99: ;6819
-    db $eb, $fc, $ec, $00
-    db $05, $fc, $ec, $00
-    db $f8, $ef, $ec, $00
-    db $f8, $09, $ec, $00
-    db $f8, $f8, $fc, $20
-    db $f8, $00, $fa, $30
+    db $eb, $fc, $ec, $05
+    db $05, $fc, $ec, $05
+    db $f8, $ef, $ec, $05
+    db $f8, $09, $ec, $05
+    db $f8, $f8, $fc, $27
+    db $f8, $00, $fa, $37
 Metasprite_Part2Unknown100: ;6831
-    db $f4, $ef, $ec, $00
-    db $fd, $09, $ec, $00
-    db $05, $f8, $ec, $00
-    db $ec, $01, $ec, $00
-    db $f8, $f8, $fc, $20
-    db $f8, $00, $fa, $30
+    db $f4, $ef, $ec, $05
+    db $fd, $09, $ec, $05
+    db $05, $f8, $ec, $05
+    db $ec, $01, $ec, $05
+    db $f8, $f8, $fc, $27
+    db $f8, $00, $fa, $37
 Metasprite_Part2Unknown101: ;6849
-    db $ef, $f3, $ec, $00
-    db $01, $06, $ec, $00
-    db $01, $f3, $ec, $00
-    db $ef, $06, $ec, $00
-    db $f8, $f8, $fc, $20
-    db $f8, $00, $fa, $30
+    db $ef, $f3, $ec, $05
+    db $01, $06, $ec, $05
+    db $01, $f3, $ec, $05
+    db $ef, $06, $ec, $05
+    db $f8, $f8, $fc, $27
+    db $f8, $00, $fa, $37
 Metasprite_Part2Unknown102: ;6861
-    db $04, $02, $ec, $00
-    db $ec, $f7, $ec, $00
-    db $fe, $f1, $ec, $00
-    db $f2, $08, $ec, $00
-    db $f8, $f8, $fc, $20
-    db $f8, $00, $fa, $30
+    db $04, $02, $ec, $05
+    db $ec, $f7, $ec, $05
+    db $fe, $f1, $ec, $05
+    db $f2, $08, $ec, $05
+    db $f8, $f8, $fc, $27
+    db $f8, $00, $fa, $37
 Metasprite_Part2Unknown103: ;6879
     db $f8, $00, $fc, $00
     db $f8, $f8, $fa, $01
@@ -3281,5 +3281,260 @@ Metasprite_GlunkProjectile3: ;68A9
 Metasprite_GlunkProjectile4: ;68AD
     db $f3, $fd, $86, $50
 
-; free space padding
-INCBIN "baserom.gb", $2e8a9, $30000 - $2e8a9
+LoadColorPalettes::
+    ld a, %10000000 ;Increment bit
+    ld [rBCPS], a
+;BG0
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $1F
+    ld [rBCPD], a
+    ld a, $68
+    ld [rBCPD], a
+
+    ld a, $1F
+    ld [rBCPD], a
+    ld a, $0C
+    ld [rBCPD], a
+
+    xor a
+    ld [rBCPD], a
+    ld [rBCPD], a 
+
+;BG1
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $03
+    ld [rBCPD], a
+    ld a, $EF
+    ld [rBCPD], a
+
+    ld a, $03
+    ld [rBCPD], a
+    ld a, $E0
+    ld [rBCPD], a
+
+    xor a
+    ld [rBCPD], a
+    ld [rBCPD], a 
+;BG2
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $68
+    ld [rBCPD], a
+    ld a, $1F
+    ld [rBCPD], a
+
+    ld a, $84
+    ld [rBCPD], a
+    ld a, $0a
+    ld [rBCPD], a
+
+    xor a
+    ld [rBCPD], a
+    ld [rBCPD], a 
+;BG3
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $17
+    ld [rBCPD], a
+    ld a, $0E
+    ld [rBCPD], a
+
+    ld a, $08
+    ld [rBCPD], a
+    ld a, $0D
+    ld [rBCPD], a
+
+    xor a
+    ld [rBCPD], a
+    ld [rBCPD], a 
+;BG4
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld [rBCPD], a
+    ld a, $03
+    ld [rBCPD], a
+
+    ld a, $3F
+    ld [rBCPD], a
+    ld a, $01
+    ld [rBCPD], a
+
+    xor a
+    ld [rBCPD], a
+    ld [rBCPD], a 
+;BG5
+    ld a, $FF
+    ld [rBCPD], a
+    ld [rBCPD], a
+
+    ld a, $08
+    ld [rBCPD], a
+    ld a, $40
+    ld [rBCPD], a
+
+    ld a, $04
+    ld [rBCPD], a
+    ld a, $20
+    ld [rBCPD], a
+
+    xor a
+    ld [rBCPD], a
+    ld [rBCPD], a 
+
+;Objects
+    ld a, %10000000 ;increment bit 
+    ld [rOCPS], a
+;OBJ0
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $68
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $0C
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ1
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $FF
+    ld [rOCPD], a
+    ld a, $2B
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $68
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ2
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $1C
+    ld [rOCPD], a
+    ld a, $32
+    ld [rOCPD], a
+
+    ld a, $03
+    ld [rOCPD], a
+    ld a, $60
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ3
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $FF
+    ld [rOCPD], a
+    ld a, $2B
+    ld [rOCPD], a
+
+    ld a, $9F
+    ld [rOCPD], a
+    ld a, $01
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ4
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $BC
+    ld [rOCPD], a
+    ld a, $32
+    ld [rOCPD], a
+
+    ld a, $1F
+    ld [rOCPD], a
+    ld a, $0C
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ5
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $FF
+    ld [rOCPD], a
+    ld a, $03
+    ld [rOCPD], a
+
+    ld a, $3F
+    ld [rOCPD], a
+    ld a, $01
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ6
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $03
+    ld [rOCPD], a
+    ld a, $6F
+    ld [rOCPD], a
+
+    ld a, $03
+    ld [rOCPD], a
+    ld a, $60
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+;OBJ7
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $FF
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld a, $08
+    ld [rOCPD], a
+    ld a, $21
+    ld [rOCPD], a
+
+    xor a
+    ld [rOCPD], a
+    ld [rOCPD], a
+
+    ld hl, wCurStage
+    inc [hl] ;lololo
+    inc [hl] ;islands
+    inc [hl] ;clouds
+    inc [hl] ;dedede
+    ret

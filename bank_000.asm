@@ -3345,7 +3345,7 @@ DrawMetaSprite:
     ld a, [hl+]
     ld [de], a
     inc e
-    ld a, [wTemp]
+    call IgnoreBit4
     xor [hl]
     ld [de], a
     inc hl
@@ -3730,7 +3730,7 @@ Call_000_19f9:
     ld h, d
     ld l, e
     ld de, wMetatileDefinitions
-    call Decompress
+    call MidLevelColorSwap
     ld hl, $ff91
     bit 5, [hl]
     jr z, .jump_000_1bc2
@@ -8683,100 +8683,15 @@ Call_000_3da9:
 ; free space padding
 ;INCBIN "baserom.gb", $3dae, $4000 - $3dae
 ColourPallets:
-    ld a, %10000000 ;Increment bit
-    ld [rBCPS], a
-    ;BG0
-    ld a, $FF
-    ld [rBCPD], a
-    ld [rBCPD], a
-
-    ld a, $1F
-    ld [rBCPD], a
-    ld a, $68
-    ld [rBCPD], a
-
-    ld a, $1F
-    ld [rBCPD], a
-    ld a, $0C
-    ld [rBCPD], a
-
-    xor a
-    ld [rBCPD], a
-    ld [rBCPD], a 
-
-    ;BG1
-    ld a, $FF
-    ld [rBCPD], a
-    ld [rBCPD], a
-
-    ld a, $03
-    ld [rBCPD], a
-    ld a, $EF
-    ld [rBCPD], a
-
-    ld a, $03
-    ld [rBCPD], a
-    ld a, $E0
-    ld [rBCPD], a
-
-    xor a
-    ld [rBCPD], a
-    ld [rBCPD], a 
-    ;BG2
-    ld a, $FF
-    ld [rBCPD], a
-    ld [rBCPD], a
-
-    ld a, $68
-    ld [rBCPD], a
-    ld a, $1F
-    ld [rBCPD], a
-
-    ld a, $82
-    ld [rBCPD], a
-    ld a, $09
-    ld [rBCPD], a
-
-    xor a
-    ld [rBCPD], a
-    ld [rBCPD], a 
-    ;similar code for sprites
-    ld a, %10000000 ;increment bit 
-    ld [rOCPS], a
-    ;OBJ0
-    ld [rOCPD], a
-    ld [rOCPD], a
-
-    ld a, $1F
-    ld [rOCPD], a
-    ld a, $68
-    ld [rOCPD], a
-
-    ld a, $1F
-    ld [rOCPD], a
-    ld a, $0C
-    ld [rOCPD], a
-
-    xor a
-    ld [rOCPD], a
-    ld [rOCPD], a
-    ;OBJ1
-    ld [rOCPD], a
-    ld [rOCPD], a
-
-    ld a, $FF
-    ld [rOCPD], a
-    ld a, $2B
-    ld [rOCPD], a
-
-    ld a, $1F
-    ld [rOCPD], a
-    ld a, $68
-    ld [rOCPD], a
-
-    xor a
-    ld [rOCPD], a
-    ld [rOCPD], a
+    ld a, [wLoadedROMBank]
+    ld b, a
+    ld a, $0B
+    ld [wLoadedROMBank], a
+    ld [MBC1RomBank], a
+    call LoadColorPalettes
+    ld a, b
+    ld [wLoadedROMBank], a
+    ld [MBC1RomBank], a
     jp Return
 
 CopyTilemapBuffer:
@@ -9013,10 +8928,8 @@ MetatileLocationLoader:
 
 InitRAMplus2xspeed:
     call InitRAM
-    push af
     ld a, %00000001
     ld [rKEY1], a
-    pop af
     stop
     ret
 
@@ -9024,14 +8937,44 @@ StageColortileDefinitions:
     db Bank(Colortiles_GreenGreens);These need to be replaced with the proper color tiles once I get this working
     bigdw Colortiles_GreenGreens
 
-    db Bank(Metatiles_CastleLololo);todo
-    bigdw Metatiles_CastleLololo
+    db Bank(Colortiles_CastleLololo)
+    bigdw Colortiles_CastleLololo
 
-    db Bank(Metatiles_FloatIslands);todo
-    bigdw Metatiles_FloatIslands
+    db Bank(Colortiles_FloatIslands)
+    bigdw Colortiles_FloatIslands
 
-    db Bank(Metatiles_BubblyClouds);todo
-    bigdw Metatiles_BubblyClouds
+    db Bank(Colortiles_BubblyClouds)
+    bigdw Colortiles_BubblyClouds
 
-    db Bank(Metatiles_MtDedede) ;todo
-    bigdw Metatiles_MtDedede
+    db Bank(Colortiles_MtDedede)
+    bigdw Colortiles_MtDedede
+
+IgnoreBit4: ;Used to negate the 4th bit which is no longer used
+    push bc
+    ld a, [wTemp]
+    ld b, %11101111
+    and b
+    pop bc
+    ret
+
+MidLevelColorSwap:
+    call Decompress
+    ld a, [$d06c]
+    ld c, a
+    add a
+    add c
+    ld b, $00
+    ld c, a
+    ld hl, StageColortileDefinitions
+    add hl, bc
+    ld a, [hl+]
+    ld c, a
+    ld a, [hl+]
+    ld d, a
+    ld a, [hl+]
+    ld e, a
+    ld h, d
+    ld l, e
+    ld de, wColortileDefinitions
+    call Decompress
+    ret

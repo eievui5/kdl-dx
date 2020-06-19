@@ -3,9 +3,6 @@ SECTION "ROM Bank $003", ROMX[$4000], BANK[$3]
 TitlescreenTilemap:
     INCBIN "gfx/titlescreen.tilemap.lz"
 
-TitlescreenColormap:
-    INCBIN "gfx/titlescreen.colormap.lz"
-
 FontFullTilesGfx:
     INCBIN "gfx/font_full.2bpp.lz"
 
@@ -108,4 +105,6 @@ MetatileMap_BubblyCloudsScreen4:
     INCBIN "data/stages/bubbly_clouds/screen_4.map.lz"
 
 ; free space padding
-INCBIN "baserom.gb", $fed1, $10000 - $fed1
+
+TitlescreenColormap:
+    INCBIN "gfx/titlescreen.colormap.lz"

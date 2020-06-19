@@ -966,3 +966,11 @@ INCBIN "baserom.gb", $3de3f, $3dfb2 - $3de3f
 
 Colortiles_GreenGreens:
     INCBIN "data/stages/green_greens/colortiles.bin.lz"
+Colortiles_CastleLololo:
+    INCBIN "data/stages/castle_lololo/colortiles.bin.lz"
+Colortiles_FloatIslands:
+    INCBIN "data/stages/float_islands/colortiles.bin.lz"
+Colortiles_BubblyClouds:
+    INCBIN "data/stages/bubbly_clouds/colortiles.bin.lz"
+Colortiles_MtDedede:
+    INCBIN "data/stages/mt_dedede/colortiles.bin.lz"

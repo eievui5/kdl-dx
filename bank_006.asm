@@ -456,7 +456,7 @@ Call_006_42e8:
     ld h, d
     ld l, e
     ld de, _VRAM + $1800
-    call Decompress
+    call IntroColormapping
     xor a
     call Call_000_21fb
     call StopTimer
@@ -7644,3 +7644,56 @@ LoadTileAndColorData:
     ld de, wColortileDefinitions ;and de is set to the destination for the decompressed data.
     call Decompress
     ret
+
+IntroColormapping:
+    call Decompress
+    ld a, $FF
+    ld [rVBK], a
+    ld a, [wCurStage]
+    ld c, a
+    add a
+    add c
+    ld c, a
+    ld b, $00
+    ld hl, StageIntroScreenColormaps
+    add hl, bc
+    ld a, [hl+]
+    ld c, a
+    ld a, [hl+]
+    ld d, a
+    ld a, [hl]
+    ld e, a
+    ld h, d
+    ld l, e
+    ld de, _VRAM + $1800
+    call Decompress
+    xor a
+    ld [rVBK], a
+    ret
+
+StageIntroScreenColormaps:
+    db Bank(IntroScreenColormap_GreenGreens)
+    bigdw IntroScreenColormap_GreenGreens
+
+    db Bank(IntroScreenColormap_CastleLololo)
+    bigdw IntroScreenColormap_CastleLololo
+
+    db Bank(IntroScreenColormap_FloatIslands)
+    bigdw IntroScreenColormap_FloatIslands
+
+    db Bank(IntroScreenColormap_BubblyClouds)
+    bigdw IntroScreenColormap_BubblyClouds
+
+    db Bank(IntroScreenColormap_MtDedede)
+    bigdw IntroScreenColormap_MtDedede
+
+IntroScreenColormap_GreenGreens:
+    INCBIN "gfx/stages/green_greens/intro_screen.colormap.lz"
+IntroScreenColormap_CastleLololo:
+    INCBIN "gfx/stages/castle_lololo/intro_screen.colormap.lz"
+IntroScreenColormap_FloatIslands:
+    INCBIN "gfx/stages/float_islands/intro_screen.colormap.lz"
+IntroScreenColormap_BubblyClouds:
+    INCBIN "gfx/stages/bubbly_clouds/intro_screen.colormap.lz"
+IntroScreenColormap_MtDedede:
+    INCBIN "gfx/stages/mt_dedede/intro_screen.colormap.lz"

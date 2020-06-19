@@ -20,5 +20,3 @@ NormalGameTilesGfx_MtDedede:
 FontIntroGfx:
     INCBIN "gfx/font_intro.2bpp.lz"
 
-; free space padding
-INCBIN "baserom.gb", $b906, $c000 - $b906
