@@ -974,3 +974,17 @@ Colortiles_BubblyClouds:
     INCBIN "data/stages/bubbly_clouds/colortiles.bin.lz"
 Colortiles_MtDedede:
     INCBIN "data/stages/mt_dedede/colortiles.bin.lz"
+
+IntroScreenColormap_GreenGreens:
+    INCBIN "gfx/stages/green_greens/intro_screen.colormap.lz"
+IntroScreenColormap_CastleLololo:
+    INCBIN "gfx/stages/castle_lololo/intro_screen.colormap.lz"
+IntroScreenColormap_FloatIslands:
+    INCBIN "gfx/stages/float_islands/intro_screen.colormap.lz"
+IntroScreenColormap_BubblyClouds:
+    INCBIN "gfx/stages/bubbly_clouds/intro_screen.colormap.lz"
+IntroScreenColormap_MtDedede:
+    INCBIN "gfx/stages/mt_dedede/intro_screen.colormap.lz"
+
+TitlescreenTilemap:
+    INCBIN "gfx/titlescreen.tilemap.lz"

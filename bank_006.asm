@@ -1169,7 +1169,7 @@ Jump_006_486c:
     ld hl, $42c8
     ld de, $9800
     ld c, $03
-    call Decompress
+    call SetCreditsToOrange
     call StopTimer
     call FadeIn
     ld de, $00c8
@@ -1195,17 +1195,17 @@ jr_006_48e0:
     call ClearSprites
     call FadeOut
     call StartTimer
-    ld hl, $4000
+    ld hl, NormalGameSpritesGfx
     ld de, $8000
-    ld c, $02
+    ld c, bank(NormalGameSpritesGfx)
     call Decompress
-    ld hl, $4855
+    ld hl, NormalGameStatusBarGfx
     ld de, $9670
-    ld c, $02
+    ld c, bank(NormalGameStatusBarGfx)
     call Decompress
-    ld hl, $6c49
+    ld hl, NormalGameTilesGfx_MtDedede
     ld de, $8800
-    ld c, $02
+    ld c, bank(NormalGameTilesGfx_MtDedede)
     call Decompress
     ld hl, $777c
     ld de, wMetatileDefinitions
@@ -1265,7 +1265,7 @@ jr_006_495b:
     ld hl, $42c8
     ld de, $9800
     ld c, $03
-    call Decompress
+    call SetCreditsToOrange
     call StopTimer
     call FadeIn
     ld de, $0200
@@ -7042,7 +7042,7 @@ ExecuteConfigurationModeScreen:
     ld hl, NormalGameStatusBarGfx
     ld de, $9670
     ld c, Bank(NormalGameSpritesGfx)
-    call Decompress
+    call ColorConfigPurple
     ld hl, $7b0d
     ld de, _VRAM + $800
     ld c, $06
@@ -7567,6 +7567,7 @@ jr_006_66fc:
     ld_long $ff91, a
     ret
 
+VERYYYYYY:
 INCBIN "baserom.gb", $1a727, $1a800 - $1a727
 
 MetatileMap_BubblyCloudsScreen7:
@@ -7608,6 +7609,8 @@ IntroScreenTilemap_BubblyClouds:
     INCBIN "gfx/stages/bubbly_clouds/intro_screen.tilemap.lz"
 IntroScreenTilemap_MtDedede:
     INCBIN "gfx/stages/mt_dedede/intro_screen.tilemap.lz"
+
+INCBIN "baserom.gb", $1bb0d, $1bdf0 - $1bb0d
 
 ;mystuff
 
@@ -7687,13 +7690,38 @@ StageIntroScreenColormaps:
     db Bank(IntroScreenColormap_MtDedede)
     bigdw IntroScreenColormap_MtDedede
 
-IntroScreenColormap_GreenGreens:
-    INCBIN "gfx/stages/green_greens/intro_screen.colormap.lz"
-IntroScreenColormap_CastleLololo:
-    INCBIN "gfx/stages/castle_lololo/intro_screen.colormap.lz"
-IntroScreenColormap_FloatIslands:
-    INCBIN "gfx/stages/float_islands/intro_screen.colormap.lz"
-IntroScreenColormap_BubblyClouds:
-    INCBIN "gfx/stages/bubbly_clouds/intro_screen.colormap.lz"
-IntroScreenColormap_MtDedede:
-    INCBIN "gfx/stages/mt_dedede/intro_screen.colormap.lz"
+SetCreditsToOrange:
+    call Decompress
+    ld a, $FF
+    ld [rVBK], a
+    ld bc, $04FF
+    ld hl, $9800
+    ld a, $04
+.repeatUntilDone
+    ld [hli], a
+    dec c
+    jr nz, .repeatUntilDone
+    ld c, $FF
+    dec b
+    jr nz, .repeatUntilDone
+    xor a
+    ld [rVBK], a
+    ret
+
+ColorConfigPurple:
+    call Decompress
+    ld a, $FF
+    ld [rVBK], a
+    ld bc, $04FF
+    ld hl, $9800
+    ld a, $04
+.repeatUntilDone
+    ld [hli], a
+    dec c
+    jr nz, .repeatUntilDone
+    ld c, $FF
+    dec b
+    jr nz, .repeatUntilDone
+    xor a
+    ld [rVBK], a
+    ret

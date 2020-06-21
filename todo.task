@@ -1,13 +1,12 @@
-Next Tasks:
-    ✔ Color all stills (Level intros) @started(20-06-19 02:36) @done(20-06-19 03:43) @lasted(1h7m24s)
-    ☐ Credits scene needs a pallet (All orange will be fine! and maybe required!) @critical 
-    ☐ Edit credits
 Marketing:
-    ☐ youtube announcement
     ☐ r/Kirby (Ask mods for permission)
-    ☐ r/Gameboy (No need for permission)
-    ☐ GBAtemp
 Archive:
+  ✔ Color all stills (Level intros) @started(20-06-19 02:36) @done(20-06-19 03:43) @lasted(1h7m24s) @project(Next Tasks)
+  ✔ Credits scene needs a pallet (All orange will be fine! and maybe required!) @critical @done(20-06-19 22:06) @project(Next Tasks)
+  ✘ Edit credits @cancelled(20-06-19 22:06) @project(Next Tasks)
+  ✔ youtube announcement @done(20-06-19 22:06) @project(Marketing)
+  ✔ r/Gameboy (No need for permission) @done(20-06-19 22:14) @project(Marketing)
+  ✔ GBAtemp @done(20-06-19 22:14) @project(Marketing)
   ✔ And in more pallets to make green greens a little less green @done(20-06-17 12:44) @project(Next Tasks)
   ✔ Youtube trailer @done(20-06-17 12:44) @project(Marketing)
   ✔ Decompile every metasprite in the game... You can use kdldx5.0 to help. Remeber to change bit 4 to 1 on the last part of the metasprite. This is *THE FINAL ENGINE CHANGE* @critical @done(20-06-16 15:46) @project(Current Task)
