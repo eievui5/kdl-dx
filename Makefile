@@ -1,4 +1,4 @@
-.PHONY: all tools compare clean tidy
+.PHONY: all tools clean tidy
 
 .SUFFIXES:
 .SECONDEXPANSION:
@@ -10,7 +10,7 @@ OBJS := main.o wram.o
 
 MD5 := md5sum -c
 
-all: $(ROM) compare
+all: $(ROM)
 
 ifeq (,$(filter tools clean tidy,$(MAKECMDGOALS)))
 Makefile: tools
@@ -23,9 +23,6 @@ endif
 $(ROM): $(OBJS)
 	rgblink -n $(ROM:.gb=.sym) -m $(ROM:.gb=.map) -o $@ $(OBJS)
 	rgbfix -jCv -l 0x01 -m 0x01 -p 0xFF -r 0 -t "KLDDX" $@
-
-compare: $(ROM)
-	@$(MD5) rom.md5
 
 tools:
 	$(MAKE) -C tools
